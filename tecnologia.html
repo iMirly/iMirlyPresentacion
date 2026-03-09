@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnología y Arquitectura - iMirly</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header / Navbar -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">iMirly</a>
+            <ul class="nav__menu">
+                <li class="nav__item">
+                    <a href="index.html" class="nav__link">Inicio</a>
+                </li>
+                <li class="nav__item">
+                    <a href="mercado-y-estrategia.html" class="nav__link">Mercado y estrategia</a>
+                </li>
+                <li class="nav__item">
+                    <a href="diseno-ux.html" class="nav__link">Diseño & UX</a>
+                </li>
+                <li class="nav__item">
+                    <a href="aplicacion.html" class="nav__link">Aplicación</a>
+                </li>
+                <li class="nav__item">
+                    <a href="tecnologia.html" class="nav__link active">Tecnología</a>
+                </li>
+                <li class="nav__item">
+                    <a href="equipo.html" class="nav__link">Equipo</a>
+                </li>
+            </ul>
+            <button class="nav__toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero hero--secondary">
+    <div class="hero__decoration hero__decoration--1"></div>
+    <div class="hero__decoration hero__decoration--2"></div>
+    <div class="container">
+        <div class="hero__wrapper" style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;">
+            <!-- Contenido texto -->
+            <div class="hero__content fade-in">
+                <span class="section__tag">Backend</span>
+                <h1 class="hero__title">Tecnología y arquitectura</h1>
+                <p class="hero__subtitle">
+                    Un backend estructurado, escalable y basado en buenas prácticas.
+                </p>
+                <p class="hero__text">
+                    El backend de iMirly se ha diseñado siguiendo principios de arquitectura limpia y buenas prácticas de desarrollo, con el objetivo de garantizar mantenibilidad, escalabilidad y seguridad.
+                </p>
+            </div>
+
+            <!-- Mockup SVG de Arquitectura Backend -->
+            <div class="hero__image fade-in" style="display: flex; justify-content: center; align-items: center;">
+                <svg viewBox="0 0 400 320" style="max-width: 100%; height: auto; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.15));">
+                    <!-- Fondo del mockup -->
+                    <rect x="20" y="20" width="360" height="280" rx="16" fill="#ffffff"/>
+                    
+                    <!-- Título superior -->
+                    <rect x="20" y="20" width="360" height="45" rx="16" fill="#321e92"/>
+                    <text x="200" y="50" text-anchor="middle" fill="white" font-size="13" font-weight="600" font-family="Inter, sans-serif">Arquitectura iMirly - Spring Boot API</text>
+                    
+                    <!-- Capa: Cliente/App -->
+                    <rect x="40" y="85" width="100" height="50" rx="10" fill="#E6E6FA" stroke="#7864D7" stroke-width="2"/>
+                    <text x="90" y="105" text-anchor="middle" fill="#321e92" font-size="10" font-weight="600" font-family="Inter, sans-serif">APP MÓVIL</text>
+                    <text x="90" y="120" text-anchor="middle" fill="#7864D7" font-size="8" font-family="Inter, sans-serif">Android / Compose</text>
+                    
+                    <!-- Flecha hacia abajo -->
+                    <line x1="90" y1="140" x2="90" y2="155" stroke="#7864D7" stroke-width="2" stroke-dasharray="4,2"/>
+                    <polygon points="85,150 90,158 95,150" fill="#7864D7"/>
+                    
+                    <!-- Capa: API REST (Servidor central) -->
+                    <rect x="30" y="165" width="140" height="70" rx="12" fill="#321e92"/>
+                    <text x="100" y="190" text-anchor="middle" fill="white" font-size="11" font-weight="600" font-family="Inter, sans-serif">API REST</text>
+                    <text x="100" y="205" text-anchor="middle" fill="#E6E6FA" font-size="9" font-family="Inter, sans-serif">Spring Boot</text>
+                    <text x="100" y="218" text-anchor="middle" fill="#90EE90" font-size="8" font-family="Inter, sans-serif">Java + Kotlin</text>
+                    
+                    <!-- Conexiones a capas inferiores -->
+                    <line x1="100" y1="238" x2="100" y2="250" stroke="#321e92" stroke-width="2"/>
+                    <line x1="100" y1="250" x2="70" y2="250" stroke="#321e92" stroke-width="2"/>
+                    <line x1="100" y1="250" x2="130" y2="250" stroke="#321e92" stroke-width="2"/>
+                    <line x1="70" y1="250" x2="70" y2="260" stroke="#321e92" stroke-width="2"/>
+                    <line x1="130" y1="250" x2="130" y2="260" stroke="#321e92" stroke-width="2"/>
+                    
+                    <!-- Capa: Lógica de Negocio -->
+                    <rect x="35" y="265" width="70" height="25" rx="6" fill="#7864D7"/>
+                    <text x="70" y="281" text-anchor="middle" fill="white" font-size="8" font-weight="500" font-family="Inter, sans-serif">Services</text>
+                    
+                    <!-- Capa: Datos -->
+                    <rect x="95" y="265" width="70" height="25" rx="6" fill="#90EE90"/>
+                    <text x="130" y="281" text-anchor="middle" fill="#1B5E20" font-size="8" font-weight="500" font-family="Inter, sans-serif">JPA / H2</text>
+                    
+                    <!-- Panel lateral: Seguridad -->
+                    <rect x="190" y="85" width="170" height="90" rx="10" fill="#F0FFF0" stroke="#90EE90" stroke-width="1"/>
+                    <text x="275" y="105" text-anchor="middle" fill="#2E7D32" font-size="10" font-weight="600" font-family="Inter, sans-serif">SEGURIDAD</text>
+                    
+                    <!-- Items de seguridad -->
+                    <rect x="205" y="115" width="140" height="18" rx="4" fill="white" stroke="#90EE90" stroke-width="1"/>
+                    <text x="275" y="127" text-anchor="middle" fill="#2E7D32" font-size="8" font-family="Inter, sans-serif">✓ Autenticación JWT</text>
+                    
+                    <rect x="205" y="138" width="140" height="18" rx="4" fill="white" stroke="#90EE90" stroke-width="1"/>
+                    <text x="275" y="150" text-anchor="middle" fill="#2E7D32" font-size="8" font-family="Inter, sans-serif">✓ Control de acceso</text>
+                    
+                    <!-- Panel lateral: Arquitectura -->
+                    <rect x="190" y="185" width="170" height="110" rx="10" fill="#FFF8E1" stroke="#FFB74D" stroke-width="1"/>
+                    <text x="275" y="205" text-anchor="middle" fill="#E65100" font-size="10" font-weight="600" font-family="Inter, sans-serif">ARQUITECTURA</text>
+                    
+                    <!-- Capas de arquitectura -->
+                    <rect x="205" y="218" width="140" height="16" rx="3" fill="white" stroke="#FFB74D" stroke-width="1"/>
+                    <text x="275" y="229" text-anchor="middle" fill="#E65100" font-size="8" font-family="Inter, sans-serif">Controllers (REST)</text>
+                    
+                    <rect x="205" y="238" width="140" height="16" rx="3" fill="white" stroke="#FFB74D" stroke-width="1"/>
+                    <text x="275" y="249" text-anchor="middle" fill="#E65100" font-size="8" font-family="Inter, sans-serif">Services (Lógica)</text>
+                    
+                    <rect x="205" y="258" width="140" height="16" rx="3" fill="white" stroke="#FFB74D" stroke-width="1"/>
+                    <text x="275" y="269" text-anchor="middle" fill="#E65100" font-size="8" font-family="Inter, sans-serif">Repositories (Datos)</text>
+                    
+                    <!-- Indicador de escalabilidad -->
+                    <circle cx="360" cy="285" r="12" fill="#E6E6FA" stroke="#7864D7" stroke-width="2"/>
+                    <text x="360" y="289" text-anchor="middle" fill="#321e92" font-size="10" font-weight="bold" font-family="Inter, sans-serif">↗</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Visión General de la Arquitectura -->
+    <section class="section section--concept" id="vision-general">
+        <div class="container">
+            <div class="section__header fade-in">
+                <span class="section__tag">Arquitectura</span>
+                <h2 class="section__title">Visión general del sistema</h2>
+                <p class="section__description">
+                    iMirly se apoya en una arquitectura cliente-servidor, donde la aplicación móvil consume una API REST desarrollada en Spring Boot.
+                </p>
+            </div>
+            <div class="concept-grid">
+                <div class="concept-card fade-in">
+                    <div class="concept-card__visual concept-card__visual--clean">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 48px; height: 48px; color: #7864D7;">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                            <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                        </svg>
+                    </div>
+                    <h3 class="concept-card__title">App móvil (cliente)</h3>
+                    <p class="concept-card__text">Aplicación Android desarrollada con Jetpack Compose que consume servicios REST</p>
+                </div>
+                <div class="concept-card fade-in">
+                    <div class="concept-card__visual concept-card__visual--clear">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 48px; height: 48px; color: #7864D7;">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="concept-card__title">API REST (backend)</h3>
+                    <p class="concept-card__text">Servidor Spring Boot que expone endpoints RESTful para la gestión de datos</p>
+                </div>
+                <div class="concept-card fade-in">
+                    <div class="concept-card__visual concept-card__visual--friendly">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 48px; height: 48px; color: #7864D7;">
+                            <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                        </svg>
+                    </div>
+                    <h3 class="concept-card__title">Base de datos relacional</h3>
+                    <p class="concept-card__text">Persistencia de datos mediante JPA con base de datos H2 en desarrollo</p>
+                </div>
+            </div>
+            <div class="palette-description fade-in" style="margin-top: 48px;">
+                <p>Esta <strong>separación</strong> permite desacoplar el frontend del backend y facilita la evolución independiente de cada parte del sistema.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Arquitectura en Capas -->
+    <section class="section section--ux" id="arquitectura-capas">
+        <div class="container">
+            <div class="section__header fade-in">
+                <span class="section__tag">Estructura</span>
+                <h2 class="section__title">Arquitectura en capas</h2>
+                <p class="section__description">
+                    El backend sigue un patrón arquitectónico por capas que separa claramente las responsabilidades del sistema.
+                </p>
+            </div>
+            <div class="ux-pillars">
+                <div class="ux-pillar fade-in">
+                    <div class="ux-pillar__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="ux-pillar__title">Capa de presentación (Controllers)</h3>
+                    <ul class="ux-pillar__list">
+                        <li>Exposición de endpoints REST</li>
+                        <li>Gestión de peticiones HTTP</li>
+                        <li>Validación básica de datos</li>
+                        <li>Manejo de respuestas y excepciones</li>
+                    </ul>
+                </div>
+                <div class="ux-pillar fade-in">
+                    <div class="ux-pillar__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                        </svg>
+                    </div>
+                    <h3 class="ux-pillar__title">Capa de lógica de negocio (Services)</h3>
+                    <ul class="ux-pillar__list">
+                        <li>Reglas de negocio</li>
+                        <li>Gestión de operaciones</li>
+                        <li>Separación de responsabilidades</li>
+                        <li>Transaccionalidad</li>
+                    </ul>
+                </div>
+                <div class="ux-pillar fade-in">
+                    <div class="ux-pillar__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                        </svg>
+                    </div>
+                    <h3 class="ux-pillar__title">Capa de acceso a datos (Repositories)</h3>
+                    <ul class="ux-pillar__list">
+                        <li>Acceso a base de datos mediante JPA</li>
+                        <li>Abstracción de la persistencia</li>
+                        <li>Uso de repositorios Spring Data</li>
+                        <li>Consultas tipadas y seguras</li>
+                    </ul>
+                </div>
+                <div class="ux-pillar fade-in">
+                    <div class="ux-pillar__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="9" y1="9" x2="15" y2="15"></line>
+                            <line x1="15" y1="9" x2="9" y2="15"></line>
+                        </svg>
+                    </div>
+                    <h3 class="ux-pillar__title">Capa de modelo (Entities / DTOs)</h3>
+                    <ul class="ux-pillar__list">
+                        <li>Representación de datos</li>
+                        <li>Separación entre entidades y DTOs</li>
+                        <li>Mapeo objeto-relacional</li>
+                        <li>Validaciones de dominio</li>
+                    </ul>
+                </div>
+                <div class="ux-pillar fade-in">
+    <div class="ux-pillar__icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+        </svg>
+    </div>
+    <h3 class="ux-pillar__title">Capa de seguridad (Security)</h3>
+    <ul class="ux-pillar__list">
+        <li>Configuración de autenticación</li>
+        <li>Filtros de seguridad HTTP</li>
+        <li>Gestión de roles y permisos</li>
+        <li>Protección contra vulnerabilidades</li>
+    </ul>
+</div>
+
+<div class="ux-pillar fade-in">
+    <div class="ux-pillar__icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+        </svg>
+    </div>
+    <h3 class="ux-pillar__title">Capa de excepciones (Exception Handling)</h3>
+    <ul class="ux-pillar__list">
+        <li>Gestión centralizada de errores</li>
+        <li>Respuestas HTTP consistentes</li>
+        <li>Logging de incidencias</li>
+        <li>Mensajes informativos para el cliente</li>
+    </ul>
+</div>
+            </div>
+            <div class="palette-description fade-in" style="margin-top: 48px;">
+                <p>Esta <strong>estructura</strong> mejora la legibilidad, el mantenimiento y la escalabilidad del proyecto.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modelo de Datos -->
+<section class="section section--ux" id="modelo-datos">
+    <div class="container">
+        <div class="section__header fade-in">
+            <span class="section__tag">Datos</span>
+            <h2 class="section__title">Modelo de datos</h2>
+            <p class="section__description">
+                El modelo de datos de iMirly se ha diseñado para representar de forma clara la relación entre usuarios y servicios, permitiendo una futura ampliación del sistema.
+            </p>
+        </div>
+
+        <!-- Diagrama central de entidades -->
+        <div class="concept-grid fade-in" style="margin-bottom: 64px;">
+            <div class="concept-card fade-in" style="border-top: 4px solid #7864D7;">
+                <div class="concept-card__visual concept-card__visual--clean" style="background: #F8F6FF;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#7864D7" stroke-width="2" style="width: 48px; height: 48px;">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </div>
+                <h3 class="concept-card__title" style="color: #321e92; font-size: 1.3rem;">Usuario</h3>
+                <p class="concept-card__text" style="font-size: 0.9rem; margin-bottom: 16px;">
+                    Entidad central del sistema
+                </p>
+                <ul style="list-style: none; padding: 0; text-align: left; font-size: 0.85rem; color: #666;">
+                    <li style="padding: 4px 0; border-bottom: 1px solid #eee;">• id (PK)</li>
+                    <li style="padding: 4px 0; border-bottom: 1px solid #eee;">• nombre</li>
+                    <li style="padding: 4px 0; border-bottom: 1px solid #eee;">• email</li>
+                    <li style="padding: 4px 0; border-bottom: 1px solid #eee;">• password</li>
+                    <li style="padding: 4px 0;">• rol (cliente/proveedor)</li>
+                </ul>
+            </div>
+
+            <div class="concept-card fade-in" style="border-top: 4px solid #90EE90;">
+                <div class="concept-card__visual concept-card__visual--clear" style="background: #F0FFF0;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#4CAF50" stroke-width="2" style="width: 48px; height: 48px;">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                    </svg>
+                </div>
+                <h3 class="concept-card__title" style="color: #2E7D32; font-size: 1.3rem;">Servicio</h3>
+                <p class="concept-card__text" style="font-size: 0.9rem; margin-bottom: 16px;">
+                    Anuncio de servicio ofrecido
+                </p>
+                <ul style="list-style: none; padding: 0; text-align: left; font-size: 0.85rem; color: #666;">
+                    <li style="padding: 4px 0; border-bottom: 1px solid #eee;">• id (PK)</li>
+                    <li style="padding: 4px 0; border-bottom: 1px solid #eee;">• titulo</li>
+                    <li style="padding: 4px 0; border-bottom: 1px solid #eee;">• descripcion</li>
+                    <li style="padding: 4px 0; border-bottom: 1px solid #eee;">• precio</li>
+                    <li style="padding: 4px 0;">• usuario_id (FK)</li>
+                </ul>
+            </div>
+
+            <div class="concept-card fade-in" style="border-top: 4px solid #FFB74D;">
+                <div class="concept-card__visual concept-card__visual--friendly" style="background: #FFF8E1;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#FF9800" stroke-width="2" style="width: 48px; height: 48px;">
+                        <rect x="3" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="14" width="7" height="7"></rect>
+                        <rect x="3" y="14" width="7" height="7"></rect>
+                    </svg>
+                </div>
+                <h3 class="concept-card__title" style="color: #E65100; font-size: 1.3rem;">Categoría</h3>
+                <p class="concept-card__text" style="font-size: 0.9rem; margin-bottom: 16px;">
+                    Clasificación jerárquica
+                </p>
+                <ul style="list-style: none; padding: 0; text-align: left; font-size: 0.85rem; color: #666;">
+                    <li style="padding: 4px 0; border-bottom: 1px solid #eee;">• id (PK)</li>
+                    <li style="padding: 4px 0; border-bottom: 1px solid #eee;">• nombre</li>
+                    <li style="padding: 4px 0; border-bottom: 1px solid #eee;">• descripcion</li>
+                    <li style="padding: 4px 0;">• categoria_padre_id (FK)</li>
+                </ul>
+            </div>
+
+            <div class="concept-card fade-in" style="border-top: 4px solid #64B5F6;">
+                <div class="concept-card__visual concept-card__visual--modern" style="background: #E3F2FD;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#2196F3" stroke-width="2" style="width: 48px; height: 48px;">
+                        <circle cx="18" cy="5" r="3"></circle>
+                        <circle cx="6" cy="12" r="3"></circle>
+                        <circle cx="18" cy="19" r="3"></circle>
+                        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                        <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                    </svg>
+                </div>
+                <h3 class="concept-card__title" style="color: #1565C0; font-size: 1.3rem;">Relaciones</h3>
+                <p class="concept-card__text" style="font-size: 0.9rem; margin-bottom: 16px;">
+                    Cardinalidad entre entidades
+                </p>
+                <ul style="list-style: none; padding: 0; text-align: left; font-size: 0.85rem; color: #666;">
+                    <li style="padding: 4px 0; border-bottom: 1px solid #eee;">• Usuario 1:N Servicios</li>
+                    <li style="padding: 4px 0; border-bottom: 1px solid #eee;">• Categoría 1:N Servicios</li>
+                    <li style="padding: 4px 0; border-bottom: 1px solid #eee;">• Categoría 1:N Subcategorías</li>
+                    <li style="padding: 4px 0;">• Integridad referencial</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Descripción de relaciones -->
+        <div class="research-context fade-in" style="background: #F8F9FA; padding: 32px; border-radius: 16px; border-left: 4px solid #7864D7;">
+            <h3 style="color: #321e92; margin-bottom: 16px; font-size: 1.2rem;">Estructura relacional</h3>
+            <p class="research-context__text" style="margin-bottom: 16px;">
+                El modelo sigue una arquitectura <strong>relacional normalizada</strong> donde los usuarios pueden publicar múltiples servicios (relación 1:N), y cada servicio pertenece a una categoría específica. Las categorías pueden anidarse jerárquicamente mediante auto-referencia.
+            </p>
+            <p class="research-context__text" style="margin: 0;">
+                Esta estructura garantiza la <strong>integridad referencial</strong> de los datos, facilita consultas eficientes mediante joins y permite escalar el sistema añadiendo nuevas entidades sin modificar las existentes.
+            </p>
+        </div>
+    </div>
+</section>
+
+    <!-- Seguridad y Autenticación -->
+    <section class="section section--accessibility" id="seguridad">
+        <div class="container">
+            <div class="section__header fade-in">
+                <span class="section__tag">Seguridad</span>
+                <h2 class="section__title">Seguridad y autenticación</h2>
+                <p class="section__description">
+                    La aplicación contempla un sistema de autenticación basado en tokens, preparado para garantizar el acceso seguro a los recursos de la API.
+                </p>
+            </div>
+            <div class="accessibility-features">
+                <div class="accessibility-feature fade-in">
+                    <div class="accessibility-feature__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                    <div class="accessibility-feature__text">
+                        <h4>Autenticación de usuarios</h4>
+                        <p>Sistema de login que verifica credenciales y genera tokens de sesión para usuarios válidos</p>
+                    </div>
+                </div>
+                <div class="accessibility-feature fade-in">
+                    <div class="accessibility-feature__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                    </div>
+                    <div class="accessibility-feature__text">
+                        <h4>Control de acceso a endpoints</h4>
+                        <p>Protección de rutas sensibles mediante filtros de seguridad que validan la autenticación</p>
+                    </div>
+                </div>
+                <div class="accessibility-feature fade-in">
+                    <div class="accessibility-feature__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"></path>
+                        </svg>
+                    </div>
+                    <div class="accessibility-feature__text">
+                        <h4>Preparado para JWT</h4>
+                        <p>Arquitectura lista para implementar JSON Web Tokens, estándar de la industria para autenticación stateless</p>
+                    </div>
+                </div>
+                <div class="accessibility-feature fade-in">
+                    <div class="accessibility-feature__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <div class="accessibility-feature__text">
+                        <h4>Protección de datos sensibles</h4>
+                        <p>Almacenamiento seguro de contraseñas mediante hash y prevención de vulnerabilidades comunes</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accessibility-conclusion fade-in" style="margin-top: 48px;">
+                <p><strong>Nota:</strong> En fase de desarrollo se utiliza una configuración simplificada, con vistas a reforzar la seguridad en fases posteriores.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Base de Datos y Entorno -->
+<section class="section section--ux" id="base-datos">
+    <div class="container">
+        <div class="section__header fade-in">
+            <span class="section__tag">Infraestructura</span>
+            <h2 class="section__title">Base de datos y entorno</h2>
+            <p class="section__description">
+                Durante el desarrollo, iMirly utiliza una base de datos en memoria (H2), lo que permite pruebas rápidas, facilidad de configuración y un entorno controlado.
+            </p>
+        </div>
+        
+        <div class="ux-pillars" style="grid-template-columns: repeat(3, 1fr);">
+            <!-- Fila 1 -->
+            <div class="ux-pillar fade-in">
+                <div class="ux-pillar__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                        <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                        <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                    </svg>
+                </div>
+                <h3 class="ux-pillar__title">H2 Database</h3>
+                <ul class="ux-pillar__list">
+                    <li>Base de datos en memoria</li>
+                    <li>Sin instalación externa</li>
+                    <li>Ideal para desarrollo y testing</li>
+                </ul>
+            </div>
+            
+            <div class="ux-pillar fade-in">
+                <div class="ux-pillar__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
+                </div>
+                <h3 class="ux-pillar__title">Datos de prueba</h3>
+                <ul class="ux-pillar__list">
+                    <li>Script SQL inicial (data.sql)</li>
+                    <li>Población automática</li>
+                    <li>Escenarios predefinidos</li>
+                </ul>
+            </div>
+            
+            <div class="ux-pillar fade-in">
+                <div class="ux-pillar__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                    </svg>
+                </div>
+                <h3 class="ux-pillar__title">Entorno portable</h3>
+                <ul class="ux-pillar__list">
+                    <li>Sin dependencias externas</li>
+                    <li>Ejecución en cualquier máquina</li>
+                    <li>Ideal para demostraciones</li>
+                </ul>
+            </div>
+            
+            <!-- Fila 2 -->
+            <div class="ux-pillar fade-in">
+                <div class="ux-pillar__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                        <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                    </svg>
+                </div>
+                <h3 class="ux-pillar__title">Preparado para producción</h3>
+                <ul class="ux-pillar__list">
+                    <li>Migración a MySQL/PostgreSQL</li>
+                    <li>Mismo código JPA</li>
+                    <li>Perfiles Spring (dev/prod)</li>
+                </ul>
+            </div>
+            
+            <div class="ux-pillar fade-in">
+                <div class="ux-pillar__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                    </svg>
+                </div>
+                <h3 class="ux-pillar__title">Spring Data JPA</h3>
+                <ul class="ux-pillar__list">
+                    <li>Abstracción de persistencia</li>
+                    <li>Repositorios automáticos</li>
+                    <li>Consultas tipadas seguras</li>
+                </ul>
+            </div>
+            
+            <div class="ux-pillar fade-in">
+                <div class="ux-pillar__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="16 18 22 12 16 6"></polyline>
+                        <polyline points="8 6 2 12 8 18"></polyline>
+                    </svg>
+                </div>
+                <h3 class="ux-pillar__title">API REST</h3>
+                <ul class="ux-pillar__list">
+                    <li>Endpoints HTTP estándar</li>
+                    <li>Comunicación stateless</li>
+                    <li>Formato JSON universal</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Buenas Prácticas -->
+    <section class="section section--ui" id="buenas-practicas">
+        <div class="container">
+            <div class="section__header fade-in">
+                <span class="section__tag">Calidad</span>
+                <h2 class="section__title">Buenas prácticas de desarrollo</h2>
+            </div>
+            <div class="ui-showcase">
+                <div class="ui-element fade-in">
+                    <div class="ui-element__preview">
+                        <div class="ui-card ui-card--clean">
+                            <div class="ui-card__content" style="padding: 24px; text-align: center;">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="#7864D7" stroke-width="2" style="width: 40px; height: 40px;">
+                                    <rect x="3" y="3" width="7" height="7"></rect>
+                                    <rect x="14" y="3" width="7" height="7"></rect>
+                                    <rect x="14" y="14" width="7" height="7"></rect>
+                                    <rect x="3" y="14" width="7" height="7"></rect>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui-element__info">
+                        <h4>Separación de responsabilidades</h4>
+                        <p>Cada clase tiene una única razón para cambiar, siguiendo el principio SOLID</p>
+                    </div>
+                </div>
+                <div class="ui-element fade-in">
+                    <div class="ui-element__preview">
+                        <div class="ui-hierarchy" style="flex-direction: column; gap: 8px; align-items: center;">
+                            <div style="width: 80px; height: 20px; background: #7864D7; border-radius: 4px;"></div>
+                            <div style="width: 80px; height: 20px; background: #321e92; border-radius: 4px;"></div>
+                            <div style="width: 80px; height: 20px; background: #E6E6FA; border-radius: 4px;"></div>
+                        </div>
+                    </div>
+                    <div class="ui-element__info">
+                        <h4>Arquitectura en capas</h4>
+                        <p>Independencia entre presentación, lógica y datos</p>
+                    </div>
+                </div>
+                <div class="ui-element fade-in">
+                    <div class="ui-element__preview">
+                        <div class="ui-buttons" style="flex-direction: column; gap: 12px; align-items: center;">
+                            <div style="width: 80px; height: 30px; background: #F1F1F1; border-radius: 4px; display: flex; align-items: center; justify-content: center;">
+                                <div style="width: 40px; height: 4px; background: #7864D7; border-radius: 2px;"></div>
+                            </div>
+                            <div style="width: 80px; height: 30px; background: #F1F1F1; border-radius: 4px; display: flex; align-items: center; justify-content: center;">
+                                <div style="width: 40px; height: 4px; background: #7864D7; border-radius: 2px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui-element__info">
+                        <h4>Código mantenible</h4>
+                        <p>Nomenclatura clara, comentarios pertinentes y estructura organizada</p>
+                    </div>
+                </div>
+                <div class="ui-element fade-in">
+                    <div class="ui-element__preview">
+                        <div class="ui-spacing" style="flex-direction: row; gap: 8px; justify-content: center;">
+                            <div style="width: 30px; height: 30px; background: #7864D7; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 12px;">GET</div>
+                            <div style="width: 30px; height: 30px; background: #321e92; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 12px;">POST</div>
+                        </div>
+                    </div>
+                    <div class="ui-element__info">
+                        <h4>Estándares REST</h4>
+                        <p>Uso correcto de métodos HTTP, códigos de estado y formatos JSON</p>
+                    </div>
+                </div>
+                <div class="ui-element fade-in">
+                    <div class="ui-element__preview">
+                        <div style="display: flex; align-items: center; justify-content: center; gap: 8px;">
+                            <div style="width: 20px; height: 40px; background: #E6E6FA; border-radius: 4px;"></div>
+                            <div style="width: 20px; height: 50px; background: #7864D7; border-radius: 4px;"></div>
+                            <div style="width: 20px; height: 60px; background: #321e92; border-radius: 4px;"></div>
+                        </div>
+                    </div>
+                    <div class="ui-element__info">
+                        <h4>Preparado para escalabilidad</h4>
+                        <p>Diseño que permite crecer sin reestructurar el sistema</p>
+                    </div>
+                </div>
+                <div class="ui-element fade-in">
+                    <div class="ui-element__preview">
+                        <div style="display: flex; align-items: center; justify-content: center; gap: 8px;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#7864D7" stroke-width="2" style="width: 32px; height: 32px;">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                            </svg>
+                            <span style="color: #7864D7; font-weight: 600;">Git</span>
+                        </div>
+                    </div>
+                    <div class="ui-element__info">
+                        <h4>Proyecto versionado</h4>
+                        <p>Control de versiones con Git y repositorio estructurado</p>
+                    </div>
+                </div>
+                <div class="ui-element fade-in">
+    <div class="ui-element__preview">
+        <div style="display: flex; align-items: center; justify-content: center; gap: 8px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#7864D7" stroke-width="2" style="width: 32px; height: 32px;">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+            <span style="color: #7864D7; font-weight: 600;">Javadoc</span>
+        </div>
+    </div>
+    <div class="ui-element__info">
+        <h4>Documentación de código</h4>
+        <p>Comentarios Javadoc en métodos y clases para facilitar el mantenimiento</p>
+    </div>
+</div>
+
+<div class="ui-element fade-in">
+    <div class="ui-element__preview">
+        <div style="display: flex; align-items: center; justify-content: center; gap: 8px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#7864D7" stroke-width="2" style="width: 32px; height: 32px;">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+            <span style="color: #7864D7; font-weight: 600;">JSON</span>
+        </div>
+    </div>
+    <div class="ui-element__info">
+        <h4>DTOs y serialización</h4>
+        <p>Uso de Data Transfer Objects para separar entidades de la API pública</p>
+    </div>
+</div>
+            </div>
+            <div class="quote quote--large fade-in" style="margin-top: 64px;">
+                <blockquote class="quote__text">
+                    "Un backend bien estructurado es la base de un proyecto sostenible."
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- Escalabilidad -->
+    <section class="section section--research" id="escalabilidad">
+        <div class="container">
+            <div class="section__header fade-in">
+                <span class="section__tag">Futuro</span>
+                <h2 class="section__title">Escalabilidad y evolución futura</h2>
+                <p class="section__description">
+                    La arquitectura de iMirly permite incorporar nuevas funcionalidades sin necesidad de rehacer el sistema.
+                </p>
+            </div>
+
+            <div class="research-pillars">
+                <div class="research-pillar fade-in">
+                    <div class="research-pillar__icon">🏷️</div>
+                    <h3 class="research-pillar__title">Nuevos tipos de servicios</h3>
+                    <p class="research-pillar__text">
+                        El modelo de categorías permite añadir nuevos tipos de servicios sin modificar la estructura existente.
+                    </p>
+                </div>
+
+                <div class="research-pillar fade-in">
+                    <div class="research-pillar__icon">⭐</div>
+                    <h3 class="research-pillar__title">Valoraciones y reputación</h3>
+                    <p class="research-pillar__text">
+                        Preparado para incorporar sistema de ratings y reviews mediante nuevas entidades relacionadas.
+                    </p>
+                </div>
+
+                <div class="research-pillar fade-in">
+                    <div class="research-pillar__icon">💳</div>
+                    <h3 class="research-pillar__title">Sistemas de pago</h3>
+                    <p class="research-pillar__text">
+                        Arquitectura lista para integrar pasarelas de pago y gestión de transacciones.
+                    </p>
+                </div>
+
+                <div class="research-pillar fade-in">
+                    <div class="research-pillar__icon">🎛️</div>
+                    <h3 class="research-pillar__title">Panel de administración</h3>
+                    <p class="research-pillar__text">
+                        Capacidad para añadir endpoints de gestión y roles administrativos.
+                    </p>
+                </div>
+
+                <div class="research-pillar fade-in">
+                    <div class="research-pillar__icon">🗄️</div>
+                    <h3 class="research-pillar__title">Migración a BBDD real</h3>
+                    <p class="research-pillar__text">
+                        Cambio transparente de H2 a MySQL o PostgreSQL para producción manteniendo JPA.
+                    </p>
+                </div>
+
+                <div class="research-pillar fade-in">
+                    <div class="research-pillar__icon">🔔</div>
+                    <h3 class="research-pillar__title">Notificaciones push</h3>
+                    <p class="research-pillar__text">
+                        Estructura preparada para integrar servicios de mensajería y alertas en tiempo real.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tecnología como Soporte -->
+    <section class="section section--value-design" id="soporte">
+        <div class="container">
+            <div class="section__header fade-in">
+                <span class="section__tag">Propósito</span>
+                <h2 class="section__title">La tecnología dentro del proyecto</h2>
+            </div>
+            <div class="value-proposition fade-in">
+                <div class="value-proposition__content">
+                    <p class="value-proposition__text">
+                        La tecnología de iMirly <strong>no se ha planteado como un fin en sí mismo</strong>, sino como un soporte sólido para una solución real y escalable.
+                    </p>
+                    <div class="value-points">
+                        <div class="value-point">
+                            <span class="value-point__number">01</span>
+                            <span class="value-point__text">Arquitectura sólida</span>
+                        </div>
+                        <div class="value-point">
+                            <span class="value-point__number">02</span>
+                            <span class="value-point__text">Código mantenible</span>
+                        </div>
+                        <div class="value-point">
+                            <span class="value-point__number">03</span>
+                            <span class="value-point__text">Base para crecer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="value-visual">
+                    <div class="value-visual__element"></div>
+                    <div class="value-visual__element value-visual__element--secondary"></div>
+                    <div class="value-visual__element value-visual__element--tertiary"></div>
+                </div>
+            </div>
+            <div class="quote quote--large fade-in">
+                <blockquote class="quote__text">
+                    "Las buenas prácticas no se ven, pero se notan."
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cierre de Sección -->
+    <section class="section section--closing" id="cierre">
+        <div class="container">
+            <div class="closing-block fade-in">
+                <div class="closing-block__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                    </svg>
+                </div>
+                <h2 class="closing-block__title">Base técnica sólida</h2>
+                <p class="closing-block__text">
+                    El backend de iMirly demuestra que el proyecto se apoya en una base técnica coherente, bien estructurada y alineada con los estándares actuales del desarrollo de aplicaciones.
+                </p>
+                <a href="equipo.html" class="btn btn--secondary">
+                    Siguiente sección: Equipo
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 20px; height: 20px; margin-left: 8px;">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <span class="footer__logo">iMirly</span>
+                    <p class="footer__text">Proyecto académico DAM</p>
+                </div>
+                <div class="footer__info">
+                    <p class="footer__location">Granada, España</p>
+                    <p class="footer__note">Presentación del proyecto</p>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 iMirly. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

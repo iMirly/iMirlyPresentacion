@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iMirly - Servicios Locales, Soluciones Reales</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header / Navbar -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">iMirly</a>
+            <ul class="nav__menu">
+                <li class="nav__item">
+                    <a href="#home" class="nav__link active">Inicio</a>
+                </li>
+                <li class="nav__item">
+                    <a href="mercado-y-estrategia.html" class="nav__link">Mercado y estrategia</a>
+                </li>
+                <li class="nav__item">
+                    <a href="diseno-ux.html" class="nav__link">Diseño & UX</a>
+                </li>
+                </li>
+                <li class="nav__item">
+                    <a href="aplicacion.html" class="nav__link">Aplicación</a>
+                </li>
+                </li>
+                <li class="nav__item">
+                    <a href="tecnologia.html" class="nav__link">Tecnología</a>
+                </li>
+                </li>
+                <li class="nav__item">
+                    <a href="equipo.html" class="nav__link">Equipo</a>
+                </li>
+            </ul>
+            <button class="nav__toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero__decoration hero__decoration--1"></div>
+        <div class="hero__decoration hero__decoration--2"></div>
+        <div class="hero__decoration hero__decoration--3"></div>
+
+        <div class="container">
+            <div class="hero__wrapper"
+                style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; min-height: auto; padding: 100px 0 60px;">
+
+                <!-- Contenido texto -->
+                <div class="hero__content fade-in" style="max-width: 540px; position: relative; z-index: 2;">
+                    <span
+                        style="display: inline-block; padding: 8px 16px; background: #E6E6FA; color: #321e92; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 24px; letter-spacing: 0.5px;">
+                        🚀 Proyecto DAM 2025
+                    </span>
+
+                    <h1 class="hero__title"
+                        style="font-size: 3.2rem; line-height: 1.1; margin-bottom: 24px; color: #321e92;">
+                        Servicios locales,<br>
+                        <span style="color: #7864D7;">soluciones reales</span>
+                    </h1>
+
+                    <p class="hero__subtitle"
+                        style="font-size: 1.15rem; line-height: 1.7; color: #555; margin-bottom: 16px;">
+                        iMirly conecta a personas que necesitan un servicio con profesionales que lo ofrecen, de forma
+                        <strong>sencilla, cercana y organizada</strong>.
+                    </p>
+
+                    <p class="hero__text"
+                        style="font-size: 1rem; color: #777; margin-bottom: 32px; font-style: italic;">
+                        "Todos necesitamos arreglar un enchufe alguna vez. iMirly nace para hacer ese proceso más fácil,
+                        rápido y humano."
+                    </p>
+
+                    <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+                        <a href="index.html#idea" class="btn btn--primary" style="padding: 14px 32px; font-size: 1rem;">
+                            Conoce el proyecto
+                        </a>
+                        <a href="diseno-ux.html#figma" class="btn btn--secondary"
+                            style="padding: 14px 32px; font-size: 1rem; background: transparent; border: 2px solid #7864D7; color: #7864D7;">
+                            Ver prototipo en Figma
+                        </a>
+                    </div>
+
+                    <!-- Stats -->
+                    <div
+                        style="display: flex; gap: 40px; margin-top: 48px; padding-top: 32px; border-top: 1px solid #E6E6FA;">
+                        <div>
+                            <span style="display: block; font-size: 2rem; font-weight: 700; color: #321e92;">4</span>
+                            <span style="font-size: 0.9rem; color: #777;">Desarrolladores</span>
+                        </div>
+                        <div>
+                            <span style="display: block; font-size: 2rem; font-weight: 700; color: #321e92;">2</span>
+                            <span style="font-size: 0.9rem; color: #777;">Plataformas</span>
+                        </div>
+                        <div>
+                            <span style="display: block; font-size: 2rem; font-weight: 700; color: #321e92;">1</span>
+                            <span style="font-size: 0.9rem; color: #777;">Proyecto real</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mockup de App Móvil - Posicionado arriba -->
+                <div class="hero__mockup fade-in"
+                    style="display: flex; justify-content: center; align-items: flex-start; position: relative; margin-top: -40px;">
+
+                    <!-- Círculos decorativos de fondo -->
+                    <div
+                        style="position: absolute; width: 420px; height: 420px; border-radius: 50%; background: linear-gradient(135deg, #E6E6FA 0%, #F0FFF0 100%); opacity: 0.5; top: 20px; z-index: 0;">
+                    </div>
+                    <div
+                        style="position: absolute; width: 300px; height: 300px; border-radius: 50%; border: 2px dashed #7864D7; opacity: 0.3; top: 80px; animation: spin 20s linear infinite; z-index: 0;">
+                    </div>
+
+                    <!-- Teléfono móvil -->
+                    <svg viewBox="0 0 300 560"
+                        style="width: 220px; height: auto; filter: drop-shadow(0 25px 50px rgba(50, 30, 146, 0.25)); position: relative; z-index: 1;">
+                        <!-- Marco del teléfono -->
+                        <rect x="10" y="10" width="280" height="540" rx="35" fill="#2D2D2D" />
+                        <rect x="15" y="15" width="270" height="530" rx="30" fill="#1a1a1a" />
+
+                        <!-- Pantalla -->
+                        <rect x="25" y="35" width="250" height="490" rx="20" fill="#ffffff" />
+
+                        <!-- Notch -->
+                        <path d="M 110 35 L 110 50 Q 110 55 115 55 L 185 55 Q 190 55 190 50 L 190 35 Z"
+                            fill="#1a1a1a" />
+
+                        <!-- Status Bar -->
+                        <rect x="25" y="35" width="250" height="30" rx="20" fill="#321e92" />
+                        <text x="45" y="55" fill="white" font-size="10" font-family="Inter, sans-serif"
+                            font-weight="600">9:41</text>
+                        <text x="245" y="55" fill="white" font-size="10" font-family="Inter, sans-serif"
+                            text-anchor="end">📶 🔋</text>
+
+                        <!-- Header App -->
+                        <rect x="25" y="65" width="250" height="55" fill="#321e92" />
+                        <text x="150" y="98" fill="white" font-size="17" font-family="Inter, sans-serif"
+                            font-weight="700" text-anchor="middle">iMirly</text>
+
+                        <!-- Search Bar -->
+                        <rect x="40" y="130" width="220" height="34" rx="17" fill="#F1F1F1" />
+                        <text x="60" y="152" fill="#999" font-size="11" font-family="Inter, sans-serif">🔍 Buscar
+                            servicios...</text>
+
+                        <!-- Categorías -->
+                        <rect x="40" y="178" width="52" height="52" rx="12" fill="#E6E6FA" />
+                        <text x="66" y="210" fill="#7864D7" font-size="17" text-anchor="middle">🔧</text>
+
+                        <rect x="102" y="178" width="52" height="52" rx="12" fill="#F0FFF0" />
+                        <text x="128" y="210" fill="#4CAF50" font-size="17" text-anchor="middle">🌿</text>
+
+                        <rect x="164" y="178" width="52" height="52" rx="12" fill="#FFF8E1" />
+                        <text x="190" y="210" fill="#FF9800" font-size="17" text-anchor="middle">🧹</text>
+
+                        <!-- Cards de servicios -->
+                        <rect x="40" y="245" width="220" height="72" rx="12" fill="white" stroke="#E6E6FA"
+                            stroke-width="2" />
+                        <rect x="52" y="257" width="42" height="42" rx="8" fill="#E6E6FA" />
+                        <text x="73" y="282" fill="#7864D7" font-size="15" text-anchor="middle">👤</text>
+                        <rect x="105" y="265" width="85" height="8" rx="4" fill="#321e92" opacity="0.8" />
+                        <rect x="105" y="278" width="65" height="6" rx="3" fill="#999" opacity="0.5" />
+                        <rect x="105" y="290" width="45" height="6" rx="3" fill="#999" opacity="0.3" />
+
+                        <rect x="40" y="328" width="220" height="72" rx="12" fill="white" stroke="#E6E6FA"
+                            stroke-width="2" />
+                        <rect x="52" y="340" width="42" height="42" rx="8" fill="#F0FFF0" />
+                        <text x="73" y="365" fill="#4CAF50" font-size="15" text-anchor="middle">👤</text>
+                        <rect x="105" y="348" width="85" height="8" rx="4" fill="#321e92" opacity="0.8" />
+                        <rect x="105" y="361" width="65" height="6" rx="3" fill="#999" opacity="0.5" />
+                        <rect x="105" y="373" width="45" height="6" rx="3" fill="#999" opacity="0.3" />
+
+                        <!-- Bottom Navigation -->
+                        <rect x="25" y="475" width="250" height="50" fill="white" />
+                        <line x1="25" y1="475" x2="275" y2="475" stroke="#E6E6FA" stroke-width="2" />
+                        <circle cx="75" cy="500" r="5" fill="#7864D7" />
+                        <circle cx="150" cy="500" r="5" fill="#ccc" />
+                        <circle cx="225" cy="500" r="5" fill="#ccc" />
+
+                        <!-- Home Indicator -->
+                        <rect x="120" y="515" width="60" height="4" rx="2" fill="#1a1a1a" opacity="0.3" />
+                    </svg>
+
+                    <!-- Elementos flotantes - Reposicionados más arriba -->
+                    <div
+                        style="position: absolute; top: 60px; right: 0px; padding: 10px 16px; background: white; border-radius: 10px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); animation: float 3s ease-in-out infinite; z-index: 2;">
+                        <span style="font-size: 1.2rem;">⭐</span>
+                        <span style="font-size: 0.75rem; color: #321e92; font-weight: 600; margin-left: 6px;">4.8</span>
+                    </div>
+
+                    <div
+                        style="position: absolute; bottom: 100px; left: -10px; padding: 10px 16px; background: white; border-radius: 10px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); animation: float 3s ease-in-out infinite 0.5s; z-index: 2;">
+                        <span style="font-size: 0.75rem; color: #4CAF50; font-weight: 600;">✓ Verificado</span>
+                    </div>
+
+                    <div
+                        style="position: absolute; top: 180px; left: -20px; padding: 8px 14px; background: #321e92; border-radius: 16px; box-shadow: 0 8px 25px rgba(50,30,146,0.3); animation: float 3s ease-in-out infinite 1s; z-index: 2;">
+                        <span style="font-size: 0.7rem; color: white; font-weight: 600;">+50 servicios</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- La Idea Section -->
+    <section class="section section--idea" id="idea">
+        <div class="container">
+            <div class="section__header fade-in">
+                <span class="section__tag">Concepto</span>
+                <h2 class="section__title">La idea</h2>
+                <p class="section__description">
+                    iMirly es una aplicación móvil pensada como un marketplace de servicios locales. Permite a los
+                    usuarios encontrar, ofrecer y contratar servicios de forma directa, sin intermediarios complejos y
+                    con una experiencia clara y accesible.
+                </p>
+            </div>
+            <div class="features">
+                <div class="feature-card fade-in">
+                    <div class="feature-card__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21L16.65 16.65" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-card__title">Buscar servicios</h3>
+                    <p class="feature-card__text">Encuentra exactamente lo que necesitas según tu necesidad específica
+                    </p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-card__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-card__title">Filtrar por tipo</h3>
+                    <p class="feature-card__text">Navega por categorías y subcategorías de forma organizada</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-card__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" />
+                            <line x1="9" y1="9" x2="15" y2="9" />
+                            <line x1="9" y1="13" x2="15" y2="13" />
+                            <line x1="9" y1="17" x2="11" y2="17" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-card__title">Información clara</h3>
+                    <p class="feature-card__text">Visualiza anuncios con datos claros y estructurados</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-card__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-card__title">Contacto directo</h3>
+                    <p class="feature-card__text">Comunícate directamente con el anunciante sin intermediarios</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- El Problema Section -->
+    <section class="section section--problem" id="problem">
+        <div class="container">
+            <div class="section__header fade-in">
+                <span class="section__tag">Contexto</span>
+                <h2 class="section__title">¿Por qué iMirly?</h2>
+                <p class="section__description">
+                    Existen muchas plataformas de compra-venta generalistas, pero no están pensadas específicamente para
+                    servicios. Esto provoca anuncios mal clasificados, confusión y una mala experiencia de usuario.
+                </p>
+            </div>
+            <div class="problem-grid">
+                <div class="problem-card fade-in">
+                    <div class="problem-card__number">01</div>
+                    <h3 class="problem-card__title">Demanda real</h3>
+                    <p class="problem-card__text">Necesidad constante de servicios locales: reparaciones, clases,
+                        cuidado personal, diseño...</p>
+                </div>
+                <div class="problem-card fade-in">
+                    <div class="problem-card__number">02</div>
+                    <h3 class="problem-card__title">Soluciones digitales</h3>
+                    <p class="problem-card__text">Cada vez más personas buscan respuestas rápidas a través de
+                        aplicaciones</p>
+                </div>
+                <div class="problem-card fade-in">
+                    <div class="problem-card__number">03</div>
+                    <h3 class="problem-card__title">Visibilidad</h3>
+                    <p class="problem-card__text">Profesionales y autónomos necesitan darse a conocer sin grandes costes
+                    </p>
+                </div>
+                <div class="problem-card fade-in">
+                    <div class="problem-card__number">04</div>
+                    <h3 class="problem-card__title">Falta de especialización</h3>
+                    <p class="problem-card__text">No existen plataformas claras y dedicadas exclusivamente a servicios
+                    </p>
+                </div>
+                <div class="problem-card fade-in">
+                    <div class="problem-card__number">05</div>
+                    <h3 class="problem-card__title">Impacto juvenil</h3>
+                    <p class="problem-card__text">Especial relevancia para jóvenes y nuevas contrataciones de vivienda
+                    </p>
+                </div>
+
+
+                <div class="problem-card fade-in">
+                    <div class="problem-card__number">08</div>
+                    <h3 class="problem-card__title">Precios poco transparentes</h3>
+                    <p class="problem-card__text">Falta de estándares claros en cotizaciones genera desconfianza y
+                        conflictos entre clientes y profesionales</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Propuesta de Valor Section -->
+    <section class="section section--value" id="value">
+        <div class="container">
+            <div class="section__header fade-in">
+                <span class="section__tag">Diferencial</span>
+                <h2 class="section__title">¿Qué aporta iMirly?</h2>
+            </div>
+
+            <div class="value-grid"
+                style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-bottom: 48px;">
+                <!-- Fila 1 -->
+                <div class="value-item fade-in"
+                    style="display: flex; align-items: flex-start; gap: 16px; padding: 20px; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                    <div class="value-item__icon"
+                        style="flex-shrink: 0; width: 48px; height: 48px; background: #E8F5E9; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #4CAF50;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            style="width: 24px; height: 24px;">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="value-item__title"
+                            style="font-size: 1rem; font-weight: 600; color: #321e92; margin-bottom: 8px;">Plataforma
+                            especializada</h3>
+                        <p class="value-item__text"
+                            style="font-size: 0.9rem; color: #666; line-height: 1.5; margin: 0;">Diseñada exclusivamente
+                            para servicios, no una adaptación generalista</p>
+                    </div>
+                </div>
+
+                <div class="value-item fade-in"
+                    style="display: flex; align-items: flex-start; gap: 16px; padding: 20px; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                    <div class="value-item__icon"
+                        style="flex-shrink: 0; width: 48px; height: 48px; background: #E8F5E9; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #4CAF50;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            style="width: 24px; height: 24px;">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="value-item__title"
+                            style="font-size: 1rem; font-weight: 600; color: #321e92; margin-bottom: 8px;">Enfoque local
+                        </h3>
+                        <p class="value-item__text"
+                            style="font-size: 0.9rem; color: #666; line-height: 1.5; margin: 0;">Proximidad geográfica y
+                            confianza comunitaria</p>
+                    </div>
+                </div>
+
+                <div class="value-item fade-in"
+                    style="display: flex; align-items: flex-start; gap: 16px; padding: 20px; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                    <div class="value-item__icon"
+                        style="flex-shrink: 0; width: 48px; height: 48px; background: #E8F5E9; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #4CAF50;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            style="width: 24px; height: 24px;">
+                            <rect x="3" y="3" width="18" height="18" rx="2" />
+                            <path d="M9 12l2 2 4-4" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="value-item__title"
+                            style="font-size: 1rem; font-weight: 600; color: #321e92; margin-bottom: 8px;">Diseño
+                            accesible</h3>
+                        <p class="value-item__text"
+                            style="font-size: 0.9rem; color: #666; line-height: 1.5; margin: 0;">Interfaz clara,
+                            intuitiva y centrada en el usuario</p>
+                    </div>
+                </div>
+
+                <div class="value-item fade-in"
+                    style="display: flex; align-items: flex-start; gap: 16px; padding: 20px; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                    <div class="value-item__icon"
+                        style="flex-shrink: 0; width: 48px; height: 48px; background: #E8F5E9; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #4CAF50;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            style="width: 24px; height: 24px;">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="value-item__title"
+                            style="font-size: 1rem; font-weight: 600; color: #321e92; margin-bottom: 8px;">Contacto
+                            directo</h3>
+                        <p class="value-item__text"
+                            style="font-size: 0.9rem; color: #666; line-height: 1.5; margin: 0;">Transparencia total en
+                            la comunicación entre partes</p>
+                    </div>
+                </div>
+
+                <!-- Fila 2 -->
+                <div class="value-item fade-in"
+                    style="display: flex; align-items: flex-start; gap: 16px; padding: 20px; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                    <div class="value-item__icon"
+                        style="flex-shrink: 0; width: 48px; height: 48px; background: #E8F5E9; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #4CAF50;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            style="width: 24px; height: 24px;">
+                            <path
+                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="value-item__title"
+                            style="font-size: 1rem; font-weight: 600; color: #321e92; margin-bottom: 8px;">Impacto
+                            social</h3>
+                        <p class="value-item__text"
+                            style="font-size: 0.9rem; color: #666; line-height: 1.5; margin: 0;">Fortalecimiento de la
+                            economía local y comunitaria</p>
+                    </div>
+                </div>
+
+                <div class="value-item fade-in"
+                    style="display: flex; align-items: flex-start; gap: 16px; padding: 20px; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                    <div class="value-item__icon"
+                        style="flex-shrink: 0; width: 48px; height: 48px; background: #E8F5E9; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #4CAF50;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            style="width: 24px; height: 24px;">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            <path d="M9 12l2 2 4-4" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="value-item__title"
+                            style="font-size: 1rem; font-weight: 600; color: #321e92; margin-bottom: 8px;">Confianza
+                            verificada</h3>
+                        <p class="value-item__text"
+                            style="font-size: 0.9rem; color: #666; line-height: 1.5; margin: 0;">Sistema de valoraciones
+                            y reputación que construye seguridad mutua entre usuarios</p>
+                    </div>
+                </div>
+
+                <div class="value-item fade-in"
+                    style="display: flex; align-items: flex-start; gap: 16px; padding: 20px; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                    <div class="value-item__icon"
+                        style="flex-shrink: 0; width: 48px; height: 48px; background: #E8F5E9; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #4CAF50;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            style="width: 24px; height: 24px;">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                            <line x1="9" y1="10" x2="15" y2="10" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="value-item__title"
+                            style="font-size: 1rem; font-weight: 600; color: #321e92; margin-bottom: 8px;">Chat
+                            integrado</h3>
+                        <p class="value-item__text"
+                            style="font-size: 0.9rem; color: #666; line-height: 1.5; margin: 0;">Comunicación
+                            centralizada dentro de la app para organizar todos los detalles del servicio</p>
+                    </div>
+                </div>
+
+                <div class="value-item fade-in"
+                    style="display: flex; align-items: flex-start; gap: 16px; padding: 20px; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                    <div class="value-item__icon"
+                        style="flex-shrink: 0; width: 48px; height: 48px; background: #E8F5E9; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #4CAF50;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            style="width: 24px; height: 24px;">
+                            <line x1="12" y1="1" x2="12" y2="23" />
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="value-item__title"
+                            style="font-size: 1rem; font-weight: 600; color: #321e92; margin-bottom: 8px;">Precios
+                            claros</h3>
+                        <p class="value-item__text"
+                            style="font-size: 0.9rem; color: #666; line-height: 1.5; margin: 0;">Transparencia en
+                            cotizaciones y tarifas para evitar sorpresas y malentendidos</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quote fade-in">
+                <blockquote class="quote__text">
+                    "iMirly no es solo una app de servicios, es una red de confianza local."
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- Misión y Objetivos Section -->
+    <section class="section section--mission" id="mission">
+        <div class="container">
+            <div class="mission-wrapper">
+                <div class="mission-block fade-in">
+                    <span class="section__tag">Propósito</span>
+                    <h2 class="section__title">Nuestra misión</h2>
+                    <p class="mission__text">
+                        Crear una plataforma digital sencilla, accesible y eficaz que conecte personas con servicios de
+                        forma directa, segura y organizada, facilitando oportunidades tanto para clientes como para
+                        proveedores.
+                    </p>
+                </div>
+                <div class="objectives-block fade-in">
+                    <span class="section__tag">Metas</span>
+                    <h2 class="section__title">Objetivos</h2>
+                    <ul class="objectives__list">
+                        <li class="objective-item">
+                            <span class="objective-item__check">✓</span>
+                            <span class="objective-item__text">Desarrollar una app Android funcional</span>
+                        </li>
+                        <li class="objective-item">
+                            <span class="objective-item__check">✓</span>
+                            <span class="objective-item__text">Implantación inicial en Granada y área
+                                metropolitana</span>
+                        </li>
+                        <li class="objective-item">
+                            <span class="objective-item__check">✓</span>
+                            <span class="objective-item__text">Publicación y visualización de anuncios de
+                                servicios</span>
+                        </li>
+                        <li class="objective-item">
+                            <span class="objective-item__check">✓</span>
+                            <span class="objective-item__text">Experiencia de usuario clara y atractiva</span>
+                        </li>
+                        <li class="objective-item">
+                            <span class="objective-item__check">✓</span>
+                            <span class="objective-item__text">Primera base de usuarios en fase de pruebas</span>
+                        </li>
+                        <li class="objective-item">
+                            <span class="objective-item__check">✓</span>
+                            <span class="objective-item__text">Bases para futura ampliación y monetización</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipo Section -->
+    <section class="section section--team" id="team">
+        <div class="container">
+            <div class="section__header fade-in">
+                <span class="section__tag">Nosotros</span>
+                <h2 class="section__title">El equipo</h2>
+                <p class="section__description">
+                    iMirly está desarrollado por un equipo de cuatro personas, estudiantes del ciclo de Desarrollo de
+                    Aplicaciones Multiplataforma (DAM), implicados en todas las fases del proyecto.
+                </p>
+            </div>
+            <div class="team-grid">
+                <div class="team-card fade-in">
+                    <div class="team-card__avatar"
+                        style="background: linear-gradient(135deg, #D7D1F3 0%, #7864D7 100%);">
+                        <span>EL</span>
+                    </div>
+                    <h3 class="team-card__name">Eva Gallardo Romero</h3>
+                    <p class="team-card__role">Desarrolladora de aplicaciones y programadora en formación</p>
+                    <p class="team-card__text">Front, lógica de negocio y estructuración técnica</p>
+                </div>
+                <div class="team-card fade-in">
+                    <div class="team-card__avatar"
+                        style="background: linear-gradient(135deg, #7864D7 0%, #321E92 100%);">
+                        <span>AN</span>
+                    </div>
+                    <h3 class="team-card__name">Ana Núñez Rejón</h3>
+                    <p class="team-card__role">Diseñadora gráfica y desarrolladora en formación</p>
+                    <p class="team-card__text">UX/UI, diseño visual y desarrollo técnico</p>
+                </div>
+                <div class="team-card fade-in">
+                    <div class="team-card__avatar"
+                        style="background: linear-gradient(135deg, #D7D1F3 0%, #7864D7 100%);">
+                        <span>NC</span>
+                    </div>
+                    <h3 class="team-card__name">Nicolás Corbi De Gracia</h3>
+                    <p class="team-card__role">Programador full-stack en formación</p>
+                    <p class="team-card__text">Backend, lógica de aplicación y estructura técnica</p>
+                </div>
+                <div class="team-card fade-in">
+                    <div class="team-card__avatar"
+                        style="background: linear-gradient(135deg, #7864D7 0%, #321E92 100%);">
+                        <span>AM</span>
+                    </div>
+                    <h3 class="team-card__name">Ángel Millán Aragón</h3>
+                    <p class="team-card__role">Desarrollador multiplataforma en formación</p>
+                    <p class="team-card__text">Coordinación del proyecto y desarrollo técnico</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <span class="footer__logo">iMirly</span>
+                    <p class="footer__text">Proyecto académico DAM</p>
+                </div>
+                <div class="footer__info">
+                    <p class="footer__location">Granada, España</p>
+                    <p class="footer__note">Presentación del proyecto</p>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 iMirly. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

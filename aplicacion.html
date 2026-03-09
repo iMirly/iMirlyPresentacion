@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Aplicación - iMirly</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header / Navbar -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">iMirly</a>
+            <ul class="nav__menu">
+                <li class="nav__item">
+                    <a href="index.html" class="nav__link">Inicio</a>
+                </li>
+                <li class="nav__item">
+                    <a href="mercado-y-estrategia.html" class="nav__link">Mercado y estrategia</a>
+                </li>
+                <li class="nav__item">
+                    <a href="diseno-ux.html" class="nav__link">Diseño & UX</a>
+                </li>
+                <li class="nav__item">
+                    <a href="aplicacion.html" class="nav__link active">Aplicación</a>
+                </li>
+                <li class="nav__item">
+                    <a href="tecnologia.html" class="nav__link">Tecnología</a>
+                </li>
+                <li class="nav__item">
+                    <a href="equipo.html" class="nav__link">Equipo</a>
+                </li>
+            </ul>
+            <button class="nav__toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <<section class="hero hero--secondary">
+    <div class="hero__decoration hero__decoration--1"></div>
+    <div class="hero__decoration hero__decoration--2"></div>
+    <div class="container">
+        <div class="hero__wrapper" style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;">
+            <!-- Contenido texto -->
+            <div class="hero__content fade-in">
+                <span class="section__tag">Frontend</span>
+                <h1 class="hero__title">La aplicación iMirly</h1>
+                <p class="hero__subtitle">
+                    Una app móvil pensada para conectar personas y servicios de forma sencilla y directa.
+                </p>
+                <p class="hero__text">
+                    iMirly se ha desarrollado como una aplicación móvil funcional, orientada a facilitar la búsqueda y publicación de servicios locales desde el smartphone.
+                </p>
+            </div>
+
+            <!-- Imagen a la derecha - PON TU RUTA AQUÍ -->
+            <div class="hero__image fade-in" style="display: flex; justify-content: center; align-items: center;">
+                <img src="./assets/img/maquetaimirly.jpg" alt="Aplicación móvil iMirly" style="max-width: 100%; height: auto; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Tipo de Aplicación -->
+    <section class="section section--concept" id="tipo-aplicacion">
+        <div class="container">
+            <div class="section__header fade-in">
+                <span class="section__tag">Definición</span>
+                <h2 class="section__title">¿Qué tipo de aplicación es iMirly?</h2>
+                <p class="section__description">
+                    iMirly es una aplicación móvil de tipo marketplace de servicios, donde conviven dos perfiles principales: personas que buscan servicios y personas que los ofrecen.
+                </p>
+            </div>
+            <div class="concept-grid">
+                <div class="concept-card fade-in">
+                    <div class="concept-card__visual concept-card__visual--clean">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 48px; height: 48px; color: #7864D7;">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                            <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                        </svg>
+                    </div>
+                    <h3 class="concept-card__title">Aplicación móvil Android</h3>
+                    <p class="concept-card__text">Desarrollada nativamente para dispositivos Android, garantizando compatibilidad y rendimiento óptimo en smartphones.</p>
+                </div>
+                <div class="concept-card fade-in">
+                    <div class="concept-card__visual concept-card__visual--clear">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 48px; height: 48px; color: #7864D7;">
+                            <path d="M3 3h18v18H3zM9 3v18M15 3v18M3 9h18M3 15h18"></path>
+                        </svg>
+                    </div>
+                    <h3 class="concept-card__title">Enfoque marketplace</h3>
+                    <p class="concept-card__text">Modelo de negocio que conecta oferta y demanda de servicios en un único espacio digital.</p>
+                </div>
+                <div class="concept-card fade-in">
+                    <div class="concept-card__visual concept-card__visual--friendly">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 48px; height: 48px; color: #7864D7;">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                    </div>
+                    <h3 class="concept-card__title">Servicios locales</h3>
+                    <p class="concept-card__text">Especializada en servicios de proximidad que se prestan de forma presencial en la zona del usuario.</p>
+                </div>
+                <div class="concept-card fade-in">
+                    <div class="concept-card__visual concept-card__visual--modern">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 48px; height: 48px; color: #7864D7;">
+                            <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path>
+                        </svg>
+                    </div>
+                    <h3 class="concept-card__title">Uso sencillo e intuitivo</h3>
+                    <p class="concept-card__text">Interfaz diseñada para minimizar la curva de aprendizaje y maximizar la usabilidad desde el primer uso.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Funcionalidades Principales -->
+    <section class="section section--ux" id="funcionalidades">
+        <div class="container">
+            <div class="section__header fade-in">
+                <span class="section__tag">Características</span>
+                <h2 class="section__title">Funcionalidades principales</h2>
+                <p class="section__description">
+                    Estas funcionalidades constituyen el núcleo de la aplicación y permiten validar el funcionamiento real del proyecto.
+                </p>
+            </div>
+            <div class="ux-pillars">
+                <div class="ux-pillar fade-in">
+                    <div class="ux-pillar__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                    <h3 class="ux-pillar__title">Registro e inicio de sesión</h3>
+                    <ul class="ux-pillar__list">
+                        <li>Creación de cuentas personales</li>
+                        <li>Autenticación segura de usuarios</li>
+                        <li>Gestión de perfiles diferenciados</li>
+                    </ul>
+                </div>
+                <div class="ux-pillar fade-in">
+                    <div class="ux-pillar__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="ux-pillar__title">Publicación de anuncios</h3>
+                    <ul class="ux-pillar__list">
+                        <li>Creación de servicios detallados</li>
+                        <li>Inclusión de descripción y categoría</li>
+                        <li>Datos de contacto del proveedor</li>
+                    </ul>
+                </div>
+                <div class="ux-pillar fade-in">
+                    <div class="ux-pillar__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="14" width="7" height="7"></rect>
+                            <rect x="3" y="14" width="7" height="7"></rect>
+                        </svg>
+                    </div>
+                    <h3 class="ux-pillar__title">Visualización de servicios</h3>
+                    <ul class="ux-pillar__list">
+                        <li>Listado completo de anuncios</li>
+                        <li>Información relevante organizada</li>
+                        <li>Presentación clara y estructurada</li>
+                    </ul>
+                </div>
+                <div class="ux-pillar fade-in">
+                    <div class="ux-pillar__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="ux-pillar__title">Navegación por categorías</h3>
+                    <ul class="ux-pillar__list">
+                        <li>Sistema de categorías jerárquico</li>
+                        <li>Subcategorías especializadas</li>
+                        <li>Búsqueda filtrada por necesidad</li>
+                    </ul>
+                </div>
+                <div class="ux-pillar fade-in">
+                    <div class="ux-pillar__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                    </div>
+                    <h3 class="ux-pillar__title">Información del servicio</h3>
+                    <ul class="ux-pillar__list">
+                        <li>Vista detallada del anuncio</li>
+                        <li>Datos completos del proveedor</li>
+                        <li>Información para valorar el servicio</li>
+                    </ul>
+                </div>
+                <div class="ux-pillar fade-in">
+                    <div class="ux-pillar__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="ux-pillar__title">Contacto directo</h3>
+                    <ul class="ux-pillar__list">
+                        <li>Comunicación entre usuarios</li>
+                        <li>Acuerdo de términos directo</li>
+                        <li>Gestión sin intermediarios</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flujo de Uso -->
+    <section class="section section--wireframes" id="flujo-uso">
+        <div class="container">
+            <div class="section__header fade-in">
+                <span class="section__tag">User Flow</span>
+                <h2 class="section__title">Flujo de uso de la aplicación</h2>
+                <p class="section__description">
+                    El flujo de uso se ha diseñado para reducir pasos innecesarios y facilitar una experiencia rápida y comprensible.
+                </p>
+            </div>
+
+            <div class="wireframe-block fade-in">
+                <div class="wireframe-block__content">
+                    <h3 class="wireframe-block__title">01. Acceso a la aplicación</h3>
+                    <p class="wireframe-block__text">
+                        El usuario abre iMirly en su dispositivo móvil y accede al sistema mediante sus credenciales o como visitante para explorar los servicios disponibles.
+                    </p>
+                </div>
+                <div class="wireframe-block__image">
+                    <div class="flow-step__visual">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#7864D7" stroke-width="2" style="width: 64px; height: 64px;">
+                            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+                            <polyline points="10 17 15 12 10 7"></polyline>
+                            <line x1="15" y1="12" x2="3" y2="12"></line>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wireframe-block wireframe-block--reverse fade-in">
+                <div class="wireframe-block__content">
+                    <h3 class="wireframe-block__title">02. Exploración o publicación</h3>
+                    <p class="wireframe-block__text">
+                        El usuario decide su rol: buscar servicios existentes que necesita o publicar uno nuevo que desea ofrecer a la comunidad.
+                    </p>
+                </div>
+                <div class="wireframe-block__image">
+                    <div class="flow-step__visual">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#7864D7" stroke-width="2" style="width: 64px; height: 64px;">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            <line x1="11" y1="8" x2="11" y2="14"></line>
+                            <line x1="8" y1="11" x2="14" y2="11"></line>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wireframe-block fade-in">
+                <div class="wireframe-block__content">
+                    <h3 class="wireframe-block__title">03. Filtrado por categoría</h3>
+                    <p class="wireframe-block__text">
+                        Navegación mediante filtros de categoría y subcategoría para encontrar servicios específicos según la necesidad particular del usuario.
+                    </p>
+                </div>
+                <div class="wireframe-block__image">
+                    <div class="flow-step__visual">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#7864D7" stroke-width="2" style="width: 64px; height: 64px;">
+                            <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wireframe-block wireframe-block--reverse fade-in">
+                <div class="wireframe-block__content">
+                    <h3 class="wireframe-block__title">04. Consulta de información</h3>
+                    <p class="wireframe-block__text">
+                        Revisión detallada del anuncio seleccionado para conocer todas las características del servicio, precio y datos del proveedor.
+                    </p>
+                </div>
+                <div class="wireframe-block__image">
+                    <div class="flow-step__visual">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#7864D7" stroke-width="2" style="width: 64px; height: 64px;">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wireframe-block fade-in">
+                <div class="wireframe-block__content">
+                    <h3 class="wireframe-block__title">05. Contacto con el proveedor</h3>
+                    <p class="wireframe-block__text">
+                        Establecimiento de comunicación directa para acordar términos, precio, fecha y detalles específicos del servicio a contratar.
+                    </p>
+                </div>
+                <div class="wireframe-block__image">
+                    <div class="flow-step__visual">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#7864D7" stroke-width="2" style="width: 64px; height: 64px;">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enfoque Frontend -->
+    <section class="section section--ui" id="frontend">
+        <div class="container">
+            <div class="section__header fade-in">
+                <span class="section__tag">Desarrollo</span>
+                <h2 class="section__title">Enfoque frontend</h2>
+                <p class="section__description">
+                    El desarrollo del frontend de iMirly se ha centrado en ofrecer una experiencia fluida, clara y coherente con el diseño planteado.
+                </p>
+            </div>
+            <div class="ui-showcase">
+                <div class="ui-element fade-in">
+                    <div class="ui-element__preview">
+                        <div class="ui-card ui-card--clean">
+                            <div class="ui-card__content" style="padding: 24px;">
+                                <div style="width: 100%; height: 8px; background: #E6E6FA; border-radius: 4px; margin-bottom: 12px;"></div>
+                                <div style="width: 80%; height: 8px; background: #F1F1F1; border-radius: 4px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui-element__info">
+                        <h4>Interfaz limpia</h4>
+                        <p>Diseño sin elementos superfluos que distraigan del objetivo principal</p>
+                    </div>
+                </div>
+                <div class="ui-element fade-in">
+                    <div class="ui-element__preview">
+                        <div class="ui-hierarchy" style="flex-direction: row; gap: 8px; justify-content: center;">
+                            <div style="width: 40px; height: 40px; background: #7864D7; border-radius: 8px;"></div>
+                            <div style="width: 40px; height: 40px; background: #321e92; border-radius: 8px;"></div>
+                            <div style="width: 40px; height: 40px; background: #E6E6FA; border-radius: 8px;"></div>
+                        </div>
+                    </div>
+                    <div class="ui-element__info">
+                        <h4>Navegación sencilla</h4>
+                        <p>Estructura intuitiva que permite moverse entre pantallas sin confusión</p>
+                    </div>
+                </div>
+                <div class="ui-element fade-in">
+                    <div class="ui-element__preview">
+                        <div class="ui-buttons" style="flex-direction: column; gap: 12px;">
+                            <div style="width: 100px; height: 36px; background: #7864D7; border-radius: 20px;"></div>
+                            <div style="width: 100px; height: 36px; border: 2px solid #7864D7; border-radius: 20px;"></div>
+                        </div>
+                    </div>
+                    <div class="ui-element__info">
+                        <h4>Uso orientado a móvil</h4>
+                        <p>Interacciones optimizadas para pantallas táctiles y dispositivos móviles</p>
+                    </div>
+                </div>
+                <div class="ui-element fade-in">
+                    <div class="ui-element__preview">
+                        <div class="ui-spacing" style="flex-direction: row; gap: 4px; justify-content: center;">
+                            <div style="width: 20px; height: 20px; background: #7864D7; border-radius: 4px;"></div>
+                            <div style="width: 20px; height: 20px; background: #7864D7; border-radius: 4px;"></div>
+                            <div style="width: 20px; height: 20px; background: #7864D7; border-radius: 4px;"></div>
+                        </div>
+                    </div>
+                    <div class="ui-element__info">
+                        <h4>Consistencia visual</h4>
+                        <p>Paleta, tipografías y componentes uniformes en toda la aplicación</p>
+                    </div>
+                </div>
+                <div class="ui-element fade-in" style="grid-column: 1 / -1;">
+                    <div class="ui-element__preview">
+                        <div style="display: flex; align-items: center; justify-content: center; gap: 16px;">
+                            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #E6E6FA 0%, #7864D7 100%); border-radius: 12px;"></div>
+                            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #7864D7 0%, #321e92 100%); border-radius: 12px;"></div>
+                            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #321e92 0%, #1f0e75 100%); border-radius: 12px;"></div>
+                        </div>
+                    </div>
+                    <div class="ui-element__info">
+                        <h4>Preparada para ampliaciones</h4>
+                        <p>Arquitectura modular que facilita la incorporación de nuevas funcionalidades futuras</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stack Tecnológico - Insertar DESPUÉS de "Enfoque Frontend" y ANTES de "MVP" -->
+<section class="section section--research" id="stack-tecnologico">
+    <div class="container">
+        <div class="section__header fade-in">
+            <span class="section__tag">Tecnología</span>
+            <h2 class="section__title">Stack de desarrollo frontend</h2>
+            <p class="section__description">
+                El desarrollo de iMirly se ha construido sobre tecnologías modernas de Android, seleccionadas por su robustez, mantenibilidad y alineación con los estándares actuales de la industria.
+            </p>
+        </div>
+
+        <!-- Android Studio -->
+        <div class="research-context fade-in">
+            <div class="research-context__header">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 32px; height: 32px; color: #7864D7;">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+                <h3 class="research-context__title">Android Studio</h3>
+            </div>
+            <p class="research-context__text">
+                Hemos seleccionado <strong>Android Studio</strong> como entorno de desarrollo integrado (IDE) por ser el estándar oficial de Google para el desarrollo Android. Su integración nativa con el SDK de Android, el emulador integrado y las herramientas de depuración en tiempo real han permitido un flujo de trabajo eficiente y profesional durante todo el ciclo de desarrollo de iMirly.
+            </p>
+        </div>
+
+        <!-- Tres pilares técnicos -->
+        <div class="research-pillars">
+            <div class="research-pillar fade-in">
+                <div class="research-pillar__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 32px; height: 32px;">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                    </svg>
+                </div>
+                <h3 class="research-pillar__title">Jetpack Compose</h3>
+                <p class="research-pillar__text">
+                    Framework moderno de UI declarativa que permite construir interfaces nativas de forma más intuitiva y con menos código boilerplate que el sistema tradicional de Views XML.
+                </p>
+                <p class="research-pillar__insight">
+                    <strong>¿Por qué Compose?</strong> Facilita la creación de componentes reutilizables, garantiza consistencia visual mediante el sistema de diseño y permite previews en tiempo real que aceleran la iteración de interfaces.
+                </p>
+            </div>
+
+            <div class="research-pillar fade-in">
+                <div class="research-pillar__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 32px; height: 32px;">
+                        <polyline points="16 18 22 12 16 6"></polyline>
+                        <polyline points="8 6 2 12 8 18"></polyline>
+                    </svg>
+                </div>
+                <h3 class="research-pillar__title">Kotlin</h3>
+                <p class="research-pillar__text">
+                    Lenguaje de programación oficial recomendado por Google para Android, que ofrece sintaxis concisa, seguridad frente a nulls y completa interoperabilidad con Java.
+                </p>
+                <p class="research-pillar__insight">
+                    <strong>¿Por qué Kotlin?</strong> Código más legible y mantenible, reducción de errores en tiempo de compilación, y soporte nativo para corrutinas que simplifican la programación asíncrona y las llamadas a API.
+                </p>
+            </div>
+
+            <div class="research-pillar fade-in">
+                <div class="research-pillar__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 32px; height: 32px;">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <line x1="4.93" y1="4.93" x2="9.17" y2="9.17"></line>
+                        <line x1="14.83" y1="14.83" x2="19.07" y2="19.07"></line>
+                        <line x1="14.83" y1="9.17" x2="19.07" y2="4.93"></line>
+                        <line x1="14.83" y1="9.17" x2="18.36" y2="5.64"></line>
+                        <line x1="4.93" y1="19.07" x2="9.17" y2="14.83"></line>
+                    </svg>
+                </div>
+                <h3 class="research-pillar__title">Material Theme 3</h3>
+                <p class="research-pillar__text">
+                    Sistema de diseño adaptativo de Google que proporciona componentes UI predefinidos, temas dinámicos y directrices de accesibilidad integradas.
+                </p>
+                <p class="research-pillar__insight">
+                    <strong>¿Por qué Material 3?</strong> Asegura coherencia visual con las aplicaciones Android modernas, incluye soporte para temas dinámicos (Dynamic Color) y componentes accesibles por defecto que cumplen estándares WCAG.
+                </p>
+            </div>
+        </div>
+
+        <!-- Arquitectura -->
+        <div class="palette-description fade-in" style="margin-top: 48px;">
+            <p>La combinación de estas tecnologías conforma una <strong>arquitectura moderna y escalable</strong>: Compose gestiona la capa de presentación con un enfoque reactivo, Kotlin proporciona robustez en la lógica de negocio, y Material Theme 3 unifica la experiencia visual bajo estándares de la industria. Esta stack garantiza que iMirly no solo funcione correctamente hoy, sino que esté preparada para evolucionar con las futuras actualizaciones del ecosistema Android.</p>
+        </div>
+    </div>
+</section>
+
+    <!-- MVP -->
+    <section class="section section--accessibility" id="mvp">
+        <div class="container">
+            <div class="section__header fade-in">
+                <span class="section__tag">Producto</span>
+                <h2 class="section__title">iMirly como producto mínimo viable (MVP)</h2>
+                <p class="section__description">
+                    La aplicación se ha desarrollado como un producto mínimo viable (MVP), con las funcionalidades esenciales necesarias para validar la idea y el uso real por parte de los usuarios.
+                </p>
+            </div>
+            <div class="accessibility-features">
+                <div class="accessibility-feature fade-in">
+                    <div class="accessibility-feature__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <div class="accessibility-feature__text">
+                        <h4>Funcionalidades clave implementadas</h4>
+                        <p>Todas las características esenciales para el funcionamiento básico del marketplace</p>
+                    </div>
+                </div>
+                <div class="accessibility-feature fade-in">
+                    <div class="accessibility-feature__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                        </svg>
+                    </div>
+                    <div class="accessibility-feature__text">
+                        <h4>Base sólida para crecimiento</h4>
+                        <p>Arquitectura preparada para escalar y añadir nuevas capacidades</p>
+                    </div>
+                </div>
+                <div class="accessibility-feature fade-in">
+                    <div class="accessibility-feature__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                        </svg>
+                    </div>
+                    <div class="accessibility-feature__text">
+                        <h4>Validación técnica del proyecto</h4>
+                        <p>Demostración de viabilidad técnica y funcionalidad real</p>
+                    </div>
+                </div>
+                <div class="accessibility-feature fade-in">
+                    <div class="accessibility-feature__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                        </svg>
+                    </div>
+                    <div class="accessibility-feature__text">
+                        <h4>Preparada para iteraciones futuras</h4>
+                        <p>Facilidad para incorporar mejoras basadas en feedback de usuarios</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Valor de la Aplicación -->
+    <section class="section section--value-design" id="valor">
+        <div class="container">
+            <div class="section__header fade-in">
+                <span class="section__tag">Impacto</span>
+                <h2 class="section__title">La aplicación dentro del proyecto</h2>
+            </div>
+            <div class="value-proposition fade-in">
+                <div class="value-proposition__content">
+                    <p class="value-proposition__text">
+                        La aplicación de iMirly demuestra la <strong>viabilidad técnica</strong> del proyecto y su capacidad para convertirse en un producto real, más allá de un ejercicio académico.
+                    </p>
+                    <div class="value-points">
+                        <div class="value-point">
+                            <span class="value-point__number">01</span>
+                            <span class="value-point__text">Producto funcional</span>
+                        </div>
+                        <div class="value-point">
+                            <span class="value-point__number">02</span>
+                            <span class="value-point__text">Código real</span>
+                        </div>
+                        <div class="value-point">
+                            <span class="value-point__number">03</span>
+                            <span class="value-point__text">Experiencia validada</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="value-visual">
+                    <div class="value-visual__element"></div>
+                    <div class="value-visual__element value-visual__element--secondary"></div>
+                    <div class="value-visual__element value-visual__element--tertiary"></div>
+                </div>
+            </div>
+            <div class="quote quote--large fade-in">
+                <blockquote class="quote__text">
+                    "Una aplicación funcional convierte una idea en una solución real."
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cierre de Sección -->
+    <section class="section section--closing" id="cierre">
+        <div class="container">
+            <div class="closing-block fade-in">
+                <div class="closing-block__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                    </svg>
+                </div>
+                <h2 class="closing-block__title">La aplicación iMirly</h2>
+                <p class="closing-block__text">
+                    Materializa la idea del proyecto en un producto usable, funcional y escalable, sentando las bases para su evolución futura.
+                </p>
+                <a href="tecnologia.html" class="btn btn--secondary">
+                    Siguiente sección: Tecnología
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 20px; height: 20px; margin-left: 8px;">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <span class="footer__logo">iMirly</span>
+                    <p class="footer__text">Proyecto académico DAM</p>
+                </div>
+                <div class="footer__info">
+                    <p class="footer__location">Granada, España</p>
+                    <p class="footer__note">Presentación del proyecto</p>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 iMirly. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
