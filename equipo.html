@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Equipo - iMirly</title>
+    <title>Diseño & UX - iMirly</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+<base target="_blank">
 </head>
+
 <body>
     <!-- Header / Navbar -->
     <header class="header" id="header">
@@ -22,16 +26,19 @@
                     <a href="mercado-y-estrategia.html" class="nav__link">Mercado y estrategia</a>
                 </li>
                 <li class="nav__item">
-                    <a href="diseno-ux.html" class="nav__link">Diseño & UX</a>
+                    <a href="diseno-ux.html" class="nav__link active">Diseño & UX</a>
+                </li>
                 </li>
                 <li class="nav__item">
                     <a href="aplicacion.html" class="nav__link">Aplicación</a>
                 </li>
+                </li>
                 <li class="nav__item">
                     <a href="tecnologia.html" class="nav__link">Tecnología</a>
                 </li>
+                </li>
                 <li class="nav__item">
-                    <a href="equipo.html" class="nav__link active">Equipo</a>
+                    <a href="equipo.html" class="nav__link">Equipo</a>
                 </li>
             </ul>
             <button class="nav__toggle" id="nav-toggle">
@@ -44,267 +51,628 @@
 
     <!-- Hero Section -->
     <section class="hero hero--secondary">
-        <div class="hero__decoration hero__decoration--1"></div>
-        <div class="hero__decoration hero__decoration--2"></div>
-        <div class="container">
+    <div class="hero__decoration hero__decoration--1"></div>
+    <div class="hero__decoration hero__decoration--2"></div>
+    <div class="container">
+        <div class="hero__wrapper" style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;">
             <div class="hero__content fade-in">
-                <span class="section__tag">Equipo</span>
-                <h1 class="hero__title">El equipo iMirly</h1>
+                <span class="section__tag">UX/UI</span>
+                <h1 class="hero__title">Diseño & Experiencia de Usuario</h1>
                 <p class="hero__subtitle">
-                    Personas, perfiles y colaboración detrás del proyecto.
+                    Una experiencia clara, cercana y pensada para todos los perfiles de usuario.
                 </p>
                 <p class="hero__text">
-                    iMirly es el resultado del trabajo conjunto de un equipo de cuatro personas, estudiantes del ciclo de Desarrollo de Aplicaciones Multiplataforma (DAM), implicadas activamente en todas las fases del proyecto.
+                    El diseño de iMirly se ha desarrollado con un enfoque centrado en el usuario, priorizando la
+                    claridad, la accesibilidad y la confianza en la contratación de servicios locales.
                 </p>
             </div>
+            <div class="hero__image fade-in" style="display: flex; justify-content: center; align-items: center;">
+                <img src="./assets/img/protptipoaltaimirly.png" alt="Diseño UX/UI de iMirly" style="max-width: 100%; height: auto; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Filosofía de Equipo -->
-    <section class="section section--concept" id="filosofia">
+    <!-- Concepto Visual -->
+    <section class="section section--concept" id="concepto">
         <div class="container">
             <div class="section__header fade-in">
-                <span class="section__tag">Colaboración</span>
-                <h2 class="section__title">Trabajo en equipo y colaboración</h2>
+                <span class="section__tag">Identidad</span>
+                <h2 class="section__title">Concepto visual</h2>
                 <p class="section__description">
-                    El proyecto iMirly se ha desarrollado de forma colaborativa, con una participación activa de todos los miembros en el diseño, desarrollo técnico, planificación y toma de decisiones.
+                    La identidad visual de iMirly busca transmitir cercanía, confianza y simplicidad. Se ha diseñado una
+                    interfaz amable, moderna y fácil de entender, evitando la saturación de información y facilitando la
+                    navegación.
                 </p>
             </div>
             <div class="concept-grid">
                 <div class="concept-card fade-in">
                     <div class="concept-card__visual concept-card__visual--clean">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 48px; height: 48px; color: #7864D7;">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="9" cy="7" r="4"></circle>
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                        </svg>
+                        <div class="visual-element"></div>
+                        <div class="visual-element visual-element--small"></div>
                     </div>
-                    <h3 class="concept-card__title">Reparto equilibrado de tareas</h3>
-                    <p class="concept-card__text">Distribución justa del trabajo según habilidades y disponibilidad de cada miembro</p>
+                    <h3 class="concept-card__title">Diseño limpio</h3>
+                    <p class="concept-card__text">Espacios en blanco que respiran y reducen la carga cognitiva del
+                        usuario</p>
                 </div>
                 <div class="concept-card fade-in">
                     <div class="concept-card__visual concept-card__visual--clear">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 48px; height: 48px; color: #7864D7;">
-                            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
-                        </svg>
+                        <div class="visual-bar"></div>
+                        <div class="visual-bar visual-bar--short"></div>
+                        <div class="visual-bar"></div>
                     </div>
-                    <h3 class="concept-card__title">Comunicación constante</h3>
-                    <p class="concept-card__text">Reuniones regulares y canales de comunicación abiertos para resolver dudas</p>
+                    <h3 class="concept-card__title">Interfaz clara</h3>
+                    <p class="concept-card__text">Jerarquía visual que guía al usuario naturalmente hacia la acción</p>
                 </div>
                 <div class="concept-card fade-in">
                     <div class="concept-card__visual concept-card__visual--friendly">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 48px; height: 48px; color: #7864D7;">
-                            <polyline points="20 6 9 17 4 12"></polyline>
-                        </svg>
+                        <div class="visual-circle"></div>
+                        <div class="visual-arc"></div>
                     </div>
-                    <h3 class="concept-card__title">Trabajo coordinado</h3>
-                    <p class="concept-card__text">Sincronización de esfuerzos para evitar duplicidades y mantener coherencia</p>
+                    <h3 class="concept-card__title">Lenguaje accesible</h3>
+                    <p class="concept-card__text">Formas orgánicas y redondeadas que transmiten cercanía y humanidad</p>
                 </div>
                 <div class="concept-card fade-in">
                     <div class="concept-card__visual concept-card__visual--modern">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 48px; height: 48px; color: #7864D7;">
-                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                        </svg>
+                        <div class="visual-grid">
+                            <div class="visual-grid__item"></div>
+                            <div class="visual-grid__item"></div>
+                            <div class="visual-grid__item"></div>
+                            <div class="visual-grid__item"></div>
+                        </div>
                     </div>
-                    <h3 class="concept-card__title">Visión compartida</h3>
-                    <p class="concept-card__text">Objetivos comunes y alineación en la dirección del proyecto</p>
+                    <h3 class="concept-card__title">Estética moderna</h3>
+                    <p class="concept-card__text">Diseño contemporáneo que transmite profesionalidad sin ser frío</p>
                 </div>
-            </div>
-            <div class="palette-description fade-in" style="margin-top: 48px;">
-                <p>Esta forma de trabajo ha permitido mantener <strong>coherencia, calidad y compromiso</strong> en todo el desarrollo.</p>
             </div>
         </div>
     </section>
 
-    <!-- Miembros del Equipo -->
-    <section class="section section--ux" id="miembros">
+    <!-- Paleta de Colores -->
+    <section class="section section--palette" id="paleta">
         <div class="container">
             <div class="section__header fade-in">
-                <span class="section__tag">Perfiles</span>
-                <h2 class="section__title">Miembros del equipo</h2>
+                <span class="section__tag">Sistema visual</span>
+                <h2 class="section__title">Colores y estilo gráfico</h2>
+            </div>
+            <div class="palette-showcase fade-in">
+                <div class="palette-main">
+                    <div class="palette-color palette-color--primary">
+                        <div class="palette-color__swatch"></div>
+                        <div class="palette-color__info">
+                            <span class="palette-color__name">Lavanda suave</span>
+                            <span class="palette-color__hex">#6c5ce7</span>
+                            <span class="palette-color__use">Identidad y calma</span>
+                        </div>
+                    </div>
+                    <div class="palette-color palette-color--secondary">
+                        <div class="palette-color__swatch"></div>
+                        <div class="palette-color__info">
+                            <span class="palette-color__name">Purple</span>
+                            <span class="palette-color__hex">#3f51b5</span>
+                            <span class="palette-color__use">Acciones y confianza</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="palette-support">
+                    <div class="palette-color palette-color--light">
+                        <div class="palette-color__swatch"></div>
+                        <div class="palette-color__info">
+                            <span class="palette-color__name">Blanco / Gris claro</span>
+                            <span class="palette-color__hex">#F1F1F1</span>
+                            <span class="palette-color__use">Limpieza y claridad</span>
+                        </div>
+                    </div>
+                    <div class="palette-color palette-color--dark">
+                        <div class="palette-color__swatch"></div>
+                        <div class="palette-color__info">
+                            <span class="palette-color__name">Gris oscuro</span>
+                            <span class="palette-color__hex">#2D2D2D</span>
+                            <span class="palette-color__use">Texto principal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="palette-description fade-in">
+                <p>La paleta de colores se ha seleccionado para generar una sensación de <strong>tranquilidad y
+                        confianza</strong>, reforzando el carácter local y humano de la plataforma.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiencia de Usuario -->
+    <section class="section section--ux" id="experiencia">
+        <div class="container">
+            <div class="section__header fade-in">
+                <span class="section__tag">UX Research</span>
+                <h2 class="section__title">Experiencia de usuario (UX)</h2>
                 <p class="section__description">
-                    Cuatro personas con perfiles complementarios que han hecho posible iMirly.
+                    La experiencia de usuario de iMirly está diseñada para que cualquier persona pueda utilizar la
+                    aplicación sin dificultad, independientemente de su nivel tecnológico.
                 </p>
             </div>
-            
-            <div class="ux-pillars" style="grid-template-columns: repeat(2, 1fr); max-width: 900px; margin: 0 auto;">
-                <!-- Eva -->
-                <div class="ux-pillar fade-in" style="text-align: center;">
-                    <div class="ux-pillar__icon" style="width: 80px; height: 80px; margin: 0 auto 24px;">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="12" cy="7" r="4"></circle>
+            <div class="ux-pillars">
+                <div class="ux-pillar fade-in">
+                    <div class="ux-pillar__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="3 11 22 2 13 21 11 13 3 11" />
                         </svg>
                     </div>
-                    <h3 class="ux-pillar__title" style="font-size: 1.5rem; margin-bottom: 8px;">Eva Gallardo Romero</h3>
-                    <p style="color: #7864D7; font-weight: 500; margin-bottom: 16px; font-size: 0.9rem;">Desarrollo de aplicaciones · Backend · Programación</p>
-                    <p style="color: #666; line-height: 1.6; font-size: 0.95rem;">
-                        Estudiante de Desarrollo de Aplicaciones Multiplataforma (DAM), con una base sólida en programación, bases de datos y metodologías ágiles, orientada al desarrollo técnico y la construcción de sistemas robustos.
-                        <br><br>
-                        En iMirly participa como cocreadora del proyecto, aportando el desarrollo del backend, la lógica de negocio, la estructuración técnica del sistema y el trabajo colaborativo en equipo, asegurando el correcto funcionamiento y la escalabilidad de la aplicación.
-                    </p>
+                    <h3 class="ux-pillar__title">Navegación clara</h3>
+                    <ul class="ux-pillar__list">
+                        <li>Categorías y subcategorías bien definidas</li>
+                        <li>Estructura lógica y predecible</li>
+                        <li>Menús simples y accesibles</li>
+                    </ul>
                 </div>
-
-                <!-- Ana -->
-                <div class="ux-pillar fade-in" style="text-align: center;">
-                    <div class="ux-pillar__icon" style="width: 80px; height: 80px; margin: 0 auto 24px;">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="12" cy="7" r="4"></circle>
+                <div class="ux-pillar fade-in">
+                    <div class="ux-pillar__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
                         </svg>
                     </div>
-                    <h3 class="ux-pillar__title" style="font-size: 1.5rem; margin-bottom: 8px;">Ana Núñez Rejón</h3>
-                    <p style="color: #7864D7; font-weight: 500; margin-bottom: 16px; font-size: 0.9rem;">Diseño gráfico · UX/UI · Desarrollo</p>
-                    <p style="color: #666; line-height: 1.6; font-size: 0.95rem;">
-                        Diseñadora gráfica y desarrolladora en formación, con experiencia profesional en diseño digital, identidad visual y experiencia de usuario.
-                        <br><br>
-                        En iMirly aporta el diseño visual, la experiencia de usuario (UX/UI) y la coherencia gráfica del proyecto, además de participar activamente en el desarrollo técnico y la conceptualización del producto.
-                    </p>
+                    <h3 class="ux-pillar__title">Reducción de fricción</h3>
+                    <ul class="ux-pillar__list">
+                        <li>Pocos pasos para encontrar un servicio</li>
+                        <li>Información clara desde el primer vistazo</li>
+                        <li>Contacto directo con el proveedor</li>
+                    </ul>
                 </div>
-
-                <!-- Nicolás -->
-                <div class="ux-pillar fade-in" style="text-align: center;">
-                    <div class="ux-pillar__icon" style="width: 80px; height: 80px; margin: 0 auto 24px;">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="12" cy="7" r="4"></circle>
+                <div class="ux-pillar fade-in">
+                    <div class="ux-pillar__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            <path d="M9 12l2 2 4-4" />
                         </svg>
                     </div>
-                    <h3 class="ux-pillar__title" style="font-size: 1.5rem; margin-bottom: 8px;">Nicolás Corbi</h3>
-                    <p style="color: #7864D7; font-weight: 500; margin-bottom: 16px; font-size: 0.9rem;">Desarrollo backend · Lógica de aplicación</p>
-                    <p style="color: #666; line-height: 1.6; font-size: 0.95rem;">
-                        Programador full-stack en formación, estudiante de DAM con conocimientos en Java, Kotlin, C# y bases de datos.
-                        <br><br>
-                        En iMirly participa como cocreador del proyecto, aportando el desarrollo del backend, la lógica de negocio, la estructuración técnica del sistema y el trabajo colaborativo en equipo.
-                    </p>
-                </div>
-
-                <!-- Ángel -->
-                <div class="ux-pillar fade-in" style="text-align: center;">
-                    <div class="ux-pillar__icon" style="width: 80px; height: 80px; margin: 0 auto 24px;">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="12" cy="7" r="4"></circle>
-                        </svg>
-                    </div>
-                    <h3 class="ux-pillar__title" style="font-size: 1.5rem; margin-bottom: 8px;">Ángel Millán Aragón</h3>
-                    <p style="color: #7864D7; font-weight: 500; margin-bottom: 16px; font-size: 0.9rem;">Desarrollo multiplataforma · Coordinación</p>
-                    <p style="color: #666; line-height: 1.6; font-size: 0.95rem;">
-                        Desarrollador multiplataforma en formación, estudiante de DAM con una base sólida en programación, bases de datos y metodologías ágiles.
-                        <br><br>
-                        En iMirly aporta la planificación del proyecto, la coordinación del equipo y el desarrollo técnico, contribuyendo a la correcta ejecución y evolución del producto.
-                    </p>
+                    <h3 class="ux-pillar__title">Generación de confianza</h3>
+                    <ul class="ux-pillar__list">
+                        <li>Información estructurada y completa</li>
+                        <li>Perfiles claros y verificables</li>
+                        <li>Base para valoraciones y reputación</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Roles y Responsabilidades -->
-    <section class="section section--research" id="roles">
+    <!-- Investigación de Usuarios - Añadir entre Experiencia de Usuario y Diseño de Interfaz -->
+    <section class="section section--research" id="investigacion">
         <div class="container">
             <div class="section__header fade-in">
-                <span class="section__tag">Organización</span>
-                <h2 class="section__title">Reparto de roles</h2>
+                <span class="section__tag">Research</span>
+                <h2 class="section__title">Investigación de usuarios</h2>
                 <p class="section__description">
-                    Aunque existen roles definidos, todos los miembros han participado activamente en las decisiones clave del proyecto.
+                    Hemos realizado las entrevistas, la elaboración de mapas de empatía y los bocetos iniciales que
+                    permitieron comprender las necesidades reales de los usuarios objetivo de la aplicación iMirly.
                 </p>
             </div>
 
-            <div class="research-pillars" style="grid-template-columns: repeat(3, 1fr);">
+            <div class="research-context fade-in">
+                <p class="research-context__text">
+                    El público estaba formado por <strong>personas que necesitan contratar servicios cotidianos</strong>
+                    (como limpieza, reparaciones o cuidado de mascotas) y <strong>profesionales que desean
+                        ofrecerlos</strong>.
+                </p>
+                <p class="research-context__goal">
+                    El objetivo era diseñar una <strong>app intuitiva, rápida y de confianza</strong>, que permitiera a
+                    cualquier usuario encontrar o publicar servicios cercanos en pocos pasos, fomentando la colaboración
+                    local y la seguridad entre particulares.
+                </p>
+            </div>
+
+            <div class="research-pillars">
                 <div class="research-pillar fade-in">
-                    <div class="research-pillar__icon">🎨</div>
-                    <h3 class="research-pillar__title">Diseño y UX/UI</h3>
+                    <div class="research-pillar__icon">⏱️</div>
+                    <h3 class="research-pillar__title">Tiempo</h3>
                     <p class="research-pillar__text">
-                        <strong>Eva y Ana</strong>
+                        Tanto los usuarios que buscan ayuda como los profesionales que ofrecen servicios <strong>no
+                            disponen de tiempo para perder</strong> en llamadas, búsquedas o gestiones.
                     </p>
                     <p class="research-pillar__insight">
-                        Investigación de usuarios, wireframes, prototipos, identidad visual y experiencia de usuario completa.
+                        Las personas quieren resolver su necesidad de forma <strong>inmediata</strong>, sin procesos
+                        largos ni formularios complicados.
                     </p>
                 </div>
 
                 <div class="research-pillar fade-in">
-                    <div class="research-pillar__icon">📱</div>
-                    <h3 class="research-pillar__title">Desarrollo frontend</h3>
+                    <div class="research-pillar__icon">💰</div>
+                    <h3 class="research-pillar__title">Precio</h3>
                     <p class="research-pillar__text">
-                        <strong>Todo el equipo</strong>
+                        Las plataformas tradicionales o intermediarios suelen aplicar <strong>comisiones altas o precios
+                            poco claros</strong>.
                     </p>
                     <p class="research-pillar__insight">
-                        Aplicación Android con Jetpack Compose, Kotlin, Material Design y consumo de API REST.
+                        Muchos usuarios quieren servicios <strong>asequibles, sin sorpresas</strong> en el coste final,
+                        y los profesionales necesitan ganar lo justo por su trabajo.
                     </p>
                 </div>
 
                 <div class="research-pillar fade-in">
-                    <div class="research-pillar__icon">⚙️</div>
-                    <h3 class="research-pillar__title">Desarrollo backend</h3>
+                    <div class="research-pillar__icon">♿</div>
+                    <h3 class="research-pillar__title">Accesibilidad</h3>
                     <p class="research-pillar__text">
-                        <strong>Ángel y Ana</strong>
+                        Encontrar y ofrecer servicios a veces resulta <strong>complicado o limitado</strong>. Muchas
+                        webs o aplicaciones son poco intuitivas o requieren conocimientos técnicos.
                     </p>
                     <p class="research-pillar__insight">
-                        API REST con Spring Boot, Java, arquitectura en capas, seguridad y base de datos.
+                        iMirly busca eliminar esas barreras ofreciendo una app <strong>sencilla, directa y accesible
+                            para todos</strong>, incluso para personas con poca experiencia digital.
                     </p>
                 </div>
+            </div>
 
-                <div class="research-pillar fade-in">
-                    <div class="research-pillar__icon">📋</div>
-                    <h3 class="research-pillar__title">Planificación</h3>
-                    <p class="research-pillar__text">
-                        <strong>Ángel y Eva</strong>
-                    </p>
-                    <p class="research-pillar__insight">
-                        Coordinación del equipo, gestión de tareas, seguimiento de plazos y documentación del proyecto.
-                    </p>
+            <!-- Galería de imágenes de investigación -->
+            <div class="research-gallery fade-in">
+                <h3 class="research-gallery__title">Proceso de investigación</h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item"
+                        onclick="openModal('./assets/img/Persona1.png', 'User Persona - Laura Gómez')">
+                        <img src="./assets/img/Persona1.png" alt="Investigación UX 1" loading="lazy">
+                        <div class="gallery-item__overlay">
+                            <span>Ver más</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item"
+                        onclick="openModal('./assets/img/Persona2.png', 'User Persona - Carlos Ruiz')">
+                        <img src="./assets/img/Persona2.png" alt="Investigación UX 2" loading="lazy">
+                        <div class="gallery-item__overlay">
+                            <span>Ver más</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item"
+                        onclick="openModal('./assets/img/Persona2.1.png', 'User Journey - Carlos')">
+                        <img src="./assets/img/Persona2.1.png" alt="Investigación UX 3" loading="lazy">
+                        <div class="gallery-item__overlay">
+                            <span>Ver más</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item"
+                        onclick="openModal('./assets/img/Persona3.png', 'User Persona - Jorge Martín')">
+                        <img src="./assets/img/Persona3.png" alt="Investigación UX 4" loading="lazy">
+                        <div class="gallery-item__overlay">
+                            <span>Ver más</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item"
+                        onclick="openModal('./assets/img/Persona4.png', 'User Persona - Marta Pérez')">
+                        <img src="./assets/img/Persona4.png" alt="Investigación UX 5" loading="lazy">
+                        <div class="gallery-item__overlay">
+                            <span>Ver más</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item"
+                        onclick="openModal('./assets/img/Persona4.1.png', 'User Journey - Marta')">
+                        <img src="./assets/img/Persona4.1.png" alt="Investigación UX 6" loading="lazy">
+                        <div class="gallery-item__overlay">
+                            <span>Ver más</span>
+                        </div>
+                    </div>
                 </div>
+            </div>
 
-                <div class="research-pillar fade-in">
-                    <div class="research-pillar__icon">💡</div>
-                    <h3 class="research-pillar__title">Definición</h3>
-                    <p class="research-pillar__text">
-                        <strong>Todo el equipo</strong>
-                    </p>
-                    <p class="research-pillar__insight">
-                        Ideación, análisis de mercado, estrategia de negocio y toma de decisiones conjunta.
-                    </p>
-                </div>
-
-                <div class="research-pillar fade-in">
-                    <div class="research-pillar__icon">🌐</div>
-                    <h3 class="research-pillar__title">Web de presentación</h3>
-                    <p class="research-pillar__text">
-                        <strong>Eva y Ana</strong>
-                    </p>
-                    <p class="research-pillar__insight">
-                        Diseño y desarrollo de la landing page para la defensa del proyecto académico.
-                    </p>
+            <!-- Modal (añadir al final del body, antes del cierre) -->
+            <div id="imageModal" class="modal" onclick="closeModal(event)">
+                <div class="modal__content" onclick="event.stopPropagation()">
+                    <span class="modal__close" onclick="closeModal()">&times;</span>
+                    <img id="modalImage" src="" alt="">
+                    <p id="modalCaption" class="modal__caption"></p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Equipo como Valor -->
-    <section class="section section--value-design" id="valor-equipo">
+    <!-- Modal para imágenes -->
+    <div id="imageModal" class="modal">
+        <div class="modal__content">
+            <span class="modal__close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" src="" alt="Imagen ampliada">
+        </div>
+    </div>
+
+    <!-- Diseño de Interfaz -->
+    <section class="section section--ui" id="interfaz">
         <div class="container">
             <div class="section__header fade-in">
-                <span class="section__tag">Sinergia</span>
-                <h2 class="section__title">El equipo como valor añadido</h2>
+                <span class="section__tag">UI Design</span>
+                <h2 class="section__title">Diseño de interfaz (UI)</h2>
+                <p class="section__description">
+                    El diseño de la interfaz se ha centrado en mostrar la información de forma ordenada y comprensible,
+                    evitando elementos innecesarios y priorizando la usabilidad.
+                </p>
+            </div>
+            <div class="ui-showcase">
+                <div class="ui-element fade-in">
+                    <div class="ui-element__preview">
+                        <div class="ui-card">
+                            <div class="ui-card__image"></div>
+                            <div class="ui-card__content">
+                                <div class="ui-card__title"></div>
+                                <div class="ui-card__text"></div>
+                                <div class="ui-card__button"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui-element__info">
+                        <h4>Cards con bordes redondeados</h4>
+                        <p>Formas suaves que transmiten cercanía y facilitan la lectura</p>
+                    </div>
+                </div>
+                <div class="ui-element fade-in">
+                    <div class="ui-element__preview">
+                        <div class="ui-hierarchy">
+                            <div class="ui-hierarchy__main"></div>
+                            <div class="ui-hierarchy__secondary"></div>
+                            <div class="ui-hierarchy__tertiary"></div>
+                        </div>
+                    </div>
+                    <div class="ui-element__info">
+                        <h4>Jerarquía visual clara</h4>
+                        <p>Tamaños y pesos tipográficos que guían la atención del usuario</p>
+                    </div>
+                </div>
+                <div class="ui-element fade-in">
+                    <div class="ui-element__preview">
+                        <div class="ui-buttons">
+                            <div class="ui-button ui-button--primary"></div>
+                            <div class="ui-button ui-button--secondary"></div>
+                        </div>
+                    </div>
+                    <div class="ui-element__info">
+                        <h4>Botones visibles y reconocibles</h4>
+                        <p>Estados claros que indican la acción posible en cada momento</p>
+                    </div>
+                </div>
+                <div class="ui-element fade-in">
+                    <div class="ui-element__preview">
+                        <div class="ui-spacing">
+                            <div class="ui-spacing__item"></div>
+                            <div class="ui-spacing__gap"></div>
+                            <div class="ui-spacing__item"></div>
+                            <div class="ui-spacing__gap"></div>
+                            <div class="ui-spacing__item"></div>
+                        </div>
+                    </div>
+                    <div class="ui-element__info">
+                        <h4>Espaciados amplios</h4>
+                        <p>Respiración entre elementos para mejorar la legibilidad</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Esquemas de Página - Añadir en la sección de Diseño de Interfaz -->
+    <section class="section section--wireframes" id="esquemas">
+        <div class="container">
+            <div class="section__header fade-in">
+                <span class="section__tag">Wireframes</span>
+                <h2 class="section__title">Esquemas de página</h2>
+            </div>
+
+            <!-- Esquemas en papel -->
+            <div class="wireframe-block fade-in">
+                <div class="wireframe-block__content">
+                    <h3 class="wireframe-block__title">En papel</h3>
+                    <p class="wireframe-block__text">
+                        El proceso de iterar sobre papel nos llevó a encontrar de forma óptima lo que nuestros usuarios
+                        objetivo necesitaban según sus necesidades.
+                    </p>
+                </div>
+                <div class="wireframe-block__image">
+                    <img src="./assets/img/bocetoimirly.jpg" alt="Bocetos en papel de iMirly" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Esquemas digitales -->
+            <div class="wireframe-block wireframe-block--reverse fade-in">
+                <div class="wireframe-block__content">
+                    <h3 class="wireframe-block__title">Esquemas de página digitales</h3>
+                    <p class="wireframe-block__text">
+                        Continuando con el proceso inicial de los esquemas, realizamos el diseño low fi digitalizado
+                        basándonos en los resultados de la investigación.
+                    </p>
+                </div>
+                <div class="wireframe-block__image">
+                    <img src="./assets/img/esquemaimirly.png" alt="Wireframes digitales de iMirly" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Prototipo baja fidelidad -->
+            <div class="wireframe-block fade-in">
+                <div class="wireframe-block__content">
+                    <h3 class="wireframe-block__title">Prototipo de baja fidelidad</h3>
+                    <p class="wireframe-block__text">
+                        Desarrollamos un prototipo interactivo de baja fidelidad para testear la navegación y la
+                        estructura de la aplicación con usuarios reales antes de invertir en el diseño visual detallado.
+                    </p>
+                </div>
+                <div class="wireframe-block__image">
+                    <img src="./assets/img/prototipobajaimirly.png" alt="Prototipo de baja fidelidad de iMirly"
+                        loading="lazy">
+                </div>
+            </div>
+
+            <!-- Maqueta -->
+            <div class="wireframe-block wireframe-block--reverse fade-in">
+                <div class="wireframe-block__content">
+                    <h3 class="wireframe-block__title">Maqueta</h3>
+                    <p class="wireframe-block__text">
+                        Representación de la aplicación iMirly que simula el dispositivo móvil y sus pantallas
+                        principales. Este prototipo permite validar la distribución de elementos, tamaños de botones y
+                        flujo de navegación de forma rápida antes de pasar a la ultima fase. Facilita las primeras
+                        pruebas con usuarios reales y la detección temprana de problemas de usabilidad que no son
+                        evidentes en bocetos planos.
+                </div>
+                <div class="wireframe-block__image">
+                    <img src="./assets/img/maquetaimirly.jpg" alt="Prototipo de baja fidelidad de iMirly"
+                        loading="lazy">
+                </div>
+            </div>
+
+            <!-- Prototipo alta fidelidad -->
+            <div class="wireframe-block fade-in">
+                <div class="wireframe-block__content">
+                    <h3 class="wireframe-block__title">Prototipo de alta fidelidad</h3>
+                    <p class="wireframe-block__text">
+                        El prototipo de alta fidelidad incorpora el diseño visual completo, interacciones avanzadas y
+                        simula la experiencia final de la aplicación para validar con stakeholders y usuarios.
+                    </p>
+                </div>
+                <div class="wireframe-block__image">
+                    <img src="./assets/img/protptipoaltaimirly.png" alt="Prototipo de alta fidelidad de iMirly"
+                        loading="lazy">
+                </div>
+            </div>
+
+            <!-- Enlace a Figma -->
+            <div class="figma-embed fade-in">
+                <h3 class="figma-embed__title">Prototipo interactivo en Figma</h3>
+                <p class="figma-embed__text">
+                    Explora el prototipo completo de iMirly y navega por todas las pantallas de la aplicación.
+                </p>
+                <div class="figma-embed__container fade-in" id="figma">
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450"
+                        src="https://embed.figma.com/proto/VMs5Tabczv0oBFbj2fT9nA/ImirlyApp?node-id=11-3226&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=11%3A3226&embed-host=share"
+                        allowfullscreen></iframe>
+                </div>
+                <a href="YOUR_FIGMA_URL_HERE" target="_blank" class="btn btn--primary figma-embed__button">
+                    Abrir en Figma
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        style="width: 20px; height: 20px; margin-left: 8px;">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                        <polyline points="15 3 21 3 21 9" />
+                        <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accesibilidad -->
+    <section class="section section--accessibility" id="accesibilidad">
+        <div class="container">
+            <div class="section__header fade-in">
+                <span class="section__tag">Inclusión</span>
+                <h2 class="section__title">Accesibilidad y usabilidad</h2>
+            </div>
+            <div class="accessibility-content">
+                <div class="accessibility-visual fade-in">
+                    <div class="accessibility-demo">
+                        <div class="accessibility-demo__screen">
+                            <div class="demo-header"></div>
+                            <div class="demo-content">
+                                <div class="demo-item demo-item--large"></div>
+                                <div class="demo-item demo-item--large"></div>
+                                <div class="demo-item demo-item--large"></div>
+                            </div>
+                        </div>
+                        <div class="accessibility-demo__label">Antes</div>
+                    </div>
+                    <div class="accessibility-arrow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </div>
+                    <div class="accessibility-demo">
+                        <div class="accessibility-demo__screen accessibility-demo__screen--improved">
+                            <div class="demo-header demo-header--clear"></div>
+                            <div class="demo-content">
+                                <div class="demo-item"></div>
+                                <div class="demo-item"></div>
+                                <div class="demo-item"></div>
+                            </div>
+                        </div>
+                        <div class="accessibility-demo__label">Después</div>
+                    </div>
+                </div>
+                <div class="accessibility-features fade-in">
+                    <div class="accessibility-feature">
+                        <div class="accessibility-feature__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="4 7 4 4 20 4 20 7" />
+                                <line x1="9" y1="20" x2="15" y2="20" />
+                                <line x1="12" y1="4" x2="12" y2="20" />
+                            </svg>
+                        </div>
+                        <div class="accessibility-feature__text">
+                            <h4>Tipografías legibles</h4>
+                            <p>Familias sans-serif con buena legibilidad en todos los tamaños</p>
+                        </div>
+                    </div>
+                    <div class="accessibility-feature">
+                        <div class="accessibility-feature__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M12 16v-4M12 8h.01" />
+                            </svg>
+                        </div>
+                        <div class="accessibility-feature__text">
+                            <h4>Contraste adecuado</h4>
+                            <p>Relación de contraste que cumple estándares WCAG AA</p>
+                        </div>
+                    </div>
+                    <div class="accessibility-feature">
+                        <div class="accessibility-feature__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="4" y="4" width="16" height="16" rx="2" />
+                            </svg>
+                        </div>
+                        <div class="accessibility-feature__text">
+                            <h4>Botones accesibles</h4>
+                            <p>Tamaños mínimos de 48dp para facilitar la interacción táctil</p>
+                        </div>
+                    </div>
+                    <div class="accessibility-feature">
+                        <div class="accessibility-feature__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                            </svg>
+                        </div>
+                        <div class="accessibility-feature__text">
+                            <h4>Diseño para todas las edades</h4>
+                            <p>Interfaz adaptable a diferentes capacidades y experiencias</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accessibility-conclusion fade-in">
+                <p>iMirly se ha diseñado pensando en la <strong>diversidad de usuarios</strong>, buscando una
+                    experiencia inclusiva y fácil de usar.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diseño como Valor -->
+    <section class="section section--value-design" id="valor">
+        <div class="container">
+            <div class="section__header fade-in">
+                <span class="section__tag">Impacto</span>
+                <h2 class="section__title">El diseño como valor añadido</h2>
             </div>
             <div class="value-proposition fade-in">
                 <div class="value-proposition__content">
                     <p class="value-proposition__text">
-                        La <strong>combinación de perfiles creativos y técnicos</strong> ha permitido desarrollar un proyecto equilibrado, viable y con una visión clara de futuro.
+                        En iMirly, el diseño no es solo una cuestión estética, sino una <strong>herramienta
+                            clave</strong> para generar confianza, facilitar el uso de la aplicación y mejorar la
+                        experiencia global del usuario.
                     </p>
                     <div class="value-points">
                         <div class="value-point">
                             <span class="value-point__number">01</span>
-                            <span class="value-point__text">Visión creativa</span>
+                            <span class="value-point__text">Confianza visual</span>
                         </div>
                         <div class="value-point">
                             <span class="value-point__number">02</span>
-                            <span class="value-point__text">Solidez técnica</span>
+                            <span class="value-point__text">Facilidad de uso</span>
                         </div>
                         <div class="value-point">
                             <span class="value-point__number">03</span>
-                            <span class="value-point__text">Trabajo coordinado</span>
+                            <span class="value-point__text">Experiencia memorable</span>
                         </div>
                     </div>
                 </div>
@@ -316,99 +684,33 @@
             </div>
             <div class="quote quote--large fade-in">
                 <blockquote class="quote__text">
-                    "Un buen proyecto necesita una buena idea, pero un gran proyecto necesita un buen equipo."
+                    "Un buen diseño no solo se ve bien, también se entiende."
                 </blockquote>
             </div>
         </div>
     </section>
 
-    <!-- Contexto Académico -->
-    <section class="section section--accessibility" id="contexto">
+    <!-- Cierre de Sección -->
+    <section class="section section--closing" id="cierre">
         <div class="container">
-            <div class="section__header fade-in">
-                <span class="section__tag">Formación</span>
-                <h2 class="section__title">Contexto académico</h2>
-                <p class="section__description">
-                    iMirly se desarrolla como proyecto académico dentro del ciclo de Desarrollo de Aplicaciones Multiplataforma (DAM), aplicando conocimientos reales de diseño, programación, arquitectura y gestión de proyectos.
-                </p>
-            </div>
-            <div class="accessibility-features">
-                <div class="accessibility-feature fade-in">
-                    <div class="accessibility-feature__icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
-                            <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
-                        </svg>
-                    </div>
-                    <div class="accessibility-feature__text">
-                        <h4>Aplicación de conocimientos técnicos</h4>
-                        <p>Programación, bases de datos, diseño de interfaces y arquitectura de software</p>
-                    </div>
-                </div>
-                <div class="accessibility-feature fade-in">
-                    <div class="accessibility-feature__icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="9" cy="7" r="4"></circle>
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                        </svg>
-                    </div>
-                    <div class="accessibility-feature__text">
-                        <h4>Trabajo en equipo</h4>
-                        <p>Colaboración, comunicación y gestión de conflictos en grupo</p>
-                    </div>
-                </div>
-                <div class="accessibility-feature fade-in">
-                    <div class="accessibility-feature__icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                            <line x1="16" y1="2" x2="16" y2="6"></line>
-                            <line x1="8" y1="2" x2="8" y2="6"></line>
-                            <line x1="3" y1="10" x2="21" y2="10"></line>
-                        </svg>
-                    </div>
-                    <div class="accessibility-feature__text">
-                        <h4>Metodología organizada</h4>
-                        <p>Planificación, seguimiento de tareas y cumplimiento de plazos</p>
-                    </div>
-                </div>
-                <div class="accessibility-feature fade-in">
-                    <div class="accessibility-feature__icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                        </svg>
-                    </div>
-                    <div class="accessibility-feature__text">
-                        <h4>Enfoque en proyecto real</h4>
-                        <p>Desarrollo de una solución funcional con proyección profesional</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Cierre Final -->
-    <section class="section section--closing" id="cierre-final">
-        <div class="container">
-            <div class="closing-block fade-in" style="max-width: 800px;">
+            <div class="closing-block fade-in">
                 <div class="closing-block__icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
                     </svg>
                 </div>
-                <h2 class="closing-block__title">Más que una aplicación</h2>
-                <p class="closing-block__text" style="font-size: 1.1rem; margin-bottom: 32px;">
-                    iMirly no es solo una aplicación, es el resultado del <strong>trabajo, la coordinación y el compromiso</strong> de un equipo con una visión común.
+                <h2 class="closing-block__title">Conclusión de diseño</h2>
+                <p class="closing-block__text">
+                    El diseño y la experiencia de usuario de iMirly refuerzan la propuesta del proyecto, haciendo que la
+                    contratación de servicios locales sea más sencilla, clara y humana.
                 </p>
-                <p class="closing-block__text" style="color: #666; font-size: 1rem;">
-                    Este proyecto demuestra la capacidad del equipo para idear, diseñar y desarrollar una solución digital real y con proyección futura.
-                </p>
-                <a href="index.html" class="btn btn--secondary" style="margin-top: 32px;">
-                    Volver al inicio
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 20px; height: 20px; margin-left: 8px;">
-                        <line x1="19" y1="12" x2="5" y2="12"></line>
-                        <polyline points="12 19 5 12 12 5"></polyline>
+                <a href="#" class="btn btn--secondary disabled"
+                    onclick="event.preventDefault(); showToast('Próximamente disponible')">
+                    Siguiente sección: Aplicación
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        style="width: 20px; height: 20px; margin-left: 8px;">
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                        <polyline points="12 5 19 12 12 19" />
                     </svg>
                 </a>
             </div>
@@ -435,5 +737,39 @@
     </footer>
 
     <script src="main.js"></script>
+
+    <script>
+        function openModal(imageSrc, caption = '') {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const modalCaption = document.getElementById('modalCaption');
+
+            modalImg.src = imageSrc;
+            modalCaption.textContent = caption;
+            modal.classList.add('active');
+
+            // Prevenir scroll del body
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(event) {
+            // Si se hace clic en el fondo o en la X, cerrar
+            if (!event || event.target === document.getElementById('imageModal') || event.target.classList.contains('modal__close')) {
+                const modal = document.getElementById('imageModal');
+                modal.classList.remove('active');
+
+                // Restaurar scroll
+                document.body.style.overflow = '';
+            }
+        }
+
+        // Cerrar con tecla ESC
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
 </body>
+
 </html>

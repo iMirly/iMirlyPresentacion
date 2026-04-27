@@ -7,10 +7,10 @@
     /* Colors from brand guideline */
     --color-white: #F1F1F1;
     --color-gray: #7E7E80;
-    --color-lavender-light: #D7D1F3;
-    --color-lavender: #7864D7;
-    --color-purple: #321E92;
-    --color-purple-dark: #1e0e6e;
+    --color-lavender-light: #e0e0ff;
+    --color-lavender: #6c5ce7;
+    --color-purple: #3f51b5;
+    --color-purple-dark: #3f51b5;
 
     /* Extended palette */
     --color-background: #FFFFFF;
@@ -4837,7 +4837,6 @@ img {
         transform: rotate(360deg);
     }
 }
-
 
 
 
