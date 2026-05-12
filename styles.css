@@ -13,8 +13,8 @@
     --color-purple-dark: #3f51b5;
 
     /* Extended palette */
-    --color-background: #FFFFFF;
-    --color-background-alt: #FAFAFA;
+    --color-background: #e1ddff;
+    --color-background-alt: #f2f0ff;
     --color-text: #2D2D2D;
     --color-text-light: #6B6B6B;
     --color-green: #6B9B7A;
@@ -711,6 +711,35 @@ img {
     color: var(--color-text-light);
     font-size: 0.95rem;
     line-height: 1.6;
+}
+/* ============================================
+   Equipo Page - Custom Headers
+   ============================================ */
+.team-section__header,
+.work-section__header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto var(--spacing-lg);
+}
+
+.team-section__title,
+.work-section__title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: var(--color-purple);
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.2;
+}
+
+.team-section__description {
+    font-size: 1.15rem;
+    color: var(--color-text-light);
+    line-height: 1.7;
+    text-align: center;
+}
+
+.centered {
+    text-align: center;
 }
 
 /* ============================================

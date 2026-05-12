@@ -8,6 +8,33 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Grid de flujo de uso */
+        .flow-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        @media (max-width: 768px) {
+            .flow-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+            }
+            .flow-card {
+                padding: 24px 16px !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .flow-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+        }
+    </style>
+
 <base target="_blank">
 </head>
 <body>
@@ -234,69 +261,45 @@
                 </p>
             </div>
 
-            <div class="wireframe-block fade-in">
-                <div class="wireframe-block__content">
-                    <h3 class="wireframe-block__title">01. Acceso a la aplicación</h3>
-                    <p class="wireframe-block__text">
-                        El usuario abre iMirly en su dispositivo móvil y accede al sistema mediante sus credenciales o como visitante para explorar los servicios disponibles.
-                    </p>
-                </div>
-                <div class="wireframe-block__image">
-                    <div class="flow-step__visual">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#6c5ce7" stroke-width="2" style="width: 64px; height: 64px;">
+            <div class="flow-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+                <div class="flow-card fade-in" style="background: white; border-radius: 16px; padding: 32px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); text-align: center;">
+                    <div class="flow-card__icon" style="width: 64px; height: 64px; background: #f0f0ff; border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#6c5ce7" stroke-width="2" style="width: 32px; height: 32px;">
                             <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
                             <polyline points="10 17 15 12 10 7"></polyline>
                             <line x1="15" y1="12" x2="3" y2="12"></line>
                         </svg>
                     </div>
+                    <h3 style="font-size: 1.1rem; font-weight: 600; color: #1a1a2e; margin-bottom: 12px;">01. Acceso</h3>
+                    <p style="font-size: 0.9rem; color: #666; line-height: 1.5;">El usuario abre iMirly y accede mediante sus credenciales o como visitante.</p>
                 </div>
-            </div>
 
-            <div class="wireframe-block wireframe-block--reverse fade-in">
-                <div class="wireframe-block__content">
-                    <h3 class="wireframe-block__title">02. Exploración o publicación</h3>
-                    <p class="wireframe-block__text">
-                        El usuario decide su rol: buscar servicios existentes que necesita o publicar uno nuevo que desea ofrecer a la comunidad.
-                    </p>
-                </div>
-                <div class="wireframe-block__image">
-                    <div class="flow-step__visual">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#6c5ce7" stroke-width="2" style="width: 64px; height: 64px;">
+                <div class="flow-card fade-in" style="background: white; border-radius: 16px; padding: 32px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); text-align: center;">
+                    <div class="flow-card__icon" style="width: 64px; height: 64px; background: #f0f0ff; border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#6c5ce7" stroke-width="2" style="width: 32px; height: 32px;">
                             <circle cx="11" cy="11" r="8"></circle>
                             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                             <line x1="11" y1="8" x2="11" y2="14"></line>
                             <line x1="8" y1="11" x2="14" y2="11"></line>
                         </svg>
                     </div>
+                    <h3 style="font-size: 1.1rem; font-weight: 600; color: #1a1a2e; margin-bottom: 12px;">02. Explorar</h3>
+                    <p style="font-size: 0.9rem; color: #666; line-height: 1.5;">Decide su rol: buscar servicios o publicar uno nuevo.</p>
                 </div>
-            </div>
 
-            <div class="wireframe-block fade-in">
-                <div class="wireframe-block__content">
-                    <h3 class="wireframe-block__title">03. Filtrado por categoría</h3>
-                    <p class="wireframe-block__text">
-                        Navegación mediante filtros de categoría y subcategoría para encontrar servicios específicos según la necesidad particular del usuario.
-                    </p>
-                </div>
-                <div class="wireframe-block__image">
-                    <div class="flow-step__visual">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#6c5ce7" stroke-width="2" style="width: 64px; height: 64px;">
+                <div class="flow-card fade-in" style="background: white; border-radius: 16px; padding: 32px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); text-align: center;">
+                    <div class="flow-card__icon" style="width: 64px; height: 64px; background: #f0f0ff; border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#6c5ce7" stroke-width="2" style="width: 32px; height: 32px;">
                             <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
                         </svg>
                     </div>
+                    <h3 style="font-size: 1.1rem; font-weight: 600; color: #1a1a2e; margin-bottom: 12px;">03. Filtrar</h3>
+                    <p style="font-size: 0.9rem; color: #666; line-height: 1.5;">Navega por categorías y subcategorías para encontrar lo que necesita.</p>
                 </div>
-            </div>
 
-            <div class="wireframe-block wireframe-block--reverse fade-in">
-                <div class="wireframe-block__content">
-                    <h3 class="wireframe-block__title">04. Consulta de información</h3>
-                    <p class="wireframe-block__text">
-                        Revisión detallada del anuncio seleccionado para conocer todas las características del servicio, precio y datos del proveedor.
-                    </p>
-                </div>
-                <div class="wireframe-block__image">
-                    <div class="flow-step__visual">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#6c5ce7" stroke-width="2" style="width: 64px; height: 64px;">
+                <div class="flow-card fade-in" style="background: white; border-radius: 16px; padding: 32px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); text-align: center;">
+                    <div class="flow-card__icon" style="width: 64px; height: 64px; background: #f0f0ff; border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#6c5ce7" stroke-width="2" style="width: 32px; height: 32px;">
                             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                             <polyline points="14 2 14 8 20 8"></polyline>
                             <line x1="16" y1="13" x2="8" y2="13"></line>
@@ -304,23 +307,29 @@
                             <polyline points="10 9 9 9 8 9"></polyline>
                         </svg>
                     </div>
+                    <h3 style="font-size: 1.1rem; font-weight: 600; color: #1a1a2e; margin-bottom: 12px;">04. Consultar</h3>
+                    <p style="font-size: 0.9rem; color: #666; line-height: 1.5;">Revisa el anuncio seleccionado con toda la información del servicio.</p>
                 </div>
-            </div>
 
-            <div class="wireframe-block fade-in">
-                <div class="wireframe-block__content">
-                    <h3 class="wireframe-block__title">05. Contacto con el proveedor</h3>
-                    <p class="wireframe-block__text">
-                        Establecimiento de comunicación directa para acordar términos, precio, fecha y detalles específicos del servicio a contratar.
-                    </p>
-                </div>
-                <div class="wireframe-block__image">
-                    <div class="flow-step__visual">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#6c5ce7" stroke-width="2" style="width: 64px; height: 64px;">
+                <div class="flow-card fade-in" style="background: white; border-radius: 16px; padding: 32px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); text-align: center;">
+                    <div class="flow-card__icon" style="width: 64px; height: 64px; background: #f0f0ff; border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#6c5ce7" stroke-width="2" style="width: 32px; height: 32px;">
                             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                             <polyline points="22,6 12,13 2,6"></polyline>
                         </svg>
                     </div>
+                    <h3 style="font-size: 1.1rem; font-weight: 600; color: #1a1a2e; margin-bottom: 12px;">05. Contactar</h3>
+                    <p style="font-size: 0.9rem; color: #666; line-height: 1.5;">Establece comunicación directa para acordar términos del servicio.</p>
+                </div>
+
+                <div class="flow-card fade-in" style="background: white; border-radius: 16px; padding: 32px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); text-align: center;">
+                    <div class="flow-card__icon" style="width: 64px; height: 64px; background: #f0f0ff; border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#6c5ce7" stroke-width="2" style="width: 32px; height: 32px;">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <h3 style="font-size: 1.1rem; font-weight: 600; color: #1a1a2e; margin-bottom: 12px;">06. Confirmar</h3>
+                    <p style="font-size: 0.9rem; color: #666; line-height: 1.5;">Finaliza el acuerdo y confirma los detalles del servicio contratado.</p>
                 </div>
             </div>
         </div>
@@ -352,8 +361,8 @@
                     </div>
                 </div>
                 <div class="ui-element fade-in">
-                    <div class="ui-element__preview">
-                        <div class="ui-hierarchy" style="flex-direction: row; gap: 8px; justify-content: center;">
+                    <div class="ui-element__preview" style="display: flex; align-items: center; justify-content: center;">
+                        <div class="ui-hierarchy" style="display: flex; flex-direction: row; gap: 8px; align-items: center; justify-content: center;">
                             <div style="width: 40px; height: 40px; background: #6c5ce7; border-radius: 8px;"></div>
                             <div style="width: 40px; height: 40px; background: #3f51b5; border-radius: 8px;"></div>
                             <div style="width: 40px; height: 40px; background: #e0e0ff; border-radius: 8px;"></div>
