@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-<base target="_blank">
 </head>
 <body>
     <!-- Header / Navbar -->
@@ -42,6 +41,31 @@
             </button>
         </nav>
     </header>
+
+    <!-- Menú Flotante Lateral -->
+    <nav class="floating-nav" id="floating-nav">
+        <div class="floating-nav__menu active" id="floating-menu">
+            <a href="#equipo" class="floating-nav__link" data-section="equipo">
+                <span class="floating-nav__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg>
+                </span>
+                <span class="floating-nav__label">Miembros</span>
+            </a>
+            <a href="#organizacion" class="floating-nav__link" data-section="organizacion">
+                <span class="floating-nav__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                </span>
+                <span class="floating-nav__label">Estructura</span>
+            </a>
+            <a href="#cierre" class="floating-nav__link" data-section="cierre">
+                <span class="floating-nav__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                </span>
+                <span class="floating-nav__label">Cierre</span>
+            </a>
+        </div>
+    </nav>
+
 
     <!-- Hero Section -->
     <section class="hero hero--secondary">
@@ -117,29 +141,49 @@
                     </div>
 
                     <div class="team-card__body" style="font-size: 0.9rem; color: #555; line-height: 1.7;">
-                        <p style="margin-bottom: 16px;">Formándose como desarrolladora de aplicaciones multiplataforma con especial interés en el desarrollo frontend y la lógica de aplicaciones móviles. Aporta una visión técnica sólida al proyecto.</p>
+                        <p style="margin-bottom: 16px;">Apasionada por resolver problemas con código: desde apps Android nativas con arquitecturas modernas hasta webs estáticas con diseño responsive. Con experiencia en diseño UX/UI en Figma y desarrollo de videojuegos en Unity. Le da igual frontend, backend o móvil — si implica código, cuenta con ella.</p>
 
                         <h4 style="font-size: 0.85rem; font-weight: 700; color: #1a1a2e; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; margin-top: 20px;">Contribuciones en iMirly</h4>
                         <ul style="list-style: none; padding: 0; margin: 0;">
-                            <li style="padding: 4px 0; padding-left: 20px; position: relative;"><span style="position: absolute; left: 0; color: #6c5ce7;">▸</span> Desarrollo de la interfaz de usuario en Jetpack Compose</li>
-                            <li style="padding: 4px 0; padding-left: 20px; position: relative;"><span style="position: absolute; left: 0; color: #6c5ce7;">▸</span> Lógica de navegación y flujo de pantallas</li>
-                            <li style="padding: 4px 0; padding-left: 20px; position: relative;"><span style="position: absolute; left: 0; color: #6c5ce7;">▸</span> Estructuración técnica de la arquitectura de la app</li>
-                            <li style="padding: 4px 0; padding-left: 20px; position: relative;"><span style="position: absolute; left: 0; color: #6c5ce7;">▸</span> Implementación de funcionalidades core del marketplace</li>
+                            <li style="padding: 4px 0; padding-left: 20px; position: relative;"><span style="position: absolute; left: 0; color: #6c5ce7;">▸</span> Documentación técnica del proyecto</li>
+                            <li style="padding: 4px 0; padding-left: 20px; position: relative;"><span style="position: absolute; left: 0; color: #6c5ce7;">▸</span> Identidad visual y materiales en Canva</li>
+                            <li style="padding: 4px 0; padding-left: 20px; position: relative;"><span style="position: absolute; left: 0; color: #6c5ce7;">▸</span> Desarrollo de las webs de soporte del proyecto</li>
+                            <li style="padding: 4px 0; padding-left: 20px; position: relative;"><span style="position: absolute; left: 0; color: #6c5ce7;">▸</span> Diseño de la app junto a Ana Núñez</li>
+                            <li style="padding: 4px 0; padding-left: 20px; position: relative;"><span style="position: absolute; left: 0; color: #6c5ce7;">▸</span> Research con usuarios sobre decisiones de estilo</li>
+                            <li style="padding: 4px 0; padding-left: 20px; position: relative;"><span style="position: absolute; left: 0; color: #6c5ce7;">▸</span> Organización del repositorio y materiales en GitHub</li>
                         </ul>
 
                         <h4 style="font-size: 0.85rem; font-weight: 700; color: #1a1a2e; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; margin-top: 20px;">Tecnologías</h4>
                         <div style="display: flex; flex-wrap: wrap; gap: 6px;">
                             <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">Kotlin</span>
                             <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">Jetpack Compose</span>
-                            <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">Android Studio</span>
+                            <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">Canva</span>
+                            <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">HTML5 · CSS3</span>
+                            <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">GitHub</span>
                             <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">Material Design 3</span>
                         </div>
                     </div>
 
                     <div class="team-card__links" style="display: flex; gap: 10px; margin-top: 24px; padding-top: 20px; border-top: 1px solid #f0f0f0;">
-                        <a href="#" class="team-card__link" style="width: 36px; height: 36px; border-radius: 8px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;" title="LinkedIn">
+                        <a href="https://www.linkedin.com/in/eva-gallardo-romero-830362349/" target="_blank" rel="noopener noreferrer" class="team-card__link" style="width: 36px; height: 36px; border-radius: 8px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;" title="LinkedIn" onmouseover="this.style.background='#e8eaf6'" onmouseout="this.style.background='#f5f5f5'">
                             <svg viewBox="0 0 24 24" fill="currentColor" style="width: 18px; height: 18px; color: #666;">
                                 <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/evagr11" target="_blank" rel="noopener noreferrer" class="team-card__link" style="width: 36px; height: 36px; border-radius: 8px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;" title="GitHub" onmouseover="this.style.background='#e8eaf6'" onmouseout="this.style.background='#f5f5f5'">
+                            <svg viewBox="0 0 24 24" fill="currentColor" style="width: 18px; height: 18px; color: #666;">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="https://evagr.itch.io/" target="_blank" rel="noopener noreferrer" class="team-card__link" style="width: 36px; height: 36px; border-radius: 8px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;" title="itch.io" onmouseover="this.style.background='#e8eaf6'" onmouseout="this.style.background='#f5f5f5'">
+                            <svg viewBox="0 0 24 24" fill="currentColor" style="width: 18px; height: 18px; color: #666;">
+                                <path d="M3.13 1.338C2.08 1.96.02 4.328 0 4.95v1.03c0 1.303 1.22 2.45 2.325 2.45 1.33 0 2.436-1.102 2.436-2.41 0 1.308 1.07 2.41 2.4 2.41 1.328 0 2.362-1.102 2.362-2.41 0 1.308 1.107 2.41 2.436 2.41h.024c1.33 0 2.436-1.102 2.436-2.41 0 1.308 1.034 2.41 2.363 2.41 1.328 0 2.4-1.102 2.4-2.41 0 1.308 1.104 2.41 2.435 2.41C22.78 8.43 24 7.283 24 5.98V4.95c-.02-.622-2.08-2.99-3.13-3.612C19.154.448 4.846.448 3.13 1.338zm8.87 5.82c-.418.002-.827.06-1.12.173-.665.252-.99.88-.99 1.54v.42H7.38c-.057 0-.118.007-.173.018V9.16h-.002v.063c-.24.096-.45.295-.504.568v.018c-.013.064-.02.13-.02.198v6.946c0 .697.598 1.278 1.328 1.278h8.982c.73 0 1.328-.58 1.328-1.278V10.007c0-.068-.007-.134-.02-.198v-.018c-.054-.273-.264-.472-.504-.568V9.16H15.24v.15c-.055-.01-.116-.018-.173-.018H12.9v-.42c0-.66-.325-1.288-.99-1.54-.295-.114-.703-.174-1.12-.173l.21-.002zm0 .002-.21.002.21-.002zm-.21.002h.21-.21zm.21 0c.36-.002.713.048.938.135.478.18.65.646.65 1.203v.42H9.64v-.42c0-.557.172-1.023.65-1.203.225-.087.578-.137.937-.135h.783zm-5.3 2.52h2.12v.68c0 .43.27.768.47 1.03l.16.213c-.375.198-.55.43-.55.787v3.31c0 .387.277.658.64.658h5.32c.363 0 .64-.27.64-.658v-3.31c0-.358-.175-.59-.55-.787l.16-.213c.2-.262.47-.6.47-1.03v-.68h2.12v6.75H6.71V9.682zm2.79 2.1h4.98c.072 0 .13.057.13.127v3.067c0 .07-.058.126-.13.126H9.5c-.072 0-.13-.056-.13-.127V11.91c0-.07.058-.127.13-.127z"/>
+                            </svg>
+                        </a>
+                        <a href="https://evagr11.github.io/Curriculum/" target="_blank" rel="noopener noreferrer" class="team-card__link" style="width: 36px; height: 36px; border-radius: 8px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;" title="Portfolio web" onmouseover="this.style.background='#e8eaf6'" onmouseout="this.style.background='#f5f5f5'">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 18px; height: 18px; color: #666;">
+                                <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
                             </svg>
                         </a>
                     </div>
@@ -396,25 +440,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__content">
-                <div class="footer__brand">
-                    <span class="footer__logo">iMirly</span>
-                    <p class="footer__text">Proyecto académico DAM</p>
-                </div>
-                <div class="footer__info">
-                    <p class="footer__location">Granada, España</p>
-                    <p class="footer__note">Presentación del proyecto</p>
-                </div>
-            </div>
-            <div class="footer__bottom">
-                <p>&copy; 2025 iMirly. Todos los derechos reservados.</p>
-            </div>
-        </div>
-    </footer>
-
     <script src="main.js"></script>
+    <script src="footer.js"></script>
 </body>
 </html>

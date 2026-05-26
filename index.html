@@ -10,7 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-
 </head>
 
 <body>
@@ -48,6 +47,43 @@
             </button>
         </nav>
     </header>
+
+    <!-- Menú Flotante Lateral -->
+    <nav class="floating-nav" id="floating-nav">
+        <div class="floating-nav__menu active" id="floating-menu">
+            <a href="#home" class="floating-nav__link" data-section="home">
+                <span class="floating-nav__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                </span>
+                <span class="floating-nav__label">Inicio</span>
+            </a>
+            <a href="#idea" class="floating-nav__link" data-section="idea">
+                <span class="floating-nav__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+                </span>
+                <span class="floating-nav__label">La Idea</span>
+            </a>
+            <a href="#problem" class="floating-nav__link" data-section="problem">
+                <span class="floating-nav__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                </span>
+                <span class="floating-nav__label">¿Por qué?</span>
+            </a>
+            <a href="#value" class="floating-nav__link" data-section="value">
+                <span class="floating-nav__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </span>
+                <span class="floating-nav__label">Valor</span>
+            </a>
+            <a href="#mission" class="floating-nav__link" data-section="mission">
+                <span class="floating-nav__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+                </span>
+                <span class="floating-nav__label">Misión</span>
+            </a>
+        </div>
+    </nav>
+
 
     <!-- Hero Section -->
     <section class="hero" id="home">
@@ -352,7 +388,7 @@
                             style="font-size: 1rem; font-weight: 600; color: #3f51b5; margin-bottom: 8px;">Plataforma
                             especializada</h3>
                         <p class="value-item__text"
-                            style="font-size: 0.9rem; color: #666; line-height: 1.5; margin: 0;">Diseñada exclusivamente
+                            style="font-size: 1rem; color: #666; line-height: 1.5; margin: 0;">Diseñada exclusivamente
                             para servicios, no una adaptación generalista</p>
                     </div>
                 </div>
@@ -372,7 +408,7 @@
                             style="font-size: 1rem; font-weight: 600; color: #3f51b5; margin-bottom: 8px;">Enfoque local
                         </h3>
                         <p class="value-item__text"
-                            style="font-size: 0.9rem; color: #666; line-height: 1.5; margin: 0;">Proximidad geográfica y
+                            style="font-size: 1rem; color: #666; line-height: 1.5; margin: 0;">Proximidad geográfica y
                             confianza comunitaria</p>
                     </div>
                 </div>
@@ -392,7 +428,7 @@
                             style="font-size: 1rem; font-weight: 600; color: #3f51b5; margin-bottom: 8px;">Diseño
                             accesible</h3>
                         <p class="value-item__text"
-                            style="font-size: 0.9rem; color: #666; line-height: 1.5; margin: 0;">Interfaz clara,
+                            style="font-size: 1rem; color: #666; line-height: 1.5; margin: 0;">Interfaz clara,
                             intuitiva y centrada en el usuario</p>
                     </div>
                 </div>
@@ -413,7 +449,7 @@
                             style="font-size: 1rem; font-weight: 600; color: #3f51b5; margin-bottom: 8px;">Contacto
                             directo</h3>
                         <p class="value-item__text"
-                            style="font-size: 0.9rem; color: #666; line-height: 1.5; margin: 0;">Transparencia total en
+                            style="font-size: 1rem; color: #666; line-height: 1.5; margin: 0;">Transparencia total en
                             la comunicación entre partes</p>
                     </div>
                 </div>
@@ -434,7 +470,7 @@
                             style="font-size: 1rem; font-weight: 600; color: #3f51b5; margin-bottom: 8px;">Impacto
                             social</h3>
                         <p class="value-item__text"
-                            style="font-size: 0.9rem; color: #666; line-height: 1.5; margin: 0;">Fortalecimiento de la
+                            style="font-size: 1rem; color: #666; line-height: 1.5; margin: 0;">Fortalecimiento de la
                             economía local y comunitaria</p>
                     </div>
                 </div>
@@ -454,7 +490,7 @@
                             style="font-size: 1rem; font-weight: 600; color: #3f51b5; margin-bottom: 8px;">Confianza
                             verificada</h3>
                         <p class="value-item__text"
-                            style="font-size: 0.9rem; color: #666; line-height: 1.5; margin: 0;">Sistema de valoraciones
+                            style="font-size: 1rem; color: #666; line-height: 1.5; margin: 0;">Sistema de valoraciones
                             y reputación que construye seguridad mutua entre usuarios</p>
                     </div>
                 </div>
@@ -474,7 +510,7 @@
                             style="font-size: 1rem; font-weight: 600; color: #3f51b5; margin-bottom: 8px;">Chat
                             integrado</h3>
                         <p class="value-item__text"
-                            style="font-size: 0.9rem; color: #666; line-height: 1.5; margin: 0;">Comunicación
+                            style="font-size: 1rem; color: #666; line-height: 1.5; margin: 0;">Comunicación
                             centralizada dentro de la app para organizar todos los detalles del servicio</p>
                     </div>
                 </div>
@@ -494,7 +530,7 @@
                             style="font-size: 1rem; font-weight: 600; color: #3f51b5; margin-bottom: 8px;">Precios
                             claros</h3>
                         <p class="value-item__text"
-                            style="font-size: 0.9rem; color: #666; line-height: 1.5; margin: 0;">Transparencia en
+                            style="font-size: 1rem; color: #666; line-height: 1.5; margin: 0;">Transparencia en
                             cotizaciones y tarifas para evitar sorpresas y malentendidos</p>
                     </div>
                 </div>
@@ -557,78 +593,8 @@
         </div>
     </section>
 
-    <!-- Equipo Section -->
-    <section class="section section--team" id="team">
-        <div class="container">
-            <div class="section__header fade-in">
-                <span class="section__tag">Nosotros</span>
-                <h2 class="section__title">El equipo</h2>
-                <p class="section__description">
-                    iMirly está desarrollado por un equipo de cuatro personas, estudiantes del ciclo de Desarrollo de
-                    Aplicaciones Multiplataforma (DAM), implicados en todas las fases del proyecto.
-                </p>
-            </div>
-            <div class="team-grid">
-                <div class="team-card fade-in">
-                    <div class="team-card__avatar"
-                        style="background: linear-gradient(135deg, #e0e0ff 0%, #6c5ce7 100%);">
-                        <span>EL</span>
-                    </div>
-                    <h3 class="team-card__name">Eva Gallardo Romero</h3>
-                    <p class="team-card__role">Desarrolladora de aplicaciones y programadora en formación</p>
-                    <p class="team-card__text">Front, lógica de la app, estructuración técnica y desarrollo del proyecto</p>
-                </div>
-                <div class="team-card fade-in">
-                    <div class="team-card__avatar"
-                        style="background: linear-gradient(135deg, #6c5ce7 0%, #3f51b5 100%);">
-                        <span>AN</span>
-                    </div>
-                    <h3 class="team-card__name">Ana Núñez Rejón</h3>
-                    <p class="team-card__role">Diseñadora gráfica y desarrolladora en formación</p>
-                    <p class="team-card__text">UX/UI, diseño visual y desarrollo técnico</p>
-                </div>
-                <div class="team-card fade-in">
-                    <div class="team-card__avatar"
-                        style="background: linear-gradient(135deg, #e0e0ff 0%, #6c5ce7 100%);">
-                        <span>NC</span>
-                    </div>
-                    <h3 class="team-card__name">Nicolás Corbi De Gracia</h3>
-                    <p class="team-card__role">Desarrollador de aplicaciones y programador en formación</p>
-                    <p class="team-card__text">Lógica de negocio y estructuración técnica</p>
-                </div>
-                <div class="team-card fade-in">
-                    <div class="team-card__avatar"
-                        style="background: linear-gradient(135deg, #6c5ce7 0%, #3f51b5 100%);">
-                        <span>AM</span>
-                    </div>
-                    <h3 class="team-card__name">Ángel Millán Aragón</h3>
-                    <p class="team-card__role">Programador full-stack en formación</p>
-                    <p class="team-card__text">Coordinación del proyecto y desarrollo técnico</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__content">
-                <div class="footer__brand">
-                    <span class="footer__logo">iMirly</span>
-                    <p class="footer__text">Proyecto académico DAM</p>
-                </div>
-                <div class="footer__info">
-                    <p class="footer__location">Granada, España</p>
-                    <p class="footer__note">Presentación del proyecto</p>
-                </div>
-            </div>
-            <div class="footer__bottom">
-                <p>&copy; 2025 iMirly. Todos los derechos reservados.</p>
-            </div>
-        </div>
-    </footer>
 
     <script src="main.js"></script>
+    <script src="footer.js"></script>
 </body>
-
 </html>

@@ -248,3 +248,66 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 });
+
+// ============================================
+// Floating Navigation Menu
+// ============================================
+
+(function() {
+    // Solo ejecutar si existe el menú flotante en la página
+    const floatingNav = document.getElementById('floating-nav');
+    if (!floatingNav) return;
+
+    const links = document.querySelectorAll('.floating-nav__link');
+    const sections = document.querySelectorAll('section[id]');
+
+    // Navegación suave a secciones
+    links.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+
+            if (targetSection) {
+                const headerHeight = document.querySelector('.header').offsetHeight;
+                const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
+
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+
+                // Actualizar activo
+                links.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            }
+        });
+    });
+
+    // Scroll spy - resaltar sección actual
+    function updateActiveLink() {
+        let current = '';
+        const scrollY = window.pageYOffset;
+        const headerHeight = document.querySelector('.header').offsetHeight;
+
+        sections.forEach(function(section) {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+
+            if (scrollY >= sectionTop - headerHeight - 100) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        links.forEach(function(link) {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + current) {
+                link.classList.add('active');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', updateActiveLink);
+    // Llamar una vez al cargar
+    updateActiveLink();
+})();

@@ -42,6 +42,61 @@
         </nav>
     </header>
 
+    <!-- Menú Flotante Lateral -->
+    <nav class="floating-nav" id="floating-nav">
+        <div class="floating-nav__menu active" id="floating-menu">
+            <a href="#vision-general" class="floating-nav__link" data-section="vision-general">
+                <span class="floating-nav__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                </span>
+                <span class="floating-nav__label">Arquitectura</span>
+            </a>
+            <a href="#arquitectura-capas" class="floating-nav__link" data-section="arquitectura-capas">
+                <span class="floating-nav__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                </span>
+                <span class="floating-nav__label">Capas</span>
+            </a>
+            <a href="#modelo-datos" class="floating-nav__link" data-section="modelo-datos">
+                <span class="floating-nav__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                </span>
+                <span class="floating-nav__label">Datos</span>
+            </a>
+            <a href="#seguridad" class="floating-nav__link" data-section="seguridad">
+                <span class="floating-nav__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </span>
+                <span class="floating-nav__label">Seguridad</span>
+            </a>
+            <a href="#base-datos" class="floating-nav__link" data-section="base-datos">
+                <span class="floating-nav__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                </span>
+                <span class="floating-nav__label">BBDD</span>
+            </a>
+            <a href="#buenas-practicas" class="floating-nav__link" data-section="buenas-practicas">
+                <span class="floating-nav__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </span>
+                <span class="floating-nav__label">Prácticas</span>
+            </a>
+            <a href="#escalabilidad" class="floating-nav__link" data-section="escalabilidad">
+                <span class="floating-nav__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                </span>
+                <span class="floating-nav__label">Escalar</span>
+            </a>
+            <a href="#soporte" class="floating-nav__link" data-section="soporte">
+                <span class="floating-nav__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </span>
+                <span class="floating-nav__label">Soporte</span>
+            </a>
+        </div>
+    </nav>
+
+
     <!-- Hero Section -->
     <section class="hero hero--secondary">
     <div class="hero__decoration hero__decoration--1"></div>
@@ -313,7 +368,7 @@
                     </svg>
                 </div>
                 <h3 class="concept-card__title" style="color: #3f51b5; font-size: 1.3rem;">Usuario</h3>
-                <p class="concept-card__text" style="font-size: 0.9rem; margin-bottom: 16px;">
+                <p class="concept-card__text" style="font-size: 1rem; margin-bottom: 16px;">
                     Entidad central del sistema
                 </p>
                 <ul style="list-style: none; padding: 0; text-align: left; font-size: 0.85rem; color: #666;">
@@ -335,7 +390,7 @@
                     </svg>
                 </div>
                 <h3 class="concept-card__title" style="color: #388e3c; font-size: 1.3rem;">Servicio</h3>
-                <p class="concept-card__text" style="font-size: 0.9rem; margin-bottom: 16px;">
+                <p class="concept-card__text" style="font-size: 1rem; margin-bottom: 16px;">
                     Anuncio de servicio ofrecido
                 </p>
                 <ul style="list-style: none; padding: 0; text-align: left; font-size: 0.85rem; color: #666;">
@@ -357,7 +412,7 @@
                     </svg>
                 </div>
                 <h3 class="concept-card__title" style="color: #d84315; font-size: 1.3rem;">Categoría</h3>
-                <p class="concept-card__text" style="font-size: 0.9rem; margin-bottom: 16px;">
+                <p class="concept-card__text" style="font-size: 1rem; margin-bottom: 16px;">
                     Clasificación jerárquica
                 </p>
                 <ul style="list-style: none; padding: 0; text-align: left; font-size: 0.85rem; color: #666;">
@@ -379,7 +434,7 @@
                     </svg>
                 </div>
                 <h3 class="concept-card__title" style="color: #1565c0; font-size: 1.3rem;">Relaciones</h3>
-                <p class="concept-card__text" style="font-size: 0.9rem; margin-bottom: 16px;">
+                <p class="concept-card__text" style="font-size: 1rem; margin-bottom: 16px;">
                     Cardinalidad entre entidades
                 </p>
                 <ul style="list-style: none; padding: 0; text-align: left; font-size: 0.85rem; color: #666;">
@@ -844,25 +899,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__content">
-                <div class="footer__brand">
-                    <span class="footer__logo">iMirly</span>
-                    <p class="footer__text">Proyecto académico DAM</p>
-                </div>
-                <div class="footer__info">
-                    <p class="footer__location">Granada, España</p>
-                    <p class="footer__note">Presentación del proyecto</p>
-                </div>
-            </div>
-            <div class="footer__bottom">
-                <p>&copy; 2025 iMirly. Todos los derechos reservados.</p>
-            </div>
-        </div>
-    </footer>
-
     <script src="main.js"></script>
+    <script src="footer.js"></script>
 </body>
 </html>
