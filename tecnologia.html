@@ -172,31 +172,6 @@
                 <p class="section__description">Hemos abandonado el sistema de "capas tradicionales" por una arquitectura hexagonal (Puertos y Adaptadores) para hacer el sistema a prueba de balas.</p>
             </div>
             
-    <section class="section section--concept" id="backend-core">
-        <div class="container">
-            <div class="section__header fade-in">
-                <span class="section__tag">Servidor</span>
-                <h2 class="section__title">El Motor: Spring Boot & Seguridad</h2>
-                <p class="section__description">El backend no se limita a guardar y devolver datos. Actúa como el árbitro que asegura que las reglas de negocio, la seguridad y el dinero se gestionen correctamente.</p>
-            </div>
-            
-            <div class="concept-grid">
-                <div class="concept-card fade-in">
-                    <h3 class="concept-card__title">🛡️ Spring Security & JWT</h3>
-                    <p class="concept-card__text">Todo el sistema está protegido. Las peticiones desde Android viajan con un <strong>JSON Web Token (JWT)</strong> que el backend intercepta y valida antes de permitir ejecutar acciones como el pago o borrar chats.</p>
-                </div>
-                <div class="concept-card fade-in">
-                    <h3 class="concept-card__title">⚙️ JPA & Hibernate</h3>
-                    <p class="concept-card__text">Se utiliza <strong>Spring Data JPA</strong> como capa ORM. Esto nos permite interactuar con la base de datos PostgreSQL mediante objetos de Java (Entidades) sin necesidad de escribir sentencias SQL manuales complejas.</p>
-                </div>
-                <div class="concept-card fade-in">
-                    <h3 class="concept-card__title">🔄 Lógica de Transacciones</h3>
-                    <p class="concept-card__text">Las operaciones sensibles (como restar el <code>saldo</code> de un usuario y actualizar el <code>estado</code> de un contrato) están envueltas en anotaciones <code>@Transactional</code>. O la operación se completa entera, o se revierte automáticamente.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
             <div class="ux-pillars">
                 <div class="ux-pillar fade-in">
                     <h3 class="ux-pillar__title">🧠 Capa de Dominio</h3>
@@ -221,6 +196,31 @@
                         <li>Adaptadores REST (para que Android se conecte).</li>
                         <li>Adaptadores JPA (para guardar en base de datos).</li>
                     </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section--concept" id="backend-core">
+        <div class="container">
+            <div class="section__header fade-in">
+                <span class="section__tag">Servidor</span>
+                <h2 class="section__title">El Motor: Spring Boot & Seguridad</h2>
+                <p class="section__description">El backend no se limita a guardar y devolver datos. Actúa como el árbitro que asegura que las reglas de negocio, la seguridad y el dinero se gestionen correctamente.</p>
+            </div>
+            
+            <div class="concept-grid">
+                <div class="concept-card fade-in">
+                    <h3 class="concept-card__title">🛡️ Spring Security & JWT</h3>
+                    <p class="concept-card__text">Todo el sistema está protegido. Las peticiones desde Android viajan con un <strong>JSON Web Token (JWT)</strong> que el backend intercepta y valida antes de permitir ejecutar acciones como el pago o borrar chats.</p>
+                </div>
+                <div class="concept-card fade-in">
+                    <h3 class="concept-card__title">⚙️ JPA & Hibernate</h3>
+                    <p class="concept-card__text">Se utiliza <strong>Spring Data JPA</strong> como capa ORM. Esto nos permite interactuar con la base de datos PostgreSQL mediante objetos de Java (Entidades) sin necesidad de escribir sentencias SQL manuales complejas.</p>
+                </div>
+                <div class="concept-card fade-in">
+                    <h3 class="concept-card__title">🔄 Lógica de Transacciones</h3>
+                    <p class="concept-card__text">Las operaciones sensibles (como restar el <code>saldo</code> de un usuario y actualizar el <code>estado</code> de un contrato) están envueltas en anotaciones <code>@Transactional</code>. O la operación se completa entera, o se revierte automáticamente.</p>
                 </div>
             </div>
         </div>
@@ -292,18 +292,27 @@
             
             <div class="ui-showcase">
                 <div class="ui-element fade-in">
+                    <div class="ui-element__preview" style="background: #e8f5e9; padding: 12px; border-radius: 8px; text-align: center;">
+                        <span style="font-size: 24px;">🛡️</span>
+                    </div>
                     <div class="ui-element__info">
                         <h4>Transaccionalidad (@Transactional)</h4>
                         <p>Cuando un cliente paga, se resta su saldo y se cambia el estado del contrato. Si algo falla a la mitad, <strong>se deshace todo</strong> ("O todo o nada") para no perder dinero.</p>
                     </div>
                 </div>
                 <div class="ui-element fade-in">
+                    <div class="ui-element__preview" style="background: #FFF8E1; padding: 12px; border-radius: 8px; text-align: center;">
+                        <span style="font-size: 24px;">📦</span>
+                    </div>
                     <div class="ui-element__info">
                         <h4>Patrón DTO y Mappers</h4>
                         <p>Nunca enviamos la base de datos directa al móvil. Usamos "Mappers" que filtran la información (para no enviar contraseñas por error, por ejemplo).</p>
                     </div>
                 </div>
                 <div class="ui-element fade-in">
+                    <div class="ui-element__preview" style="background: #ffebee; padding: 12px; border-radius: 8px; text-align: center;">
+                        <span style="font-size: 24px;">⚠️</span>
+                    </div>
                     <div class="ui-element__info">
                         <h4>Gestión de Excepciones</h4>
                         <p>Respuestas HTTP estándar. Si intentas borrar un chat con dinero retenido, el servidor responde con un código claro que Android traduce a un aviso visual.</p>
