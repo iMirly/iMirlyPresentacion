@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -145,21 +146,40 @@
             
             <div class="concept-grid">
                 <div class="concept-card fade-in">
-                    <h3 class="concept-card__title">📱 App Android (Kotlin)</h3>
+                    <div class="ux-pillar__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                            <line x1="12" y1="18" x2="12.01" y2="18"/>
+                        </svg>
+                    </div>
+                    <h3 class="concept-card__title">App Android (Kotlin)</h3>
                     <p class="concept-card__text">Desarrollada nativamente con <strong>Jetpack Compose</strong>. Una interfaz rápida, reactiva y moderna.</p>
                 </div>
                 <div class="concept-card fade-in">
-                    <h3 class="concept-card__title">⚙️ API REST (Spring Boot)</h3>
+                    <div class="ux-pillar__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                        </svg>
+                    </div>
+                    <h3 class="concept-card__title">API REST (Spring Boot)</h3>
                     <p class="concept-card__text">Un potente servidor en <strong>Java</strong> que recibe peticiones, aplica reglas de negocio y procesa pagos.</p>
                 </div>
                 <div class="concept-card fade-in">
-                    <h3 class="concept-card__title">🗄️ Base de datos Relacional</h3>
+                    <div class="ux-pillar__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+                        </svg>
+                    </div>
+                    <h3 class="concept-card__title">Base de datos Relacional</h3>
                     <p class="concept-card__text">Uso de <strong>PostgreSQL</strong> (y H2 en desarrollo) gestionado a través de Hibernate (JPA).</p>
                 </div>
             </div>
 
             <div class="research-context fade-in" style="margin-top: 32px; background: #e0e0ff; padding: 20px; border-radius: 8px;">
-                <p><strong>💡 Para entenderlo mejor:</strong> Piensa en un restaurante. La App es el camarero (toma nota), la API REST es el chef (cocina el pedido siguiendo reglas estrictas), y la Base de Datos es la despensa.</p>
+                <p><strong> <i class="fa-solid fa-lightbulb"></i> Para entenderlo mejor:</strong> Piensa en un restaurante. La App es el camarero (toma nota), la API REST es el chef (cocina el pedido siguiendo reglas estrictas), y la Base de Datos es la despensa.</p>
             </div>
         </div>
     </section>
@@ -174,7 +194,13 @@
             
             <div class="ux-pillars">
                 <div class="ux-pillar fade-in">
-                    <h3 class="ux-pillar__title">🧠 Capa de Dominio</h3>
+                    <div class="ux-pillar__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/>
+                            <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="ux-pillar__title">Capa de Dominio</h3>
                     <ul class="ux-pillar__list">
                         <li>El corazón de la app (Usuarios, Contratos).</li>
                         <li>No depende de internet ni bases de datos.</li>
@@ -182,7 +208,13 @@
                     </ul>
                 </div>
                 <div class="ux-pillar fade-in">
-                    <h3 class="ux-pillar__title">⚙️ Capa de Aplicación</h3>
+                    <div class="ux-pillar__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                        </svg>
+                    </div>
+                    <h3 class="ux-pillar__title">Capa de Aplicación</h3>
                     <ul class="ux-pillar__list">
                         <li>Los "Casos de Uso" (ej. "Pagar un contrato").</li>
                         <li>Orquesta la información entre el dominio y el exterior.</li>
@@ -190,7 +222,17 @@
                     </ul>
                 </div>
                 <div class="ux-pillar fade-in">
-                    <h3 class="ux-pillar__title">🔌 Capa de Infraestructura</h3>
+                    <div class="ux-pillar__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="2" width="18" height="12" rx="2" ry="2"/>
+                            <line x1="7" y1="2" x2="7" y2="14"/>
+                            <line x1="17" y1="2" x2="17" y2="14"/>
+                            <line x1="3" y1="8" x2="21" y2="8"/>
+                            <path d="M12 14v7"/>
+                            <path d="M8 21h8"/>
+                        </svg>
+                    </div>
+                    <h3 class="ux-pillar__title">Capa de Infraestructura</h3>
                     <ul class="ux-pillar__list">
                         <li>Los "Enchufes" del sistema.</li>
                         <li>Adaptadores REST (para que Android se conecte).</li>
@@ -211,15 +253,33 @@
             
             <div class="concept-grid">
                 <div class="concept-card fade-in">
-                    <h3 class="concept-card__title">🛡️ Spring Security & JWT</h3>
+                    <div class="ux-pillar__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h3 class="concept-card__title">Spring Security & JWT</h3>
                     <p class="concept-card__text">Todo el sistema está protegido. Las peticiones desde Android viajan con un <strong>JSON Web Token (JWT)</strong> que el backend intercepta y valida antes de permitir ejecutar acciones como el pago o borrar chats.</p>
                 </div>
                 <div class="concept-card fade-in">
-                    <h3 class="concept-card__title">⚙️ JPA & Hibernate</h3>
+                    <div class="ux-pillar__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                        </svg>
+                    </div>
+                    <h3 class="concept-card__title">JPA & Hibernate</h3>
                     <p class="concept-card__text">Se utiliza <strong>Spring Data JPA</strong> como capa ORM. Esto nos permite interactuar con la base de datos PostgreSQL mediante objetos de Java (Entidades) sin necesidad de escribir sentencias SQL manuales complejas.</p>
                 </div>
                 <div class="concept-card fade-in">
-                    <h3 class="concept-card__title">🔄 Lógica de Transacciones</h3>
+                    <div class="ux-pillar__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="23 4 23 10 17 10"/>
+                            <polyline points="1 20 1 14 7 14"/>
+                            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+                        </svg>
+                    </div>
+                    <h3 class="concept-card__title">Lógica de Transacciones</h3>
                     <p class="concept-card__text">Las operaciones sensibles (como restar el <code>saldo</code> de un usuario y actualizar el <code>estado</code> de un contrato) están envueltas en anotaciones <code>@Transactional</code>. O la operación se completa entera, o se revierte automáticamente.</p>
                 </div>
             </div>
@@ -240,10 +300,10 @@
                         <span style="color: #6c5ce7; font-weight: bold; font-family: monospace;">Tabla: usuarios</span>
                     </div>
                     <ul style="list-style: none; padding: 0; margin-top: 16px; font-size: 0.9rem; color: #444; font-family: monospace;">
-                        <li style="padding: 4px 0; border-bottom: 1px solid #eee;">🔑 id (UUID)</li>
-                        <li style="padding: 4px 0; border-bottom: 1px solid #eee;">📄 email, password_hash</li>
-                        <li style="padding: 4px 0; border-bottom: 1px solid #eee;">🏷️ tipo_usuario (Enum)</li>
-                        <li style="padding: 4px 0; color: #d32f2f; font-weight: bold;">💰 saldo (Decimal 10,2)</li>
+                        <li style="padding: 4px 0; border-bottom: 1px solid #eee;"> <i class="fa-solid fa-key"></i> id (UUID)</li>
+                        <li style="padding: 4px 0; border-bottom: 1px solid #eee;"> <i class="fa-solid fa-file-lines"></i> email, password_hash</li>
+                        <li style="padding: 4px 0; border-bottom: 1px solid #eee;"> <i class="fa-solid fa-tag"></i> tipo_usuario (Enum)</li>
+                        <li style="padding: 4px 0; color: #d32f2f; font-weight: bold;"> <i class="fa-solid fa-sack-dollar" style="color: #474747;"></i> saldo (Decimal 10,2)</li>
                     </ul>
                 </div>
                 
@@ -252,11 +312,11 @@
                         <span style="color: #388e3c; font-weight: bold; font-family: monospace;">Tabla: solicitud_contrato</span>
                     </div>
                     <ul style="list-style: none; padding: 0; margin-top: 16px; font-size: 0.9rem; color: #444; font-family: monospace;">
-                        <li style="padding: 4px 0; border-bottom: 1px solid #eee;">🔑 id (UUID)</li>
-                        <li style="padding: 4px 0; border-bottom: 1px solid #eee;">🔗 cliente_id (FK Usuario)</li>
-                        <li style="padding: 4px 0; border-bottom: 1px solid #eee;">🔗 anuncio_id (FK Anuncio)</li>
-                        <li style="padding: 4px 0; border-bottom: 1px solid #eee; color: #d32f2f; font-weight: bold;">🚥 estado (Enum)</li>
-                        <li style="padding: 4px 0; color: #d32f2f; font-weight: bold;">💵 precio_acordado</li>
+                        <li style="padding: 4px 0; border-bottom: 1px solid #eee;"><i class="fa-solid fa-key"></i> id (UUID)</li>
+                        <li style="padding: 4px 0; border-bottom: 1px solid #eee;"><i class="fa-solid fa-link"></i> cliente_id (FK Usuario)</li>
+                        <li style="padding: 4px 0; border-bottom: 1px solid #eee;"><i class="fa-solid fa-link"></i> anuncio_id (FK Anuncio)</li>
+                        <li style="padding: 4px 0; border-bottom: 1px solid #eee; color: #d32f2f; font-weight: bold;"> <i class="fa-solid fa-traffic-light" style="color: #474747;"></i> estado (Enum)</li>
+                        <li style="padding: 4px 0; color: #d32f2f; font-weight: bold;"> <i class="fa-solid fa-money-bill" style="color: #474747;"></i> precio_acordado</li>
                     </ul>
                 </div>
 
@@ -265,11 +325,11 @@
                         <span style="color: #d84315; font-weight: bold; font-family: monospace;">Tabla: mensaje</span>
                     </div>
                     <ul style="list-style: none; padding: 0; margin-top: 16px; font-size: 0.9rem; color: #444; font-family: monospace;">
-                        <li style="padding: 4px 0; border-bottom: 1px solid #eee;">🔑 id (UUID)</li>
-                        <li style="padding: 4px 0; border-bottom: 1px solid #eee;">🔗 remitente_id / receptor_id</li>
-                        <li style="padding: 4px 0; border-bottom: 1px solid #eee; color: #d32f2f; font-weight: bold;">🔗 solicitud_id (FK Contrato)</li>
-                        <li style="padding: 4px 0; border-bottom: 1px solid #eee;">📝 contenido (String)</li>
-                        <li style="padding: 4px 0; color: #d32f2f; font-weight: bold;">⚙️ tipo (Enum)</li>
+                        <li style="padding: 4px 0; border-bottom: 1px solid #eee;"><i class="fa-solid fa-key"></i> id (UUID)</li>
+                        <li style="padding: 4px 0; border-bottom: 1px solid #eee;"> <i class="fa-solid fa-link"></i> remitente_id / receptor_id</li>
+                        <li style="padding: 4px 0; border-bottom: 1px solid #eee; color: #d32f2f; font-weight: bold;"> <i class="fa-solid fa-link" style="color: #474747;"></i> solicitud_id (FK Contrato)</li>
+                        <li style="padding: 4px 0; border-bottom: 1px solid #eee;"> <i class="fa-solid fa-pen-to-square"></i> contenido (String)</li>
+                        <li style="padding: 4px 0; color: #d32f2f; font-weight: bold;"> <i class="fa-solid fa-gear" style="color: #474747;"></i> tipo (Enum)</li>
                     </ul>
                 </div>
             </div>
@@ -293,7 +353,11 @@
             <div class="ui-showcase">
                 <div class="ui-element fade-in">
                     <div class="ui-element__preview" style="background: #e8f5e9; padding: 12px; border-radius: 8px; text-align: center;">
-                        <span style="font-size: 24px;">🛡️</span>
+                        <div class="ux-pillar__icon" style="background: #e8f5e900;" >
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                        </div>
                     </div>
                     <div class="ui-element__info">
                         <h4>Transaccionalidad (@Transactional)</h4>
@@ -302,7 +366,13 @@
                 </div>
                 <div class="ui-element fade-in">
                     <div class="ui-element__preview" style="background: #FFF8E1; padding: 12px; border-radius: 8px; text-align: center;">
-                        <span style="font-size: 24px;">📦</span>
+                        <div class="ux-pillar__icon" style="background: #e8f5e900;" >
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                                <line x1="12" y1="22.08" x2="12" y2="12"/>
+                            </svg>
+                        </div>
                     </div>
                     <div class="ui-element__info">
                         <h4>Patrón DTO y Mappers</h4>
@@ -311,7 +381,13 @@
                 </div>
                 <div class="ui-element fade-in">
                     <div class="ui-element__preview" style="background: #ffebee; padding: 12px; border-radius: 8px; text-align: center;">
-                        <span style="font-size: 24px;">⚠️</span>
+                        <div class="ux-pillar__icon" style="background: #e8f5e900;" >
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                                <line x1="12" y1="9" x2="12" y2="13"/>
+                                <line x1="12" y1="17" x2="12.01" y2="17"/>
+                            </svg>
+                        </div>
                     </div>
                     <div class="ui-element__info">
                         <h4>Gestión de Excepciones</h4>
@@ -329,12 +405,22 @@
             </div>
             <div class="research-pillars">
                 <div class="research-pillar fade-in">
-                    <div class="research-pillar__icon">💳</div>
+                    <div class="ux-pillar__icon" >
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                                <line x1="12" y1="9" x2="12" y2="13"/>
+                                <line x1="12" y1="17" x2="12.01" y2="17"/>
+                            </svg>
+                    </div>
                     <h3 class="research-pillar__title">Pasarelas de Pago reales</h3>
                     <p class="research-pillar__text">El sistema de "Limbo" ya está programado. Integrar Stripe o PayPal sería simplemente conectar la pasarela al flujo existente.</p>
                 </div>
                 <div class="research-pillar fade-in">
-                    <div class="research-pillar__icon">⭐</div>
+                    <div class="ux-pillar__icon" >
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        </svg>
+                    </div>
                     <h3 class="research-pillar__title">Valoraciones Automáticas</h3>
                     <p class="research-pillar__text">Al tener el ciclo de vida cerrado (desde PENDIENTE hasta COMPLETADO), disparar un sistema de reseñas es inmediato.</p>
                 </div>
