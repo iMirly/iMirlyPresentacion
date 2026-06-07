@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rect&color=0:3f51b5,100:6c5ce7&height=180&section=header&text=iMirly&fontSize=80&fontColor=fff&fontAlignY=40&desc=Sitio%20web%20de%20presentaci%C3%B3n%20del%20proyecto%20TFC%20DAM&descAlignY=70&descSize=18" width="100%"/>
+  <img src="https://capsule-render.vercel.app/api?type=rect&color=0:3f51b5,100:6c5ce7&height=180&section=header&text=Presentación%20iMirly&fontSize=80&fontColor=fff&fontAlignY=40&desc=Sitio%20web%20de%20presentaci%C3%B3n%20del%20proyecto%20TFC%20DAM&descAlignY=70&descSize=18" width="100%"/>
 </div>
 
 <br>
