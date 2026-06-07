@@ -20,41 +20,71 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', handleScroll);
 
     // ============================================
-    // Mobile menu toggle
+    // Mobile menu toggle — FIXED
     // ============================================
     const navToggle = document.getElementById('nav-toggle');
     const navMenu = document.querySelector('.nav__menu');
 
-    if (navToggle) {
-        navToggle.addEventListener('click', function () {
-            navMenu.classList.toggle('active');
+    function closeMobileMenu() {
+        if (!navMenu || !navToggle) return;
+        navMenu.classList.remove('active');
+        const spans = navToggle.querySelectorAll('span');
+        spans[0].style.transform = '';
+        spans[1].style.opacity = '';
+        spans[2].style.transform = '';
+        navToggle.setAttribute('aria-expanded', 'false');
+    }
 
-            // Animate hamburger
-            const spans = navToggle.querySelectorAll('span');
+    function openMobileMenu() {
+        if (!navMenu || !navToggle) return;
+        navMenu.classList.add('active');
+        const spans = navToggle.querySelectorAll('span');
+        spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+        spans[1].style.opacity = '0';
+        spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+        navToggle.setAttribute('aria-expanded', 'true');
+    }
+
+    if (navToggle && navMenu) {
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.setAttribute('aria-label', 'Abrir menú');
+
+        navToggle.addEventListener('click', function (e) {
+            e.stopPropagation();
             if (navMenu.classList.contains('active')) {
-                spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-                spans[1].style.opacity = '0';
-                spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+                closeMobileMenu();
             } else {
-                spans[0].style.transform = 'none';
-                spans[1].style.opacity = '1';
-                spans[2].style.transform = 'none';
+                openMobileMenu();
+            }
+        });
+
+        // Cerrar al hacer click fuera del menú
+        document.addEventListener('click', function (e) {
+            if (navMenu.classList.contains('active') &&
+                !navMenu.contains(e.target) &&
+                !navToggle.contains(e.target)) {
+                closeMobileMenu();
+            }
+        });
+
+        // Cerrar al hacer click en un enlace (solo en móvil)
+        navMenu.querySelectorAll('.nav__link').forEach(link => {
+            link.addEventListener('click', function () {
+                if (window.innerWidth <= 968) {
+                    // Pequeño delay para que la navegación ocurra
+                    setTimeout(closeMobileMenu, 150);
+                }
+            });
+        });
+
+        // Cerrar con tecla Escape
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                closeMobileMenu();
+                navToggle.focus();
             }
         });
     }
-
-    // Close mobile menu when clicking on a link
-    document.querySelectorAll('.nav__link').forEach(link => {
-        link.addEventListener('click', function () {
-            if (!this.classList.contains('disabled')) {
-                navMenu.classList.remove('active');
-                const spans = navToggle.querySelectorAll('span');
-                spans[0].style.transform = 'none';
-                spans[1].style.opacity = '1';
-                spans[2].style.transform = 'none';
-            }
-        });
-    });
 
     // ============================================
     // Intersection Observer for fade-in animations
