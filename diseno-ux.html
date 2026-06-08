@@ -11,6 +11,284 @@
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="mobile.css">
+    <style>
+        /* ============================================================
+           ESTILOS ADICIONALES - Diseño & UX (inline)
+           ============================================================ */
+
+        /* --- MENU LATERAL: Submenus verticales con tabulacion --- */
+        .floating-nav__submenu {
+            display: flex;
+            flex-direction: column;
+            padding-left: 18px;
+            margin: 2px 0 6px 22px;
+            border-left: 2px solid #E8E5F5;
+        }
+
+        .floating-nav__sublink {
+            display: block;
+            padding: 5px 10px;
+            font-size: 12px;
+            color: #8E8E9C;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+            margin: 1px 0;
+            white-space: nowrap;
+            line-height: 1.4;
+        }
+
+        .floating-nav__sublink:hover {
+            color: #6c5ce7;
+            background: rgba(107, 92, 231, 0.06);
+        }
+
+        .floating-nav__sublink.active {
+            color: #6c5ce7;
+            background: rgba(107, 92, 231, 0.1);
+            font-weight: 500;
+        }
+
+        /* --- BRANDBOOK: Canva embed --- */
+        .section--brandbook {
+            background: #FFFFFF;
+        }
+
+
+
+        .brandbook-cta {
+            text-align: center;
+            margin-top: 16px;
+        }
+
+        .brandbook__button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* --- EXPERIENCIA DE USUARIO - Capitulo --- */
+        .section--ux-chapter {
+            background: var(--color-background-alt);
+        }
+
+        /* --- INVESTIGACION: Titulo grande --- */
+        .section--research .section__title {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+        }
+
+        /* --- ESQUEMAS: Wireframes con menos espacio entre bloques --- */
+        .section--wireframes .wireframe-block {
+            margin-bottom: 24px;
+        }
+
+        .section--wireframes .wireframe-block:last-child {
+            margin-bottom: 0;
+        }
+
+        .section--wireframes {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        /* --- FIGMA: Centrado correcto --- */
+        .section--figma {
+            background: var(--color-background-alt);
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+
+        .section--figma .section__header {
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .section--figma .section__title,
+        .section--figma .section__description {
+            text-align: center !important;
+        }
+
+        .figma-embed-container {
+            width: 100%;
+            max-width: 960px;
+            margin: 0 auto;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(107, 92, 231, 0.12);
+            border: 1px solid #E8E5F5;
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            background: #FFFFFF;
+        }
+
+        .figma-embed-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .figma-cta {
+            text-align: center;
+            margin-top: 28px;
+        }
+
+        /* --- FRASE FINAL: Compacta en una linea --- */
+        .section--quote {
+            background: #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 250px;
+            padding: var(--spacing-lg) 0;
+        }
+
+        .section--quote .quote {
+            padding: 32px 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .section--quote .quote__text {
+            font-size: 28px !important;
+            white-space: nowrap;
+            text-align: center;
+            margin: 0;
+            color: var(--color-purple);
+        }
+
+        /* --- BRANDBOOK: Visor de PDF local --- */
+        .brandbook-document {
+            width: 100%;
+            max-width: 960px;
+            margin: 0 auto;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 12px 48px rgba(107, 92, 231, 0.15);
+            border: 1px solid #E8E5F5;
+            background: #FFFFFF;
+        }
+
+        .brandbook-document__bar {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 20px;
+            background: #FFFFFF;
+            border-bottom: 1px solid #E8E5F5;
+        }
+
+        .brandbook-document__dots {
+            display: flex;
+            gap: 8px;
+        }
+
+        .brandbook-document__dots span {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            display: block;
+        }
+
+        .brandbook-document__dots span:nth-child(1) {
+            background: #ff6b6b;
+        }
+
+        .brandbook-document__dots span:nth-child(2) {
+            background: #ffd43b;
+        }
+
+        .brandbook-document__dots span:nth-child(3) {
+            background: #6bcb77;
+        }
+
+        .brandbook-document__title {
+            font-size: 14px;
+            font-weight: 500;
+            color: #555;
+            margin-left: 12px;
+        }
+
+        .brandbook-document__viewer {
+            width: 100%;
+            height: 560px;
+            border: none;
+            display: block;
+            background: #f5f5f7;
+        }
+
+        @media (max-width: 768px) {
+            .section--quote {
+                min-height: 180px;
+            }
+
+            .section--quote .quote__text {
+                font-size: 20px !important;
+                white-space: normal;
+            }
+
+            .section--quote .quote {
+                padding: 20px;
+            }
+
+            .brandbook-document__viewer {
+                height: 380px;
+            }
+        }
+
+        /* --- RESPONSIVE AJUSTES --- */
+        @media (max-width: 768px) {
+            .floating-nav__submenu {
+                padding-left: 14px;
+                margin-left: 18px;
+            }
+
+            .floating-nav__sublink {
+                font-size: 11px;
+                padding: 4px 8px;
+            }
+
+            .figma-embed-container {
+                padding-bottom: 75%;
+            }
+
+            .section--wireframes .wireframe-block {
+                margin-bottom: 16px;
+            }
+
+            .section--research .section__title {
+                font-size: 1.8rem;
+            }
+        }
+
+        .brandbook-cta {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            margin-top: 24px;
+            flex-wrap: wrap;
+        }
+
+        .btn--outline {
+            background: transparent;
+            color: var(--color-purple);
+            border: 2px solid var(--color-lavender);
+            box-shadow: none;
+        }
+
+        .btn--outline:hover {
+            background: var(--color-lavender-light);
+            border-color: var(--color-purple);
+            transform: translateY(-2px);
+        }
+    </style>
+    <base target="_blank">
 </head>
 
 <body>
@@ -18,9 +296,7 @@
     <header class="header" id="header">
         <nav class="nav container">
             <a href="index.html">
-                <img src="./assets/img/iMirlyazul.png"
-                    alt="Vista previa de la aplicación iMirly"
-                    class="nav__logo"
+                <img src="./assets/img/iMirlyazul.png" alt="Vista previa de la aplicación iMirly" class="nav__logo"
                     style="width: 120px; height: auto;">
             </a>
             <ul class="nav__menu">
@@ -33,14 +309,11 @@
                 <li class="nav__item">
                     <a href="diseno-ux.html" class="nav__link active">Diseño & UX</a>
                 </li>
-                </li>
                 <li class="nav__item">
                     <a href="aplicacion.html" class="nav__link">Aplicación</a>
                 </li>
-                </li>
                 <li class="nav__item">
                     <a href="tecnologia.html" class="nav__link">Tecnología</a>
-                </li>
                 </li>
                 <li class="nav__item">
                     <a href="equipo.html" class="nav__link">Equipo</a>
@@ -59,51 +332,102 @@
         <div class="floating-nav__menu active" id="floating-menu">
             <a href="#concepto" class="floating-nav__link" data-section="concepto">
                 <span class="floating-nav__icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M8 14s1.5 2 4 2 4-2 4-2" />
+                        <line x1="9" y1="9" x2="9.01" y2="9" />
+                        <line x1="15" y1="9" x2="15.01" y2="9" />
+                    </svg>
                 </span>
                 <span class="floating-nav__label">Concepto</span>
             </a>
             <a href="#paleta" class="floating-nav__link" data-section="paleta">
                 <span class="floating-nav__icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.01 17.461 2 12 2z"/></svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="13.5" cy="6.5" r=".5" />
+                        <circle cx="17.5" cy="10.5" r=".5" />
+                        <circle cx="8.5" cy="7.5" r=".5" />
+                        <circle cx="6.5" cy="12.5" r=".5" />
+                        <path
+                            d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.01 17.461 2 12 2z" />
+                    </svg>
                 </span>
                 <span class="floating-nav__label">Colores</span>
             </a>
+            <a href="#brandbook" class="floating-nav__link" data-section="brandbook">
+                <span class="floating-nav__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                    </svg>
+                </span>
+                <span class="floating-nav__label">Brandbook</span>
+            </a>
             <a href="#experiencia" class="floating-nav__link" data-section="experiencia">
                 <span class="floating-nav__icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                    </svg>
                 </span>
-                <span class="floating-nav__label">UX</span>
+                <span class="floating-nav__label">Experiencia de usuario</span>
             </a>
-            <a href="#investigacion" class="floating-nav__link" data-section="investigacion">
-                <span class="floating-nav__icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
-                </span>
-                <span class="floating-nav__label">Research</span>
-            </a>
-            <a href="#interfaz" class="floating-nav__link" data-section="interfaz">
-                <span class="floating-nav__icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
-                </span>
-                <span class="floating-nav__label">UI</span>
-            </a>
+            <!-- Submenu visible vertical -->
+            <div class="floating-nav__submenu">
+                <a href="#investigacion" class="floating-nav__sublink" data-section="investigacion">Investigación de
+                    usuarios</a>
+                <a href="#proceso-investigacion" class="floating-nav__sublink"
+                    data-section="proceso-investigacion">Proceso de investigación</a>
+                <a href="#validacion" class="floating-nav__sublink" data-section="validacion">Decisión de diseño</a>
+
+                <a href="#accesibilidad" class="floating-nav__sublink" data-section="accesibilidad">Accesibilidad y
+                    usabilidad</a>
+            </div>
             <a href="#esquemas" class="floating-nav__link" data-section="esquemas">
                 <span class="floating-nav__icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                        <line x1="3" y1="9" x2="21" y2="9" />
+                        <line x1="9" y1="21" x2="9" y2="9" />
+                    </svg>
                 </span>
-                <span class="floating-nav__label">Wireframes</span>
+                <span class="floating-nav__label">Esquemas</span>
             </a>
-            <a href="#accesibilidad" class="floating-nav__link" data-section="accesibilidad">
+            <!-- Submenu visible vertical con 5 subtipos -->
+            <div class="floating-nav__submenu">
+                <a href="#esquemas-papel" class="floating-nav__sublink" data-section="esquemas-papel">En papel</a>
+                <a href="#esquemas-digitales" class="floating-nav__sublink" data-section="esquemas-digitales">Esquemas
+                    digitales</a>
+                <a href="#prototipo-baja" class="floating-nav__sublink" data-section="prototipo-baja">Prototipo baja
+                    fidelidad</a>
+                <a href="#maqueta" class="floating-nav__sublink" data-section="maqueta">Maqueta</a>
+                <a href="#prototipo-alta" class="floating-nav__sublink" data-section="prototipo-alta">Prototipo alta
+                    fidelidad</a>
+            </div>
+            <a href="#figma" class="floating-nav__link" data-section="figma">
                 <span class="floating-nav__icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                    </svg>
                 </span>
-                <span class="floating-nav__label">Accesibilidad</span>
+                <span class="floating-nav__label">Figma</span>
             </a>
-            <a href="#valor" class="floating-nav__link" data-section="valor">
+            <a href="#frase-final" class="floating-nav__link" data-section="frase-final">
                 <span class="floating-nav__icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                    </svg>
                 </span>
-                <span class="floating-nav__label">Valor</span>
+                <span class="floating-nav__label">Frase final</span>
+            </a>
+            <a href="#conclusion" class="floating-nav__link" data-section="conclusion">
+                <span class="floating-nav__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                </span>
+                <span class="floating-nav__label">Conclusión</span>
             </a>
         </div>
     </nav>
@@ -111,27 +435,29 @@
 
     <!-- Hero Section -->
     <section class="hero hero--secondary">
-    <div class="hero__decoration hero__decoration--1"></div>
-    <div class="hero__decoration hero__decoration--2"></div>
-    <div class="container">
-        <div class="hero__wrapper" style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;">
-            <div class="hero__content fade-in">
-                <span class="section__tag">UX/UI</span>
-                <h1 class="hero__title">Diseño & Experiencia de Usuario</h1>
-                <p class="hero__subtitle">
-                    Una experiencia clara, cercana y pensada para todos los perfiles de usuario.
-                </p>
-                <p class="hero__text">
-                    El diseño de iMirly se ha desarrollado con un enfoque centrado en el usuario, priorizando la
-                    claridad, la accesibilidad y la confianza en la contratación de servicios locales.
-                </p>
-            </div>
-            <div class="hero__image fade-in" style="display: flex; justify-content: center; align-items: center;">
-                <img src="./assets/img/protptipoaltaimirly.png" alt="Diseño UX/UI de iMirly" style="max-width: 100%; height: auto; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+        <div class="hero__decoration hero__decoration--1"></div>
+        <div class="hero__decoration hero__decoration--2"></div>
+        <div class="container">
+            <div class="hero__wrapper"
+                style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;">
+                <div class="hero__content fade-in">
+                    <span class="section__tag">UX/UI</span>
+                    <h1 class="hero__title">Diseño & Experiencia de Usuario</h1>
+                    <p class="hero__subtitle">
+                        Una experiencia clara, cercana y pensada para todos los perfiles de usuario.
+                    </p>
+                    <p class="hero__text">
+                        El diseño de iMirly se ha desarrollado con un enfoque centrado en el usuario, priorizando la
+                        claridad, la accesibilidad y la confianza en la contratación de servicios locales.
+                    </p>
+                </div>
+                <div class="hero__image fade-in" style="display: flex; justify-content: center; align-items: center;">
+                    <img src="./assets/img/protptipoaltaimirly.png" alt="Diseño UX/UI de iMirly"
+                        style="max-width: 100%; height: auto; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Concepto Visual -->
     <section class="section section--concept" id="concepto">
@@ -170,7 +496,8 @@
                         <div class="visual-arc"></div>
                     </div>
                     <h3 class="concept-card__title">Lenguaje accesible</h3>
-                    <p class="concept-card__text">Formas orgánicas y redondeadas que transmiten cercanía y humanidad</p>
+                    <p class="concept-card__text">Formas orgánicas y redondeadas que transmiten cercanía y humanidad
+                    </p>
                 </div>
                 <div class="concept-card fade-in">
                     <div class="concept-card__visual concept-card__visual--modern">
@@ -240,12 +567,61 @@
         </div>
     </section>
 
+    <!-- Brandbook con Canva embed -->
+    <section class="section section--brandbook" id="brandbook">
+        <div class="container">
+            <div class="section__header fade-in">
+                <span class="section__tag">Brandbook</span>
+                <h2 class="section__title">Manual de marca</h2>
+                <p class="section__description">
+                    Creamos un manual de marca completo que define los estándares visuales de iMirly.
+                </p>
+            </div>
+            <div class="brandbook-document fade-in">
+                <div class="brandbook-document__bar">
+                    <div class="brandbook-document__dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <span class="brandbook-document__title">iMirly - Manual de marca.pdf</span>
+                </div>
+                <embed class="brandbook-document__viewer" src="./assets/pdf/imirly-brandbook.pdf#toolbar=0&navpanes=0"
+                    type="application/pdf" />
+            </div>
+            <div class="brandbook-cta fade-in">
+                <a href="https://canva.link/3pk68t4h6plx51b" target="_blank" class="btn btn--primary brandbook__button">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        style="width: 20px; height: 20px; margin-right: 8px;">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                        <polyline points="15 3 21 3 21 9" />
+                        <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                    Abrir en Canva
+                </a>
+                <a href="./assets/pdf/imirly-brandbook.pdf" download class="btn btn--outline brandbook__button">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        style="width: 20px; height: 20px; margin-right: 8px;">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                        <polyline points="7 10 12 15 17 10" />
+                        <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                    Descargar PDF
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Experiencia de Usuario -->
-    <section class="section section--ux" id="experiencia">
+    <section class="section section--ux-chapter" id="experiencia">
         <div class="container">
             <div class="section__header fade-in">
                 <span class="section__tag">UX Research</span>
-                <h2 class="section__title">Experiencia de usuario (UX)</h2>
+                <h2 class="section__title" style="font-size: 48px;">Experiencia de usuario</h2>
+                <p class="section__description" style="font-size: 20px; color: #6c5ce7; font-weight: 500;">
+                    Encuestas de usuario, perfiles de usuario (User Personas), mapas de empatía, journey maps y
+                    validación del diseño.
+                </p>
                 <p class="section__description">
                     La experiencia de usuario de iMirly está diseñada para que cualquier persona pueda utilizar la
                     aplicación sin dificultad, independientemente de su nivel tecnológico.
@@ -297,18 +673,20 @@
         </div>
     </section>
 
-    <!-- Investigación de Usuarios - Añadir entre Experiencia de Usuario y Diseño de Interfaz -->
+    <!-- Investigación de Usuarios -->
     <section class="section section--research" id="investigacion">
         <div class="container">
             <div class="section__header fade-in">
                 <span class="section__tag">Research</span>
-                <h2 class="section__title">Investigación de usuarios</h2>
+                <h2 class="section__title" style="font-size: 42px;">Investigación de usuarios</h2>
+                <p class="section__description" style="font-size: 20px; color: #6c5ce7; font-weight: 500;">
+                    Encuestas de usuario, perfiles de usuario (User Personas), mapas de empatía y journey maps.
+                </p>
                 <p class="section__description">
-                    Hemos realizado las entrevistas, la elaboración de mapas de empatía y los bocetos iniciales que
-                    permitieron comprender las necesidades reales de los usuarios objetivo de la aplicación iMirly.
+                    Hemos realizado entrevistas, elaboración de mapas de empatía y bocetos iniciales que permitieron
+                    comprender las necesidades reales de los usuarios objetivo de iMirly.
                 </p>
             </div>
-
             <div class="research-context fade-in">
                 <p class="research-context__text">
                     El público estaba formado por <strong>personas que necesitan contratar servicios cotidianos</strong>
@@ -317,17 +695,16 @@
                 </p>
                 <p class="research-context__goal">
                     El objetivo era diseñar una <strong>app intuitiva, rápida y de confianza</strong>, que permitiera a
-                    cualquier usuario encontrar o publicar servicios cercanos en pocos pasos, fomentando la colaboración
-                    local y la seguridad entre particulares.
+                    cualquier usuario encontrar o publicar servicios cercanos en pocos pasos.
                 </p>
             </div>
-
             <div class="research-pillars">
                 <div class="research-pillar fade-in">
                     <div class="ux-pillar__icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10"/>
-                            <path d="M12 6v6l4 2"/>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 6v6l4 2" />
                         </svg>
                     </div>
                     <h3 class="research-pillar__title">Tiempo</h3>
@@ -340,13 +717,13 @@
                         largos ni formularios complicados.
                     </p>
                 </div>
-
                 <div class="research-pillar fade-in">
                     <div class="ux-pillar__icon">
-                        <svg viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="128" cy="128" r="96"/>
-                            <path d="M148 100h-24a20 20 0 0 0 0 40h8a20 20 0 0 1 0 40h-28"/>
-                            <path d="M128 76v16M128 180v16"/>
+                        <svg viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="128" cy="128" r="96" />
+                            <path d="M148 100h-24a20 20 0 0 0 0 40h8a20 20 0 0 1 0 40h-28" />
+                            <path d="M128 76v16M128 180v16" />
                         </svg>
                     </div>
                     <h3 class="research-pillar__title">Precio</h3>
@@ -359,15 +736,15 @@
                         y los profesionales necesitan ganar lo justo por su trabajo.
                     </p>
                 </div>
-
                 <div class="research-pillar fade-in">
                     <div class="ux-pillar__icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
-                            <path d="M12 16v-4"/>
-                            <path d="M12 8h.01"/>
-                            <path d="M16 12h-4"/>
-                            <path d="M8 12h2"/>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
+                            <path d="M12 16v-4" />
+                            <path d="M12 8h.01" />
+                            <path d="M16 12h-4" />
+                            <path d="M8 12h2" />
                         </svg>
                     </div>
                     <h3 class="research-pillar__title">Accesibilidad</h3>
@@ -381,347 +758,163 @@
                     </p>
                 </div>
             </div>
+        </div>
+    </section>
 
-            
-
-            <!-- Validación del Diseño -->
-            <section class="section section--validation" id="validacion">
-                <div class="container">
-                    <div class="section__header fade-in">
-                        <span class="section__tag">Validación</span>
-                        <h2 class="section__title">Decisión de diseño basada en usuarios</h2>
-                        <p class="section__description">
-                            Tras definir la identidad visual, planteamos dos propuestas de interfaz para la pantalla principal. Ambas mantenían la misma estructura funcional, pero diferían en el tratamiento gráfico de las categorías.
-                        </p>
-                    </div>
-
-                    <div class="validation-grid fade-in">
-                        <!-- Opción 1 -->
-                        <div class="validation-card">
-                            <div class="validation-card__header">
-                                <span class="validation-card__badge">Opción 1</span>
-                                <h3 class="validation-card__title">Iconos minimalistas</h3>
-                            </div>
-                            <div class="validation-card__visual">
-                                <img src="./assets/img/Opcion1.png" alt="Opción 1: diseño con iconos minimalistas" loading="lazy">
-                            </div>
-                            <div class="validation-card__body">
-                                <p class="validation-card__text">
-                                    Iconos vectoriales limpios con <strong>paleta de colores suave</strong> y mayor énfasis en la tipografía. Un enfoque sobrio y profesional.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Opción 2 -->
-                        <div class="validation-card validation-card--winner">
-                            <div class="validation-card__header">
-                                <span class="validation-card__badge validation-card__badge--winner">Opción 2</span>
-                                <h3 class="validation-card__title">Ilustraciones detalladas</h3>
-                            </div>
-                            <div class="validation-card__visual">
-                                <img src="./assets/img/Opcion2.png" alt="Opción 2: diseño con ilustraciones detalladas" loading="lazy">
-                            </div>
-                            <div class="validation-card__body">
-                                <p class="validation-card__text">
-                                    Ilustraciones coloridas por categoría con un <strong>enfoque visual y cercano</strong> que humaniza la experiencia desde el primer contacto.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Resultado destacado -->
-                    <div class="validation-result fade-in">
-                        <div class="validation-result__box">
-                            <div class="validation-result__header">
-                                <div class="validation-result__icon">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M12 20V10M18 20V4M6 20v-4"/>
-                                    </svg>
-                                </div>
-                                <h3 class="validation-result__title">Resultado de la encuesta</h3>
-                            </div>
-                            <div class="validation-result__content">
-                                <p class="validation-result__context">
-                                    La encuesta alcanzó a <strong>82 participantes</strong> de distintos rangos de edad y perfiles tecnológicos, garantizando una muestra representativa de usuarios reales.
-                                </p>
-                                <div class="validation-result__highlight">
-                                    <div class="validation-result__stat">
-                                        <span class="validation-result__number">68,3%</span>
-                                        <span class="validation-result__label">preferencia</span>
-                                    </div>
-                                    <div class="validation-result__divider"></div>
-                                    <p class="validation-result__conclusion">
-                                        La mayoría eligió la <strong>Opción 2</strong>, valorando especialmente la <strong>calidez visual</strong> y la mayor claridad para identificar servicios de un vistazo.
-                                    </p>
-                                </div>
-
-                                <div class="validation-card__visual">
-                                <img src="./assets/img/ResultadoEncuesta.png" alt="Opción 2: diseño con ilustraciones detalladas" loading="lazy">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="validation-takeaway fade-in">
-                        <p>
-                            Este resultado reforzó nuestra apuesta por un diseño <strong>accesible y cercano</strong>. La preferencia mayoritaria confirmó que los usuarios buscan una plataforma que transmita <strong>confianza y humanidad</strong> desde el primer contacto visual.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Galería de imágenes de investigación -->
+    <!-- Proceso de investigacion (Galeria) -->
+    <section class="section section--research-gallery" id="proceso-investigacion">
+        <div class="container">
+            <div class="section__header fade-in">
+                <span class="section__tag">Research</span>
+                <h2 class="section__title">Proceso de investigación</h2>
+                <p class="section__description">
+                    Documentación completa del proceso de investigación con usuarios reales.
+                </p>
+            </div>
             <div class="research-gallery fade-in">
-                <h3 class="research-gallery__title">Proceso de investigación</h3>
                 <div class="gallery-grid">
                     <div class="gallery-item"
-                        onclick="openModal('./assets/img/Persona1.png', 'User Persona - Laura Gómez')">
-                        <img src="./assets/img/Persona1.png" alt="Investigación UX 1" loading="lazy">
+                        onclick="openModal('./assets/img/Persona1.png', 'User Persona - Laura Gomez')">
+                        <img src="./assets/img/Persona1.png" alt="Investigacion UX 1" loading="lazy">
                         <div class="gallery-item__overlay">
-                            <span>Ver más</span>
+                            <span>Ver mas</span>
                         </div>
                     </div>
                     <div class="gallery-item"
                         onclick="openModal('./assets/img/Persona2.png', 'User Persona - Carlos Ruiz')">
-                        <img src="./assets/img/Persona2.png" alt="Investigación UX 2" loading="lazy">
+                        <img src="./assets/img/Persona2.png" alt="Investigacion UX 2" loading="lazy">
                         <div class="gallery-item__overlay">
-                            <span>Ver más</span>
+                            <span>Ver mas</span>
                         </div>
                     </div>
                     <div class="gallery-item"
                         onclick="openModal('./assets/img/Persona2.1.png', 'User Journey - Carlos')">
-                        <img src="./assets/img/Persona2.1.png" alt="Investigación UX 3" loading="lazy">
+                        <img src="./assets/img/Persona2.1.png" alt="Investigacion UX 3" loading="lazy">
                         <div class="gallery-item__overlay">
-                            <span>Ver más</span>
+                            <span>Ver mas</span>
                         </div>
                     </div>
                     <div class="gallery-item"
-                        onclick="openModal('./assets/img/Persona3.png', 'User Persona - Jorge Martín')">
-                        <img src="./assets/img/Persona3.png" alt="Investigación UX 4" loading="lazy">
+                        onclick="openModal('./assets/img/Persona3.png', 'User Persona - Jorge Martin')">
+                        <img src="./assets/img/Persona3.png" alt="Investigacion UX 4" loading="lazy">
                         <div class="gallery-item__overlay">
-                            <span>Ver más</span>
+                            <span>Ver mas</span>
                         </div>
                     </div>
                     <div class="gallery-item"
-                        onclick="openModal('./assets/img/Persona4.png', 'User Persona - Marta Pérez')">
-                        <img src="./assets/img/Persona4.png" alt="Investigación UX 5" loading="lazy">
+                        onclick="openModal('./assets/img/Persona4.png', 'User Persona - Marta Perez')">
+                        <img src="./assets/img/Persona4.png" alt="Investigacion UX 5" loading="lazy">
                         <div class="gallery-item__overlay">
-                            <span>Ver más</span>
+                            <span>Ver mas</span>
                         </div>
                     </div>
                     <div class="gallery-item"
                         onclick="openModal('./assets/img/Persona4.1.png', 'User Journey - Marta')">
-                        <img src="./assets/img/Persona4.1.png" alt="Investigación UX 6" loading="lazy">
+                        <img src="./assets/img/Persona4.1.png" alt="Investigacion UX 6" loading="lazy">
                         <div class="gallery-item__overlay">
-                            <span>Ver más</span>
+                            <span>Ver mas</span>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <!-- Modal (añadir al final del body, antes del cierre) -->
-            <div id="imageModal" class="modal" onclick="closeModal(event)">
-                <div class="modal__content" onclick="event.stopPropagation()">
-                    <span class="modal__close" onclick="closeModal()">&times;</span>
-                    <img id="modalImage" src="" alt="">
-                    <p id="modalCaption" class="modal__caption"></p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Modal para imágenes -->
-    <div id="imageModal" class="modal">
-        <div class="modal__content">
-            <span class="modal__close" onclick="closeModal()">&times;</span>
-            <img id="modalImage" src="" alt="Imagen ampliada">
-        </div>
-    </div>
-
-    <!-- Diseño de Interfaz -->
-    <section class="section section--ui" id="interfaz">
+    <!-- Decision de diseno -->
+    <section class="section section--validation" id="validacion">
         <div class="container">
             <div class="section__header fade-in">
-                <span class="section__tag">UI Design</span>
-                <h2 class="section__title">Diseño de interfaz (UI)</h2>
+                <span class="section__tag">Validacion</span>
+                <h2 class="section__title">Decision de diseno basada en usuarios</h2>
                 <p class="section__description">
-                    El diseño de la interfaz se ha centrado en mostrar la información de forma ordenada y comprensible,
-                    evitando elementos innecesarios y priorizando la usabilidad.
+                    Tras definir la identidad visual, planteamos dos propuestas de interfaz para la pantalla principal.
+                    Ambas mantenian la misma estructura funcional, pero diferian en el tratamiento grafico de las
+                    categorias.
                 </p>
             </div>
-            <div class="ui-showcase">
-                <div class="ui-element fade-in">
-                    <div class="ui-element__preview">
-                        <div class="ui-card">
-                            <div class="ui-card__image"></div>
-                            <div class="ui-card__content">
-                                <div class="ui-card__title"></div>
-                                <div class="ui-card__text"></div>
-                                <div class="ui-card__button"></div>
+            <div class="validation-grid fade-in">
+                <div class="validation-card">
+                    <div class="validation-card__header">
+                        <span class="validation-card__badge">Opcion 1</span>
+                        <h3 class="validation-card__title">Iconos minimalistas</h3>
+                    </div>
+                    <div class="validation-card__visual">
+                        <img src="./assets/img/Opcion1.png" alt="Opcion 1: diseno con iconos minimalistas"
+                            loading="lazy">
+                    </div>
+                    <div class="validation-card__body">
+                        <p class="validation-card__text">
+                            Iconos vectoriales limpios con <strong>paleta de colores suave</strong> y mayor enfasis en
+                            la
+                            tipografia. Un enfoque sobrio y profesional.
+                        </p>
+                    </div>
+                </div>
+                <div class="validation-card validation-card--winner">
+                    <div class="validation-card__header">
+                        <span class="validation-card__badge validation-card__badge--winner">Opcion 2</span>
+                        <h3 class="validation-card__title">Ilustraciones detalladas</h3>
+                    </div>
+                    <div class="validation-card__visual">
+                        <img src="./assets/img/Opcion2.png" alt="Opcion 2: diseno con ilustraciones detalladas"
+                            loading="lazy">
+                    </div>
+                    <div class="validation-card__body">
+                        <p class="validation-card__text">
+                            Ilustraciones coloridas por categoria con un <strong>enfoque visual y cercano</strong> que
+                            humaniza la experiencia desde el primer contacto.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="validation-result fade-in">
+                <div class="validation-result__box">
+                    <div class="validation-result__header">
+                        <div class="validation-result__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 20V10M18 20V4M6 20v-4" />
+                            </svg>
+                        </div>
+                        <h3 class="validation-result__title">Resultado de la encuesta</h3>
+                    </div>
+                    <div class="validation-result__content">
+                        <p class="validation-result__context">
+                            La encuesta alcanzo a <strong>82 participantes</strong> de distintos rangos de edad y
+                            perfiles tecnologicos, garantizando una muestra representativa de usuarios reales.
+                        </p>
+                        <div class="validation-result__highlight">
+                            <div class="validation-result__stat">
+                                <span class="validation-result__number">68,3%</span>
+                                <span class="validation-result__label">preferencia</span>
                             </div>
+                            <div class="validation-result__divider"></div>
+                            <p class="validation-result__conclusion">
+                                La mayoria eligio la <strong>Opcion 2</strong>, valorando especialmente la
+                                <strong>calidez visual</strong> y la mayor claridad para identificar servicios de un
+                                vistazo.
+                            </p>
+                        </div>
+                        <div class="validation-card__visual">
+                            <img src="./assets/img/ResultadoEncuesta.png" alt="Resultado de la encuesta" loading="lazy">
                         </div>
                     </div>
-                    <div class="ui-element__info">
-                        <h4>Cards con bordes redondeados</h4>
-                        <p>Formas suaves que transmiten cercanía y facilitan la lectura</p>
-                    </div>
-                </div>
-                <div class="ui-element fade-in">
-                    <div class="ui-element__preview">
-                        <div class="ui-hierarchy">
-                            <div class="ui-hierarchy__main"></div>
-                            <div class="ui-hierarchy__secondary"></div>
-                            <div class="ui-hierarchy__tertiary"></div>
-                        </div>
-                    </div>
-                    <div class="ui-element__info">
-                        <h4>Jerarquía visual clara</h4>
-                        <p>Tamaños y pesos tipográficos que guían la atención del usuario</p>
-                    </div>
-                </div>
-                <div class="ui-element fade-in">
-                    <div class="ui-element__preview">
-                        <div class="ui-buttons">
-                            <div class="ui-button ui-button--primary"></div>
-                            <div class="ui-button ui-button--secondary"></div>
-                        </div>
-                    </div>
-                    <div class="ui-element__info">
-                        <h4>Botones visibles y reconocibles</h4>
-                        <p>Estados claros que indican la acción posible en cada momento</p>
-                    </div>
-                </div>
-                <div class="ui-element fade-in">
-                    <div class="ui-element__preview">
-                        <div class="ui-spacing">
-                            <div class="ui-spacing__item"></div>
-                            <div class="ui-spacing__gap"></div>
-                            <div class="ui-spacing__item"></div>
-                            <div class="ui-spacing__gap"></div>
-                            <div class="ui-spacing__item"></div>
-                        </div>
-                    </div>
-                    <div class="ui-element__info">
-                        <h4>Espaciados amplios</h4>
-                        <p>Respiración entre elementos para mejorar la legibilidad</p>
-                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Esquemas de Página - Añadir en la sección de Diseño de Interfaz -->
-    <section class="section section--wireframes" id="esquemas">
-        <div class="container">
-            <div class="section__header fade-in">
-                <span class="section__tag">Wireframes</span>
-                <h2 class="section__title">Esquemas de página</h2>
-            </div>
-
-            <!-- Esquemas en papel -->
-            <div class="wireframe-block fade-in">
-                <div class="wireframe-block__content">
-                    <h3 class="wireframe-block__title">En papel</h3>
-                    <p class="wireframe-block__text">
-                        El proceso de iterar sobre papel nos llevó a encontrar de forma óptima lo que nuestros usuarios
-                        objetivo necesitaban según sus necesidades.
-                    </p>
-                </div>
-                <div class="wireframe-block__image">
-                    <img src="./assets/img/bocetoimirly.jpg" alt="Bocetos en papel de iMirly" loading="lazy">
-                </div>
-            </div>
-
-            <!-- Esquemas digitales -->
-            <div class="wireframe-block wireframe-block--reverse fade-in">
-                <div class="wireframe-block__content">
-                    <h3 class="wireframe-block__title">Esquemas de página digitales</h3>
-                    <p class="wireframe-block__text">
-                        Continuando con el proceso inicial de los esquemas, realizamos el diseño low fi digitalizado
-                        basándonos en los resultados de la investigación.
-                    </p>
-                </div>
-                <div class="wireframe-block__image">
-                    <img src="./assets/img/esquemaimirly.png" alt="Wireframes digitales de iMirly" loading="lazy">
-                </div>
-            </div>
-
-            <!-- Prototipo baja fidelidad -->
-            <div class="wireframe-block fade-in">
-                <div class="wireframe-block__content">
-                    <h3 class="wireframe-block__title">Prototipo de baja fidelidad</h3>
-                    <p class="wireframe-block__text">
-                        Desarrollamos un prototipo interactivo de baja fidelidad para testear la navegación y la
-                        estructura de la aplicación con usuarios reales antes de invertir en el diseño visual detallado.
-                    </p>
-                </div>
-                <div class="wireframe-block__image">
-                    <img src="./assets/img/prototipobajaimirly.png" alt="Prototipo de baja fidelidad de iMirly"
-                        loading="lazy">
-                </div>
-            </div>
-
-            <!-- Maqueta -->
-            <div class="wireframe-block wireframe-block--reverse fade-in">
-                <div class="wireframe-block__content">
-                    <h3 class="wireframe-block__title">Maqueta</h3>
-                    <p class="wireframe-block__text">
-                        Representación de la aplicación iMirly que simula el dispositivo móvil y sus pantallas
-                        principales. Este prototipo permite validar la distribución de elementos, tamaños de botones y
-                        flujo de navegación de forma rápida antes de pasar a la ultima fase. Facilita las primeras
-                        pruebas con usuarios reales y la detección temprana de problemas de usabilidad que no son
-                        evidentes en bocetos planos.
-                </div>
-                <div class="wireframe-block__image">
-                    <img src="./assets/img/maquetaimirly.jpg" alt="Prototipo de baja fidelidad de iMirly"
-                        loading="lazy">
-                </div>
-            </div>
-
-            <!-- Prototipo alta fidelidad -->
-            <div class="wireframe-block fade-in">
-                <div class="wireframe-block__content">
-                    <h3 class="wireframe-block__title">Prototipo de alta fidelidad</h3>
-                    <p class="wireframe-block__text">
-                        El prototipo de alta fidelidad incorpora el diseño visual completo, interacciones avanzadas y
-                        simula la experiencia final de la aplicación para validar con stakeholders y usuarios.
-                    </p>
-                </div>
-                <div class="wireframe-block__image">
-                    <img src="./assets/img/protptipoaltaimirly.png" alt="Prototipo de alta fidelidad de iMirly"
-                        loading="lazy">
-                </div>
-            </div>
-
-            <!-- Enlace a Figma -->
-            <div class="figma-embed fade-in">
-                <h3 class="figma-embed__title">Prototipo interactivo en Figma</h3>
-                <p class="figma-embed__text">
-                    Explora el prototipo completo de iMirly y navega por todas las pantallas de la aplicación.
+            <div class="validation-takeaway fade-in">
+                <p>
+                    Este resultado reforzo nuestra apuesta por un diseno <strong>accesible y cercano</strong>. La
+                    preferencia mayoritaria confirmo que los usuarios buscan una plataforma que transmita
+                    <strong>confianza y humanidad</strong> desde el primer contacto visual.
                 </p>
-                <div class="figma-embed__container fade-in" id="figma">
-                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450"
-                        src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/Td3Fo8Y82flflUeqzFaHJy/Trabajador--Copy-?node-id=1-3&p=f&t=4lW0K1ASVFzYrKhi-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A3"
-                        allowfullscreen></iframe>
-                </div>
-                <a href="YOUR_FIGMA_URL_HERE" target="_blank" class="btn btn--primary figma-embed__button">
-                    Abrir en Figma
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        style="width: 20px; height: 20px; margin-left: 8px;">
-                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                        <polyline points="15 3 21 3 21 9" />
-                        <line x1="10" y1="14" x2="21" y2="3" />
-                    </svg>
-                </a>
             </div>
         </div>
     </section>
 
-    <!-- Accesibilidad -->
+    <!-- Accesibilidad y usabilidad -->
     <section class="section section--accessibility" id="accesibilidad">
         <div class="container">
             <div class="section__header fade-in">
-                <span class="section__tag">Inclusión</span>
+                <span class="section__tag">Inclusion</span>
                 <h2 class="section__title">Accesibilidad y usabilidad</h2>
             </div>
             <div class="accessibility-content">
@@ -752,7 +945,7 @@
                                 <div class="demo-item"></div>
                             </div>
                         </div>
-                        <div class="accessibility-demo__label">Después</div>
+                        <div class="accessibility-demo__label">Despues</div>
                     </div>
                 </div>
                 <div class="accessibility-features fade-in">
@@ -765,8 +958,8 @@
                             </svg>
                         </div>
                         <div class="accessibility-feature__text">
-                            <h4>Tipografías legibles</h4>
-                            <p>Familias sans-serif con buena legibilidad en todos los tamaños</p>
+                            <h4>Tipografias legibles</h4>
+                            <p>Familias sans-serif con buena legibilidad en todos los tamanos</p>
                         </div>
                     </div>
                     <div class="accessibility-feature">
@@ -778,7 +971,7 @@
                         </div>
                         <div class="accessibility-feature__text">
                             <h4>Contraste adecuado</h4>
-                            <p>Relación de contraste que cumple estándares WCAG AA</p>
+                            <p>Relacion de contraste que cumple estandares WCAG AA</p>
                         </div>
                     </div>
                     <div class="accessibility-feature">
@@ -789,7 +982,7 @@
                         </div>
                         <div class="accessibility-feature__text">
                             <h4>Botones accesibles</h4>
-                            <p>Tamaños mínimos de 48dp para facilitar la interacción táctil</p>
+                            <p>Tamanos minimos de 48dp para facilitar la interaccion tactil</p>
                         </div>
                     </div>
                     <div class="accessibility-feature">
@@ -801,64 +994,151 @@
                             </svg>
                         </div>
                         <div class="accessibility-feature__text">
-                            <h4>Diseño para todas las edades</h4>
+                            <h4>Diseno para todas las edades</h4>
                             <p>Interfaz adaptable a diferentes capacidades y experiencias</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="accessibility-conclusion fade-in">
-                <p>iMirly se ha diseñado pensando en la <strong>diversidad de usuarios</strong>, buscando una
-                    experiencia inclusiva y fácil de usar.</p>
+                <p>iMirly se ha disenado pensando en la <strong>diversidad de usuarios</strong>, buscando una
+                    experiencia
+                    inclusiva y facil de usar.</p>
             </div>
         </div>
     </section>
 
-    <!-- Diseño como Valor -->
-    <section class="section section--value-design" id="valor">
+    <!-- ESQUEMAS DE PAGINA: Todos dentro de una misma seccion -->
+    <section class="section section--wireframes" id="esquemas">
         <div class="container">
             <div class="section__header fade-in">
-                <span class="section__tag">Impacto</span>
-                <h2 class="section__title">El diseño como valor añadido</h2>
+                <span class="section__tag">Wireframes</span>
+                <h2 class="section__title">Esquemas de pagina</h2>
+                <p class="section__description">
+                    Del boceto en papel al prototipo de alta fidelidad. Proceso iterativo de diseno centrado en el
+                    usuario.
+                </p>
             </div>
-            <div class="value-proposition fade-in">
-                <div class="value-proposition__content">
-                    <p class="value-proposition__text">
-                        En iMirly, el diseño no es solo una cuestión estética, sino una <strong>herramienta
-                            clave</strong> para generar confianza, facilitar el uso de la aplicación y mejorar la
-                        experiencia global del usuario.
+
+            <!-- En papel -->
+            <div class="wireframe-block fade-in" id="esquemas-papel">
+                <div class="wireframe-block__content">
+                    <h3 class="wireframe-block__title">En papel</h3>
+                    <p class="wireframe-block__text">
+                        El proceso de iterar sobre papel nos llevo a encontrar de forma optima lo que nuestros usuarios
+                        objetivo necesitaban segun sus necesidades.
                     </p>
-                    <div class="value-points">
-                        <div class="value-point">
-                            <span class="value-point__number">01</span>
-                            <span class="value-point__text">Confianza visual</span>
-                        </div>
-                        <div class="value-point">
-                            <span class="value-point__number">02</span>
-                            <span class="value-point__text">Facilidad de uso</span>
-                        </div>
-                        <div class="value-point">
-                            <span class="value-point__number">03</span>
-                            <span class="value-point__text">Experiencia memorable</span>
-                        </div>
-                    </div>
                 </div>
-                <div class="value-visual">
-                    <div class="value-visual__element"></div>
-                    <div class="value-visual__element value-visual__element--secondary"></div>
-                    <div class="value-visual__element value-visual__element--tertiary"></div>
+                <div class="wireframe-block__image">
+                    <img src="./assets/img/bocetoimirly.jpg" alt="Bocetos en papel de iMirly" loading="lazy">
                 </div>
             </div>
+
+            <!-- Esquemas digitales -->
+            <div class="wireframe-block wireframe-block--reverse fade-in" id="esquemas-digitales">
+                <div class="wireframe-block__content">
+                    <h3 class="wireframe-block__title">Esquemas de pagina digitales</h3>
+                    <p class="wireframe-block__text">
+                        Continuando con el proceso inicial de los esquemas, realizamos el diseno low fi digitalizado
+                        basandonos en los resultados de la investigacion.
+                    </p>
+                </div>
+                <div class="wireframe-block__image">
+                    <img src="./assets/img/esquemaimirly.png" alt="Wireframes digitales de iMirly" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Prototipo baja fidelidad -->
+            <div class="wireframe-block fade-in" id="prototipo-baja">
+                <div class="wireframe-block__content">
+                    <h3 class="wireframe-block__title">Prototipo de baja fidelidad</h3>
+                    <p class="wireframe-block__text">
+                        Desarrollamos un prototipo interactivo de baja fidelidad para testear la navegacion y la
+                        estructura de la aplicacion con usuarios reales antes de invertir en el diseno visual detallado.
+                    </p>
+                </div>
+                <div class="wireframe-block__image">
+                    <img src="./assets/img/prototipobajaimirly.png" alt="Prototipo de baja fidelidad de iMirly"
+                        loading="lazy">
+                </div>
+            </div>
+
+            <!-- Maqueta -->
+            <div class="wireframe-block wireframe-block--reverse fade-in" id="maqueta">
+                <div class="wireframe-block__content">
+                    <h3 class="wireframe-block__title">Maqueta</h3>
+                    <p class="wireframe-block__text">
+                        Representacion de la aplicacion iMirly que simula el dispositivo movil y sus pantallas
+                        principales. Permite validar la distribucion de elementos, tamanos de botones y flujo de
+                        navegacion. Facilita las primeras pruebas con usuarios reales y la deteccion temprana de
+                        problemas de usabilidad.
+                    </p>
+                </div>
+                <div class="wireframe-block__image">
+                    <img src="./assets/img/maquetaimirly.jpg" alt="Maqueta de iMirly" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Prototipo alta fidelidad -->
+            <div class="wireframe-block fade-in" id="prototipo-alta">
+                <div class="wireframe-block__content">
+                    <h3 class="wireframe-block__title">Prototipo de alta fidelidad</h3>
+                    <p class="wireframe-block__text">
+                        El prototipo de alta fidelidad incorpora el diseno visual completo, interacciones avanzadas y
+                        simula la experiencia final de la aplicacion para validar con stakeholders y usuarios.
+                    </p>
+                </div>
+                <div class="wireframe-block__image">
+                    <img src="./assets/img/protptipoaltaimirly.png" alt="Prototipo de alta fidelidad de iMirly"
+                        loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Figma -->
+    <section class="section section--figma" id="figma">
+        <div class="container">
+            <div class="section__header fade-in">
+                <h2 class="section__title">Prototipo interactivo en Figma</h2>
+                <p class="section__description">
+                    Explora el prototipo completo de iMirly y navega por todas las pantallas de la aplicacion.
+                </p>
+            </div>
+            <div class="figma-embed-container fade-in">
+                <iframe
+                    src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FTd3Fo8Y82flflUeqzFaHJy%2FTrabajador--Copy-%3Fnode-id%3D1-3%26scaling%3Dscale-down%26content-scaling%3Dfixed%26page-id%3D0%253A1%26starting-point-node-id%3D1%253A3"
+                    allowfullscreen loading="lazy">
+                </iframe>
+            </div>
+            <div class="figma-cta fade-in">
+                <a href="https://www.figma.com/proto/Td3Fo8Y82flflUeqzFaHJy/Trabajador--Copy-?node-id=1-3&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A3"
+                    target="_blank" class="btn btn--primary">
+                    Abrir en Figma
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        style="width: 20px; height: 20px; margin-left: 8px; display: inline; vertical-align: middle;">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                        <polyline points="15 3 21 3 21 9" />
+                        <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Frase final -->
+    <section class="section section--quote" id="frase-final">
+        <div class="container">
             <div class="quote quote--large fade-in">
-                <blockquote class="quote__text">
-                    "Un buen diseño no solo se ve bien, también se entiende."
+                <blockquote class="quote__text" style="text-align: center; font-style: italic; color: #6c5ce7;">
+                    "Un buen diseno no solo se ve bien, tambien se entiende."
                 </blockquote>
             </div>
         </div>
     </section>
 
-    <!-- Cierre de Sección -->
-    <section class="section section--closing" id="cierre">
+    <!-- Conclusion -->
+    <section class="section section--closing" id="conclusion">
         <div class="container">
             <div class="closing-block fade-in">
                 <div class="closing-block__icon">
@@ -866,59 +1146,55 @@
                         <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
                     </svg>
                 </div>
-                <h2 class="closing-block__title">Conclusión de diseño</h2>
+                <h2 class="closing-block__title">Conclusion de diseno</h2>
                 <p class="closing-block__text">
-                    El diseño y la experiencia de usuario de iMirly refuerzan la propuesta del proyecto, haciendo que la
-                    contratación de servicios locales sea más sencilla, clara y humana.
+                    El diseno y la experiencia de usuario de iMirly refuerzan la propuesta del proyecto, haciendo que la
+                    contratacion de servicios locales sea mas sencilla, clara y humana.
                 </p>
-
                 <a href="https://imirly.github.io/iMirlyPresentacion/aplicacion.html" class="btn btn--secondary">
-                    Siguiente sección: Aplicación
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 20px; height: 20px; margin-left: 8px;">
-                        <line x1="5" y1="12" x2="19" y2="12"/>
-                        <polyline points="12 5 19 12 12 19"/>
+                    Siguiente seccion: Aplicacion
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        style="width: 20px; height: 20px; margin-left: 8px;">
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                        <polyline points="12 5 19 12 12 19" />
                     </svg>
                 </a>
             </div>
         </div>
     </section>
 
-    <script src="main.js"></script>
+    <!-- Modal para imagenes -->
+    <div id="imageModal" class="modal">
+        <div class="modal__content">
+            <span class="modal__close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" src="" alt="Imagen ampliada">
+            <p id="modalCaption" class="modal__caption"></p>
+        </div>
+    </div>
 
     <script>
-        function openModal(imageSrc, caption = '') {
+        function openModal(imageSrc, caption) {
             const modal = document.getElementById('imageModal');
             const modalImg = document.getElementById('modalImage');
             const modalCaption = document.getElementById('modalCaption');
-
             modalImg.src = imageSrc;
-            modalCaption.textContent = caption;
+            modalCaption.textContent = caption || '';
             modal.classList.add('active');
-
-            // Prevenir scroll del body
             document.body.style.overflow = 'hidden';
         }
-
         function closeModal(event) {
-            // Si se hace clic en el fondo o en la X, cerrar
             if (!event || event.target === document.getElementById('imageModal') || event.target.classList.contains('modal__close')) {
                 const modal = document.getElementById('imageModal');
                 modal.classList.remove('active');
-
-                // Restaurar scroll
                 document.body.style.overflow = '';
             }
         }
-
-        // Cerrar con tecla ESC
         document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape') {
-                closeModal();
-            }
+            if (e.key === 'Escape') closeModal();
         });
     </script>
 
     <script src="main.js"></script>
-    <script src="footer.js"></script>
 </body>
+
 </html>
