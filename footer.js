@@ -11,7 +11,7 @@
                 <div class="footer__brand" style="flex-shrink: 0;">
                     <span class="footer__logo" style="font-size: 1.75rem; font-weight: 800; color: white; display: block; margin-bottom: 8px;">iMirly</span>
                     <p class="footer__text" style="color: rgba(255,255,255,0.8); font-size: 0.9rem; margin: 0;">Proyecto académico DAM</p>
-                    <p style="color: rgba(255,255,255,0.6); font-size: 0.85rem; margin-top: 8px;">Granada, España · 2025</p>
+                    <p style="color: rgba(255,255,255,0.6); font-size: 0.85rem; margin-top: 8px;">Granada, España · 2026</p>
                 </div>
 
                 <div class="footer__links" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; min-width: 500px;">
@@ -40,7 +40,7 @@
             </div>
 
             <div class="footer__bottom" style="margin-top: 40px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.15); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
-                <p style="color: rgba(255,255,255,0.6); font-size: 0.8rem; margin: 0;">&copy; 2025 iMirly. Todos los derechos reservados.</p>
+                <p style="color: rgba(255,255,255,0.6); font-size: 0.8rem; margin: 0;">&copy; 2026 iMirly. Todos los derechos reservados.</p>
                 <p style="color: rgba(255,255,255,0.4); font-size: 0.75rem; margin: 0;">Proyecto académico DAM · Granada, España</p>
             </div>
         </div>

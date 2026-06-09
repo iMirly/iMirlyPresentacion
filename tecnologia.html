@@ -72,6 +72,15 @@
                 </span>
                 <span class="floating-nav__label">Escalar</span>
             </a>
+            <a href="#documentacion" class="floating-nav__link" data-section="documentacion">
+                <span class="floating-nav__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M2 4h6a4 4 0 0 1 4 4v12a4 4 0 0 0-4-4H2z"/>
+                        <path d="M22 4h-6a4 4 0 0 0-4 4v12a4 4 0 0 1 4-4h6z"/>
+                    </svg>
+                </span>
+                <span class="floating-nav__label">Documentación</span>
+            </a>
         </div>
     </nav>
 
@@ -431,6 +440,75 @@
                     <p class="research-pillar__text">Al tener el ciclo de vida cerrado (desde PENDIENTE hasta COMPLETADO), disparar un sistema de reseñas es inmediato.</p>
                 </div>
             </div>
+
+            
+
+        </div>
+    </section>
+
+    <section class="section section--research" id="documentacion">
+        <div class="container">
+            <div class="section__header fade-in">
+                <h2 class="section__title">Documentación Técnica</h2>
+            </div>
+        <!-- Documentación embebida -->
+            <div class="fade-in" style="margin-top: 48px; text-align: center;">
+                <p style="color: #666; font-size: 1rem; margin-bottom: 24px;">¿Quieres explorar la documentación técnica completa? Consúltala directamente aquí.</p>
+                <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 32px;">
+                    <button id="btn-docs-inline"
+                        onclick="toggleDocsDemo()"
+                        style="display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #3f51b5, #6c5ce7); color: white; border: none; padding: 14px 28px; border-radius: 12px; font-size: 1rem; font-weight: 600; cursor: pointer; box-shadow: 0 4px 20px rgba(108,92,231,0.35); transition: transform 0.2s, box-shadow 0.2s;"
+                        onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 28px rgba(108,92,231,0.45)'"
+                        onmouseout="this.style.transform='';this.style.boxShadow='0 4px 20px rgba(108,92,231,0.35)'">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:20px;height:20px;flex-shrink:0;">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                        </svg>
+                        <span id="btn-docs-label">Ver documentación aquí</span>
+                    </button>
+                    <a href="https://imirly.github.io/iMirlyDocumentacion/" target="_blank" rel="noopener noreferrer"
+                        style="display: inline-flex; align-items: center; gap: 10px; background: white; color: #3f51b5; border: 2px solid #3f51b5; padding: 14px 28px; border-radius: 12px; font-size: 1rem; font-weight: 600; text-decoration: none; transition: background 0.2s;"
+                        onmouseover="this.style.background='#f0f0ff'"
+                        onmouseout="this.style.background='white'">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:20px;height:20px;flex-shrink:0;">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                            <polyline points="15 3 21 3 21 9"/>
+                            <line x1="10" y1="14" x2="21" y2="3"/>
+                        </svg>
+                        Abrir en nueva pestaña
+                    </a>
+                </div>
+
+                <div id="docs-demo-container" style="display:none; margin-top: 8px;">
+                    <div style="position:relative; background:#1a1a2e; border-radius:20px; padding:16px; box-shadow:0 20px 60px rgba(0,0,0,0.2);">
+                        <div style="display:flex; align-items:center; gap:8px; margin-bottom:12px;">
+                            <div style="display:flex; gap:6px;">
+                                <span style="width:12px;height:12px;background:#ff5f57;border-radius:50%;display:block;"></span>
+                                <span style="width:12px;height:12px;background:#febc2e;border-radius:50%;display:block;"></span>
+                                <span style="width:12px;height:12px;background:#28c840;border-radius:50%;display:block;"></span>
+                            </div>
+                            <div style="flex:1;background:rgba(255,255,255,0.1);border-radius:6px;padding:4px 12px;font-size:0.8rem;color:rgba(255,255,255,0.6);font-family:monospace;">
+                                imirly.github.io/iMirlyDocumentacion/
+                            </div>
+                            <button onclick="toggleDocsDemo()" title="Cerrar"
+                                style="background:rgba(255,255,255,0.1);border:none;color:rgba(255,255,255,0.7);width:28px;height:28px;border-radius:6px;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;">✕</button>
+                        </div>
+                        <iframe
+                            id="docs-iframe"
+                            src=""
+                            data-src="https://imirly.github.io/iMirlyDocumentacion/"
+                            style="width:100%;height:620px;border:none;border-radius:12px;background:white;"
+                            loading="lazy"
+                            title="Documentación técnica iMirly">
+                        </iframe>
+                    </div>
+                    <p style="color:#888;font-size:0.8rem;margin-top:12px;text-align:center;">
+                        Si la documentación no carga correctamente, usa el botón "Abrir en nueva pestaña" ↑
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -446,5 +524,28 @@
 
     <script src="main.js"></script>
     <script src="footer.js"></script>
+
+    <script>
+        function toggleDocsDemo() {
+            var container = document.getElementById('docs-demo-container');
+            var iframe    = document.getElementById('docs-iframe');
+            var label     = document.getElementById('btn-docs-label');
+            var isHidden  = container.style.display === 'none';
+
+            if (isHidden) {
+                container.style.display = 'block';
+                label.textContent = 'Ocultar documentación';
+                if (!iframe.src || iframe.src === window.location.href) {
+                    iframe.src = iframe.getAttribute('data-src');
+                }
+                setTimeout(function() {
+                    container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
+            } else {
+                container.style.display = 'none';
+                label.textContent = 'Ver documentación aquí';
+            }
+        }
+    </script>
 </body>
 </html>

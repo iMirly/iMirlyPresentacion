@@ -49,16 +49,24 @@ document.addEventListener('DOMContentLoaded', function () {
         navToggle.setAttribute('aria-expanded', 'false');
         navToggle.setAttribute('aria-label', 'Abrir menú');
 
+        // Variable para evitar que el click sintético post-touch se dispare dos veces
+        let justTouched = false;
+
+        // TOUCH: usar touchend para que no colisione con touchstart del documento
+        navToggle.addEventListener('touchend', function (e) {
+            e.preventDefault(); // cancela el click sintético posterior
+            justTouched = true;
+            navMenu.classList.contains('active') ? closeMobileMenu() : openMobileMenu();
+        }, { passive: false });
+
+        // CLICK (ratón en escritorio): ignorar si ya lo manejó touchend
         navToggle.addEventListener('click', function (e) {
             e.stopPropagation();
-            if (navMenu.classList.contains('active')) {
-                closeMobileMenu();
-            } else {
-                openMobileMenu();
-            }
+            if (justTouched) { justTouched = false; return; }
+            navMenu.classList.contains('active') ? closeMobileMenu() : openMobileMenu();
         });
 
-        // Cerrar al hacer click fuera del menú
+        // Cerrar al hacer click fuera (ratón)
         document.addEventListener('click', function (e) {
             if (navMenu.classList.contains('active') &&
                 !navMenu.contains(e.target) &&
@@ -67,11 +75,19 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
+        // Cerrar al tocar fuera (touch) — touchend para no interferir con la apertura
+        document.addEventListener('touchend', function (e) {
+            if (navMenu.classList.contains('active') &&
+                !navMenu.contains(e.target) &&
+                !navToggle.contains(e.target)) {
+                closeMobileMenu();
+            }
+        }, { passive: true });
+
         // Cerrar al hacer click en un enlace (solo en móvil)
         navMenu.querySelectorAll('.nav__link').forEach(link => {
             link.addEventListener('click', function () {
                 if (window.innerWidth <= 968) {
-                    // Pequeño delay para que la navegación ocurra
                     setTimeout(closeMobileMenu, 150);
                 }
             });

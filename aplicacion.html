@@ -115,12 +115,14 @@
                 </span>
                 <span class="floating-nav__label">MVP</span>
             </a>
+            <!--
             <a href="#valor" class="floating-nav__link" data-section="valor">
                 <span class="floating-nav__icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
                 </span>
                 <span class="floating-nav__label">Valor</span>
             </a>
+            -->
         </div>
     </nav>
 
@@ -302,7 +304,9 @@
                     </ul>
                 </div>
             </div>
+            
         </div>
+        
     </section>
 
     <!-- Flujo de Uso -->
@@ -387,6 +391,65 @@
                     <p style="font-size: 1rem; color: #666; line-height: 1.5;">Finaliza el acuerdo y confirma los detalles del servicio contratado.</p>
                 </div>
             </div>
+
+            <!-- Botón + Demo MVP -->
+            <div class="fade-in" style="margin-top: 48px; text-align: center;">
+                <p style="color: #666; font-size: 1rem; margin-bottom: 24px;">¿Quieres ver el flujo en acción? Explora la versión web del MVP directamente aquí.</p>
+                <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 32px;">
+                    <button id="btn-demo-inline"
+                        onclick="toggleMvpDemo()"
+                        style="display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #3f51b5, #6c5ce7); color: white; border: none; padding: 14px 28px; border-radius: 12px; font-size: 1rem; font-weight: 600; cursor: pointer; box-shadow: 0 4px 20px rgba(108,92,231,0.35); transition: transform 0.2s, box-shadow 0.2s;"
+                        onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 28px rgba(108,92,231,0.45)'"
+                        onmouseout="this.style.transform='';this.style.boxShadow='0 4px 20px rgba(108,92,231,0.35)'">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:20px;height:20px;flex-shrink:0;">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                        <span id="btn-demo-label">Ver demo aquí</span>
+                    </button>
+                    <a href="https://imirly.github.io/iMirlyWeb-MVP/" target="_blank" rel="noopener noreferrer"
+                        style="display: inline-flex; align-items: center; gap: 10px; background: white; color: #3f51b5; border: 2px solid #3f51b5; padding: 14px 28px; border-radius: 12px; font-size: 1rem; font-weight: 600; text-decoration: none; transition: background 0.2s;"
+                        onmouseover="this.style.background='#f0f0ff'"
+                        onmouseout="this.style.background='white'">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:20px;height:20px;flex-shrink:0;">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                        Abrir en nueva pestaña
+                    </a>
+                </div>
+
+                <!-- Contenedor iframe MVP (oculto por defecto) -->
+                <div id="mvp-demo-container" style="display:none; margin-top: 8px;">
+                    <div style="position:relative; background:#1a1a2e; border-radius:20px; padding:16px; box-shadow:0 20px 60px rgba(0,0,0,0.2);">
+                        <!-- Barra de navegador decorativa -->
+                        <div style="display:flex; align-items:center; gap:8px; margin-bottom:12px;">
+                            <div style="display:flex; gap:6px;">
+                                <span style="width:12px;height:12px;background:#ff5f57;border-radius:50%;display:block;"></span>
+                                <span style="width:12px;height:12px;background:#febc2e;border-radius:50%;display:block;"></span>
+                                <span style="width:12px;height:12px;background:#28c840;border-radius:50%;display:block;"></span>
+                            </div>
+                            <div style="flex:1;background:rgba(255,255,255,0.1);border-radius:6px;padding:4px 12px;font-size:0.8rem;color:rgba(255,255,255,0.6);font-family:monospace;">
+                                imirly.github.io/iMirlyWeb-MVP/
+                            </div>
+                            <button onclick="toggleMvpDemo()" title="Cerrar demo"
+                                style="background:rgba(255,255,255,0.1);border:none;color:rgba(255,255,255,0.7);width:28px;height:28px;border-radius:6px;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;">✕</button>
+                        </div>
+                        <iframe
+                            id="mvp-iframe"
+                            src=""
+                            data-src="https://imirly.github.io/iMirlyWeb-MVP/"
+                            style="width:100%;height:620px;border:none;border-radius:12px;background:white;"
+                            loading="lazy"
+                            title="Demo MVP iMirly">
+                        </iframe>
+                    </div>
+                    <p style="color:#888;font-size:0.8rem;margin-top:12px;text-align:center;">
+                        Si la demo no carga correctamente, usa el botón "Abrir en nueva pestaña" ↑
+                    </p>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -688,5 +751,33 @@
 
     <script src="main.js"></script>
     <script src="footer.js"></script>
+
+    <script>
+        // ── MVP Demo toggle ──────────────────────────────────────
+        function toggleMvpDemo() {
+            var container = document.getElementById('mvp-demo-container');
+            var iframe    = document.getElementById('mvp-iframe');
+            var label     = document.getElementById('btn-demo-label');
+            var isHidden  = container.style.display === 'none';
+
+            if (isHidden) {
+                container.style.display = 'block';
+                label.textContent = 'Ocultar demo';
+                // Cargar src solo la primera vez (lazy)
+                if (!iframe.src || iframe.src === window.location.href) {
+                    iframe.src = iframe.getAttribute('data-src');
+                }
+                // Scroll suave hasta la demo
+                setTimeout(function() {
+                    container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
+            } else {
+                container.style.display = 'none';
+                label.textContent = 'Ver demo aquí';
+            }
+        }
+
+        // Fix menú hamburguesa en móvil - gestionado en main.js
+    </script>
 </body>
 </html>
