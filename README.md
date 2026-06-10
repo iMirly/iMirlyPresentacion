@@ -84,35 +84,6 @@ iMirlyPresentacion/
 └── footer.js                   # Footer inyectado automáticamente
 ```
 
-## 👥 Equipo
-
-<p align="center"><b>Trabajo Fin de Ciclo DAM — New Digital Talent, Granada · 2025</b></p>
-
-<p align="center">
-  <a href="https://github.com/evagr11">
-    <img src="https://img.shields.io/badge/Eva_Gallardo-3f51b5?style=for-the-badge&logo=github&logoColor=white"/>
-  </a>
-</p>
-<p align="center">
-  <a href="https://github.com/AnaNunezRejon">
-    <img src="https://img.shields.io/badge/Ana_Núñez-6c5ce7?style=for-the-badge&logo=github&logoColor=white"/>
-  </a>
-</p>
-<p align="center">
-  <a href="https://github.com/Anyeel">
-    <img src="https://img.shields.io/badge/Ángel_Millán-3f51b5?style=for-the-badge&logo=github&logoColor=white"/>
-  </a>
-</p>
-<p align="center">
-  <a href="https://github.com/nicocorbi">
-    <img src="https://img.shields.io/badge/Nicolás_Corbi-6c5ce7?style=for-the-badge&logo=github&logoColor=white"/>
-  </a>
-</p>
-
-<p align="center">
-  <sub><b>Tutores:</b> Guillermo Sandoval Schmidt · Javier Martín Gómez</sub>
-</p>
-
 ## 🔗 Más sobre iMirly
 
 <div align="center">
@@ -126,9 +97,37 @@ iMirlyPresentacion/
 
 </div>
 
----
+## 👥 Equipo
+
+<p align="center"><b>Trabajo Fin de Ciclo DAM — New Digital Talent, Granada · 2025</b></p>
+<p align="center">
+  <a href="https://github.com/AnaNunezRejon">
+    <img src="https://img.shields.io/badge/Ana_Núñez-6c5ce7?style=for-the-badge&logo=github&logoColor=white"/>
+  </a>
+</p>
+<p align="center">
+  <a href="https://github.com/Anyeel">
+    <img src="https://img.shields.io/badge/Ángel_Millán-3f51b5?style=for-the-badge&logo=github&logoColor=white"/>
+  </a>
+</p>
+<p align="center">
+  <a href="https://github.com/evagr11">
+    <img src="https://img.shields.io/badge/Eva_Gallardo-3f51b5?style=for-the-badge&logo=github&logoColor=white"/>
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/nicocorbi">
+    <img src="https://img.shields.io/badge/Nicolás_Corbi-6c5ce7?style=for-the-badge&logo=github&logoColor=white"/>
+  </a>
+</p>
+
+<p align="center">
+  <sub><b>Tutores:</b> Guillermo Sandoval Schmidt · Javier Martín Gómez</sub>
+</p>
+
 
 <div align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:3f51b5,100:6c5ce7&height=80&section=footer" width="100%"/>
-  <sub>© 2025 iMirly — Proyecto académico DAM · Granada, España</sub>
+  <sub>© 2026 iMirly — Proyecto académico DAM · Granada, España</sub>
 </div>
