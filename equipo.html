@@ -10,8 +10,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="mobile.css">
 </head>
-<body>
-    <!-- Header / Navbar -->
+<body style="overflow-x: hidden;">
     <header class="header" id="header">
         <nav class="nav container">
             <a href="index.html">
@@ -48,8 +47,7 @@
         </nav>
     </header>
 
-    <!-- Menú Flotante Lateral -->
-<nav class="floating-nav" id="floating-nav">
+    <nav class="floating-nav" id="floating-nav">
         <div class="floating-nav__menu active" id="floating-menu">
             <a href="#equipo" class="floating-nav__link" data-section="equipo">
                 <span class="floating-nav__icon">
@@ -61,7 +59,6 @@
     </nav>
 
 
-    <!-- Hero Section -->
     <section class="hero hero--secondary">
         <div class="hero__decoration hero__decoration--1"></div>
         <div class="hero__decoration hero__decoration--2"></div>
@@ -83,7 +80,6 @@
                         <rect x="20" y="20" width="360" height="50" rx="16" fill="#3f51b5"/>
                         <text x="200" y="52" text-anchor="middle" fill="white" font-size="14" font-weight="600" font-family="Inter, sans-serif">Equipo iMirly</text>
 
-                        <!-- 4 nodos en círculo equitativo -->
                         <circle cx="200" cy="110" r="28" fill="#e0e0ff"/>
                         <text x="200" y="118" text-anchor="middle" fill="#3f51b5" font-size="13" font-weight="700" font-family="Inter, sans-serif">EG</text>
 
@@ -96,7 +92,6 @@
                         <circle cx="150" cy="240" r="28" fill="#fce4ec"/>
                         <text x="150" y="248" text-anchor="middle" fill="#c2185b" font-size="13" font-weight="700" font-family="Inter, sans-serif">AM</text>
 
-                        <!-- Líneas de conexión entre todos (estrella) -->
                         <line x1="200" y1="138" x2="290" y2="132" stroke="#e0e0e0" stroke-width="2" stroke-dasharray="3"/>
                         <line x1="200" y1="138" x2="250" y2="212" stroke="#e0e0e0" stroke-width="2" stroke-dasharray="3"/>
                         <line x1="200" y1="138" x2="150" y2="212" stroke="#e0e0e0" stroke-width="2" stroke-dasharray="3"/>
@@ -109,7 +104,6 @@
         </div>
     </section>
 
-    <!-- Equipo -->
     <section class="section section--team" id="equipo">
         <div class="container">
             <div class="team-section__header fade-in">
@@ -120,7 +114,6 @@
                 </p>
             </div>
 
-            <!-- Fila de fotos -->
             <div class="team-preview fade-in" style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-bottom: 40px;">
 
                 <div class="team-preview__member" style="display: flex; flex-direction: column; align-items: center; gap: 12px; cursor: pointer;" onclick="expandTeam()">
@@ -172,7 +165,6 @@
                 </div>
             </div>
 
-            <!-- Botón expandir -->
             <div style="text-align: center; margin-bottom: 48px;" id="expand-btn-wrapper">
                 <button id="expand-team-btn" onclick="expandTeam()" style="display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #3f51b5, #6c5ce7); color: white; border: none; padding: 14px 32px; border-radius: 50px; font-size: 1rem; font-weight: 600; cursor: pointer; box-shadow: 0 6px 24px rgba(108,92,231,0.35); transition: transform 0.2s, box-shadow 0.2s; font-family: inherit;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 10px 32px rgba(108,92,231,0.5)'" onmouseout="this.style.transform='';this.style.boxShadow='0 6px 24px rgba(108,92,231,0.35)'">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:20px;height:20px;flex-shrink:0;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
@@ -181,172 +173,151 @@
                 </button>
             </div>
 
-            <!-- Tarjetas detalladas (ocultas por defecto) -->
-            <div id="team-details" style="overflow: hidden; max-height: 0; transition: max-height 0.7s ease, opacity 0.5s ease; opacity: 0;">
-            <div class="team-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; max-width: 1400px; margin: 0 auto; padding-bottom: 16px;">
+            <div id="team-details" style="overflow: hidden; max-height: 0; transition: max-height 0.7s ease, opacity 0.5s ease; opacity: 0; width: 95vw; position: relative; left: 50%; transform: translateX(-50%);">
+            <div class="team-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1600px; margin: 0 auto; padding-bottom: 24px;">
 
-                <!-- Ana Núñez Rejón -->
-                <div class="team-card fade-in" style="background: white; border-radius: 20px; padding: 40px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); text-align: left;">
-                    <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 24px;">
-                        <div class="team-card__avatar" style="width: 72px; height: 72px; background: linear-gradient(135deg, #6c5ce7 0%, #3f51b5 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; font-weight: 700; color: white; flex-shrink: 0;">
+                <div class="team-card fade-in" style="background: white; border-radius: 20px; padding: 24px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); text-align: left;">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+                        <div class="team-card__avatar" style="width: 60px; height: 60px; background: linear-gradient(135deg, #6c5ce7 0%, #3f51b5 100%); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; font-weight: 700; color: white; flex-shrink: 0;">
                             <span>AN</span>
                         </div>
                         <div>
-                            <h3 class="team-card__name" style="font-size: 1.25rem; font-weight: 700; color: #1a1a2e; margin-bottom: 4px;">Ana Núñez Rejón</h3>
-                            <p class="team-card__role" style="font-size: 0.9rem; color: #6c5ce7; font-weight: 600;">Diseñadora Gráfica & UX/UI · DAM</p>
+                            <h3 class="team-card__name" style="font-size: 1.15rem; font-weight: 700; color: #1a1a2e; margin-bottom: 4px;">Ana Núñez Rejón</h3>
+                            <p class="team-card__role" style="font-size: 0.85rem; color: #6c5ce7; font-weight: 600;">Diseñadora Gráfica & UX/UI · DAM</p>
                         </div>
                     </div>
 
-                    <div class="team-card__body" style="font-size: 0.9rem; color: #555; line-height: 1.7;">
+                    <div class="team-card__body" style="font-size: 0.85rem; color: #555; line-height: 1.6;">
                         <p style="margin-bottom: 16px;">Diseñadora gráfica con más de 12 años de experiencia en branding e identidad visual. Actualmente cursa el Grado Superior DAM, combinando su bagaje creativo con habilidades técnicas de desarrollo.</p>
 
-                        <h4 style="font-size: 0.85rem; font-weight: 700; color: #1a1a2e; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; margin-top: 20px;">Contribuciones en iMirly</h4>
+                        <h4 style="font-size: 0.8rem; font-weight: 700; color: #1a1a2e; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; margin-top: 16px;">Contribuciones en iMirly</h4>
                         <ul style="list-style: none; padding: 0; margin: 0;">
-                            <li style="padding: 4px 0; padding-left: 20px; position: relative;"><span style="position: absolute; left: 0; color: #6c5ce7;">▸</span> Desarrollo de la interfaz de usuario en Jetpack Compose</li>
-                            <li style="padding: 4px 0; padding-left: 20px; position: relative;"><span style="position: absolute; left: 0; color: #6c5ce7;">▸</span> UX/UI de la aplicación móvil y la web de presentación</li>
-                            <li style="padding: 4px 0; padding-left: 20px; position: relative;"><span style="position: absolute; left: 0; color: #6c5ce7;">▸</span> Desarrollo frontend de la landing page corporativa</li>
-                            <li style="padding: 4px 0; padding-left: 20px; position: relative;"><span style="position: absolute; left: 0; color: #6c5ce7;">▸</span> Prototipado, wireframes y mockups del producto</li>
+                            <li style="padding: 4px 0; padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: #6c5ce7;">▸</span> Interfaz de usuario en Jetpack Compose</li>
+                            <li style="padding: 4px 0; padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: #6c5ce7;">▸</span> UX/UI de la aplicación móvil y web</li>
+                            <li style="padding: 4px 0; padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: #6c5ce7;">▸</span> Prototipado y mockups del producto</li>
                         </ul>
 
-                        <h4 style="font-size: 0.85rem; font-weight: 700; color: #1a1a2e; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; margin-top: 20px;">Tecnologías</h4>
+                        <h4 style="font-size: 0.8rem; font-weight: 700; color: #1a1a2e; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; margin-top: 16px;">Tecnologías</h4>
                         <div style="display: flex; flex-wrap: wrap; gap: 6px;">
-                            <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">Figma</span>
-                            <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">HTML/CSS</span>
-                            <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">JavaScript</span>
-                            <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">Photoshop</span>
-                            <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">Illustrator</span>
-                            <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">Kotlin</span>
-                            <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">Java</span>
-                            <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">Android Studio</span>
-                            <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">Spring Boot</span>
-                            <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">Git</span>
+                            <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 10px; border-radius: 16px; font-size: 0.75rem; font-weight: 500;">Figma</span>
+                            <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 10px; border-radius: 16px; font-size: 0.75rem; font-weight: 500;">HTML/CSS</span>
+                            <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 10px; border-radius: 16px; font-size: 0.75rem; font-weight: 500;">Kotlin</span>
+                            <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 10px; border-radius: 16px; font-size: 0.75rem; font-weight: 500;">Android Studio</span>
                         </div>
                     </div>
 
-                    <div class="team-card__links" style="display: flex; gap: 10px; margin-top: 24px; padding-top: 20px; border-top: 1px solid #f0f0f0;">
-                        <a href="https://www.linkedin.com/in/ananunezrejon" target="_blank" class="team-card__link" style="width: 36px; height: 36px; border-radius: 8px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;" title="LinkedIn">
-                            <svg viewBox="0 0 24 24" fill="currentColor" style="width: 18px; height: 18px; color: #666;">
+                    <div class="team-card__links" style="display: flex; gap: 10px; margin-top: 20px; padding-top: 16px; border-top: 1px solid #f0f0f0;">
+                        <a href="https://www.linkedin.com/in/ananunezrejon" target="_blank" class="team-card__link" style="width: 32px; height: 32px; border-radius: 8px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;" title="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor" style="width: 16px; height: 16px; color: #666;">
                                 <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                             </svg>
                         </a>
-                        <a href="https://github.com/AnaNunezRejon" target="_blank" class="team-card__link" style="width: 36px; height: 36px; border-radius: 8px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;" title="GitHub">
-                            <svg viewBox="0 0 24 24" fill="currentColor" style="width: 18px; height: 18px; color: #666;">
+                        <a href="https://github.com/AnaNunezRejon" target="_blank" class="team-card__link" style="width: 32px; height: 32px; border-radius: 8px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;" title="GitHub">
+                            <svg viewBox="0 0 24 24" fill="currentColor" style="width: 16px; height: 16px; color: #666;">
                                 <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                             </svg>
                         </a>
-                        <a href="https://behance.net/ananunezrejon" target="_blank" class="team-card__link" style="width: 36px; height: 36px; border-radius: 8px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;" title="Behance">
-                            <svg viewBox="0 0 24 24" fill="currentColor" style="width: 18px; height: 18px; color: #666;">
+                        <a href="https://behance.net/ananunezrejon" target="_blank" class="team-card__link" style="width: 32px; height: 32px; border-radius: 8px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;" title="Behance">
+                            <svg viewBox="0 0 24 24" fill="currentColor" style="width: 16px; height: 16px; color: #666;">
                                 <path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 2.211 1.168 2.911 2.632 2.911 1.168 0 2.083-.461 2.395-1.473h2.628zm-7.735-3.67h5.185c-.083-1.574-.913-2.293-2.481-2.293-1.459 0-2.474.759-2.704 2.293zM8.667 18.5H1V5.5h7.333c3.093 0 4.927 1.455 4.927 4.091 0 1.786-.759 2.93-2.073 3.506 1.685.482 2.635 1.686 2.635 3.413 0 2.787-1.896 4.49-5.155 4.49zM3.92 10.133h3.075c1.393 0 2.093-.556 2.093-1.556 0-1.072-.7-1.577-2.093-1.577H3.92v3.133zm3.47 6.267H3.92v-3.4h3.47c1.531 0 2.309.556 2.309 1.7 0 1.163-.778 1.7-2.309 1.7z"/>
                             </svg>
                         </a>
                     </div>
                 </div>
                 
-                <!-- Ángel Millán Aragón -->
-                <div class="team-card fade-in" style="background: white; border-radius: 20px; padding: 40px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); text-align: left;">
-                    <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 24px;">
-                        <div class="team-card__avatar" style="width: 72px; height: 72px; background: linear-gradient(135deg, #e0e0ff 0%, #6c5ce7 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; font-weight: 700; color: white; flex-shrink: 0;">
+                <div class="team-card fade-in" style="background: white; border-radius: 20px; padding: 24px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); text-align: left;">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+                        <div class="team-card__avatar" style="width: 60px; height: 60px; background: linear-gradient(135deg, #e0e0ff 0%, #6c5ce7 100%); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; font-weight: 700; color: white; flex-shrink: 0;">
                             <span>AM</span>
                         </div>
                         <div>
-                            <h3 class="team-card__name" style="font-size: 1.25rem; font-weight: 700; color: #1a1a2e; margin-bottom: 4px;">Ángel Millán Aragón</h3>
-                            <p class="team-card__role" style="font-size: 0.9rem; color: #6c5ce7; font-weight: 600;">Full-Stack Developer / Arquitecto Backend</p>
+                            <h3 class="team-card__name" style="font-size: 1.15rem; font-weight: 700; color: #1a1a2e; margin-bottom: 4px;">Ángel Millán Aragón</h3>
+                            <p class="team-card__role" style="font-size: 0.85rem; color: #6c5ce7; font-weight: 600;">Full-Stack / Arquitecto Backend</p>
                         </div>
                     </div>
 
-                    <div class="team-card__body" style="font-size: 0.9rem; color: #555; line-height: 1.7;">
-                        <p style="margin-bottom: 16px;">Desarrollador Full-Stack apasionado por la tecnología y la mejora continua. Cuida al detalle todo el ciclo de desarrollo del software: desde la arquitectura y la integración de IA, hasta la automatización con metodologías DevOps y el aseguramiento de la calidad.</p>
+                    <div class="team-card__body" style="font-size: 0.85rem; color: #555; line-height: 1.6;">
+                        <p style="margin-bottom: 16px;">Desarrollador Full-Stack apasionado por la tecnología. Cuida al detalle todo el ciclo de desarrollo: desde la arquitectura e IA, hasta la automatización DevOps y calidad.</p>
 
-                        <h4 style="font-size: 0.85rem; font-weight: 700; color: #1a1a2e; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; margin-top: 20px;">Contribuciones en iMirly</h4>
+                        <h4 style="font-size: 0.8rem; font-weight: 700; color: #1a1a2e; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; margin-top: 16px;">Contribuciones en iMirly</h4>
                         <ul style="list-style: none; padding: 0; margin: 0;">
-                            <li style="padding: 4px 0; padding-left: 20px; position: relative;"><span style="position: absolute; left: 0; color: #6c5ce7;">▸</span> Diseño y desarrollo de la API REST con Spring Boot bajo Arquitectura Hexagonal.</li>
-                            <li style="padding: 4px 0; padding-left: 20px; position: relative;"><span style="position: absolute; left: 0; color: #6c5ce7;">▸</span> Creación del ecosistema relacional (PostgreSQL) y mapeo de entidades (Hibernate/JPA).</li>
-                            <li style="padding: 4px 0; padding-left: 20px; position: relative;"><span style="position: absolute; left: 0; color: #6c5ce7;">▸</span> Implementación del sistema de contratos en "Limbo" (Escrow) y monedero virtual.</li>
-                            <li style="padding: 4px 0; padding-left: 20px; position: relative;"><span style="position: absolute; left: 0; color: #6c5ce7;">▸</span> Conexión asíncrona de Android (Compose) con el backend usando Retrofit y ViewModels.</li>
+                            <li style="padding: 4px 0; padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: #6c5ce7;">▸</span> API REST con Spring Boot</li>
+                            <li style="padding: 4px 0; padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: #6c5ce7;">▸</span> Base de datos relacional (PostgreSQL)</li>
+                            <li style="padding: 4px 0; padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: #6c5ce7;">▸</span> Conexión asíncrona de Android</li>
                         </ul>
 
-                        <h4 style="font-size: 0.85rem; font-weight: 700; color: #1a1a2e; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; margin-top: 20px;">Tecnologías</h4>
+                        <h4 style="font-size: 0.8rem; font-weight: 700; color: #1a1a2e; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; margin-top: 16px;">Tecnologías</h4>
                         <div style="display: flex; flex-wrap: wrap; gap: 6px;">
-                            <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">Python, Java & Kotlin</span>
-                            <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">AWS</span>
-                            <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">Docker & Linux</span>
-                            <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">Spring Boot</span>
-                            <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">PostgreSQL</span>
-                            <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">CI/CD</span>
-                            <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">Hibernate</span>
-                            <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">Jetpack Compose</span>
+                            <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 10px; border-radius: 16px; font-size: 0.75rem; font-weight: 500;">Python, Java</span>
+                            <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 10px; border-radius: 16px; font-size: 0.75rem; font-weight: 500;">Spring Boot</span>
+                            <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 10px; border-radius: 16px; font-size: 0.75rem; font-weight: 500;">PostgreSQL</span>
+                            <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 10px; border-radius: 16px; font-size: 0.75rem; font-weight: 500;">Docker</span>
                         </div>
                     </div>
 
-                    <div class="team-card__links" style="display: flex; gap: 10px; margin-top: 24px; padding-top: 20px; border-top: 1px solid #f0f0f0;">
-                        <a href="https://www.linkedin.com/in/ángel-millán-aragón/" target="_blank" class="team-card__link" style="width: 36px; height: 36px; border-radius: 8px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;" title="LinkedIn" onmouseover="this.style.background='#e8eaf6'" onmouseout="this.style.background='#f5f5f5'">
-                            <svg viewBox="0 0 24 24" fill="currentColor" style="width: 18px; height: 18px; color: #666;">
+                    <div class="team-card__links" style="display: flex; gap: 10px; margin-top: 20px; padding-top: 16px; border-top: 1px solid #f0f0f0;">
+                        <a href="https://www.linkedin.com/in/ángel-millán-aragón/" target="_blank" class="team-card__link" style="width: 32px; height: 32px; border-radius: 8px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;" title="LinkedIn" onmouseover="this.style.background='#e8eaf6'" onmouseout="this.style.background='#f5f5f5'">
+                            <svg viewBox="0 0 24 24" fill="currentColor" style="width: 16px; height: 16px; color: #666;">
                                 <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                             </svg>
                         </a>
                         
-                        <a href="https://github.com/Anyeel" target="_blank" class="team-card__link" style="width: 36px; height: 36px; border-radius: 8px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;" title="GitHub" onmouseover="this.style.background='#e8eaf6'" onmouseout="this.style.background='#f5f5f5'">
-                            <svg viewBox="0 0 24 24" fill="currentColor" style="width: 18px; height: 18px; color: #666;">
+                        <a href="https://github.com/Anyeel" target="_blank" class="team-card__link" style="width: 32px; height: 32px; border-radius: 8px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;" title="GitHub" onmouseover="this.style.background='#e8eaf6'" onmouseout="this.style.background='#f5f5f5'">
+                            <svg viewBox="0 0 24 24" fill="currentColor" style="width: 16px; height: 16px; color: #666;">
                                 <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                             </svg>
                         </a>
                     </div>
                 </div>
 
-                <!-- Eva Gallardo Romero -->
-                <div class="team-card fade-in" style="background: white; border-radius: 20px; padding: 40px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); text-align: left;">
-                    <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 24px;">
-                        <div class="team-card__avatar" style="width: 72px; height: 72px; background: linear-gradient(135deg, #e0e0ff 0%, #6c5ce7 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; font-weight: 700; color: white; flex-shrink: 0;">
+                <div class="team-card fade-in" style="background: white; border-radius: 20px; padding: 24px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); text-align: left;">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+                        <div class="team-card__avatar" style="width: 60px; height: 60px; background: linear-gradient(135deg, #e0e0ff 0%, #6c5ce7 100%); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; font-weight: 700; color: white; flex-shrink: 0;">
                             <span>EG</span>
                         </div>
                         <div>
-                            <h3 class="team-card__name" style="font-size: 1.25rem; font-weight: 700; color: #1a1a2e; margin-bottom: 4px;">Eva Gallardo Romero</h3>
-                            <p class="team-card__role" style="font-size: 0.9rem; color: #6c5ce7; font-weight: 600;">Desarrolladora de Aplicaciones Multiplataforma</p>
+                            <h3 class="team-card__name" style="font-size: 1.15rem; font-weight: 700; color: #1a1a2e; margin-bottom: 4px;">Eva Gallardo Romero</h3>
+                            <p class="team-card__role" style="font-size: 0.85rem; color: #6c5ce7; font-weight: 600;">Dev Multiplataforma</p>
                         </div>
                     </div>
 
-                    <div class="team-card__body" style="font-size: 0.9rem; color: #555; line-height: 1.7;">
-                        <p style="margin-bottom: 16px;">Apasionada por resolver problemas con código: desde apps Android nativas con arquitecturas modernas hasta webs estáticas con diseño responsive. Con experiencia en diseño UX/UI en Figma y desarrollo de videojuegos en Unity. Le da igual frontend, backend o móvil — si implica código, cuenta con ella.</p>
+                    <div class="team-card__body" style="font-size: 0.85rem; color: #555; line-height: 1.6;">
+                        <p style="margin-bottom: 16px;">Apasionada por resolver problemas con código: desde apps Android nativas hasta webs responsive. Con experiencia en diseño UX/UI en Figma y desarrollo de videojuegos.</p>
 
-                        <h4 style="font-size: 0.85rem; font-weight: 700; color: #1a1a2e; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; margin-top: 20px;">Contribuciones en iMirly</h4>
+                        <h4 style="font-size: 0.8rem; font-weight: 700; color: #1a1a2e; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; margin-top: 16px;">Contribuciones en iMirly</h4>
                         <ul style="list-style: none; padding: 0; margin: 0;">
-                            <li style="padding: 4px 0; padding-left: 20px; position: relative;"><span style="position: absolute; left: 0; color: #6c5ce7;">▸</span> Documentación técnica del proyecto</li>
-                            <li style="padding: 4px 0; padding-left: 20px; position: relative;"><span style="position: absolute; left: 0; color: #6c5ce7;">▸</span> Identidad visual y materiales en Canva</li>
-                            <li style="padding: 4px 0; padding-left: 20px; position: relative;"><span style="position: absolute; left: 0; color: #6c5ce7;">▸</span> Desarrollo de las webs de soporte del proyecto</li>
-                            <li style="padding: 4px 0; padding-left: 20px; position: relative;"><span style="position: absolute; left: 0; color: #6c5ce7;">▸</span> Diseño de la app junto a Ana Núñez</li>
-                            <li style="padding: 4px 0; padding-left: 20px; position: relative;"><span style="position: absolute; left: 0; color: #6c5ce7;">▸</span> Research con usuarios sobre decisiones de estilo</li>
-                            <li style="padding: 4px 0; padding-left: 20px; position: relative;"><span style="position: absolute; left: 0; color: #6c5ce7;">▸</span> Organización del repositorio y materiales en GitHub</li>
+                            <li style="padding: 4px 0; padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: #6c5ce7;">▸</span> Documentación técnica del proyecto</li>
+                            <li style="padding: 4px 0; padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: #6c5ce7;">▸</span> Desarrollo de webs de soporte</li>
+                            <li style="padding: 4px 0; padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: #6c5ce7;">▸</span> Organización del repositorio GitHub</li>
                         </ul>
 
-                        <h4 style="font-size: 0.85rem; font-weight: 700; color: #1a1a2e; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; margin-top: 20px;">Tecnologías</h4>
+                        <h4 style="font-size: 0.8rem; font-weight: 700; color: #1a1a2e; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; margin-top: 16px;">Tecnologías</h4>
                         <div style="display: flex; flex-wrap: wrap; gap: 6px;">
-                            <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">Kotlin</span>
-                            <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">Jetpack Compose</span>
-                            <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">Canva</span>
-                            <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">HTML5 · CSS3</span>
-                            <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">GitHub</span>
-                            <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">Material Design 3</span>
+                            <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 10px; border-radius: 16px; font-size: 0.75rem; font-weight: 500;">Kotlin</span>
+                            <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 10px; border-radius: 16px; font-size: 0.75rem; font-weight: 500;">Compose</span>
+                            <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 10px; border-radius: 16px; font-size: 0.75rem; font-weight: 500;">HTML5/CSS3</span>
+                            <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 10px; border-radius: 16px; font-size: 0.75rem; font-weight: 500;">GitHub</span>
                         </div>
                     </div>
 
-                    <div class="team-card__links" style="display: flex; gap: 10px; margin-top: 24px; padding-top: 20px; border-top: 1px solid #f0f0f0;">
-                        <a href="https://www.linkedin.com/in/eva-gallardo-romero-830362349/" target="_blank" rel="noopener noreferrer" class="team-card__link" style="width: 36px; height: 36px; border-radius: 8px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;" title="LinkedIn" onmouseover="this.style.background='#e8eaf6'" onmouseout="this.style.background='#f5f5f5'">
-                            <svg viewBox="0 0 24 24" fill="currentColor" style="width: 18px; height: 18px; color: #666;">
+                    <div class="team-card__links" style="display: flex; gap: 10px; margin-top: 20px; padding-top: 16px; border-top: 1px solid #f0f0f0;">
+                        <a href="https://www.linkedin.com/in/eva-gallardo-romero-830362349/" target="_blank" rel="noopener noreferrer" class="team-card__link" style="width: 32px; height: 32px; border-radius: 8px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;" title="LinkedIn" onmouseover="this.style.background='#e8eaf6'" onmouseout="this.style.background='#f5f5f5'">
+                            <svg viewBox="0 0 24 24" fill="currentColor" style="width: 16px; height: 16px; color: #666;">
                                 <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                             </svg>
                         </a>
-                        <a href="https://github.com/evagr11" target="_blank" rel="noopener noreferrer" class="team-card__link" style="width: 36px; height: 36px; border-radius: 8px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;" title="GitHub" onmouseover="this.style.background='#e8eaf6'" onmouseout="this.style.background='#f5f5f5'">
-                            <svg viewBox="0 0 24 24" fill="currentColor" style="width: 18px; height: 18px; color: #666;">
+                        <a href="https://github.com/evagr11" target="_blank" rel="noopener noreferrer" class="team-card__link" style="width: 32px; height: 32px; border-radius: 8px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;" title="GitHub" onmouseover="this.style.background='#e8eaf6'" onmouseout="this.style.background='#f5f5f5'">
+                            <svg viewBox="0 0 24 24" fill="currentColor" style="width: 16px; height: 16px; color: #666;">
                                 <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                             </svg>
                         </a>
-                        <a href="https://evagr.itch.io/" target="_blank" rel="noopener noreferrer" class="team-card__link" style="width: 36px; height: 36px; border-radius: 8px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;" title="itch.io" onmouseover="this.style.background='#e8eaf6'" onmouseout="this.style.background='#f5f5f5'">
-                            <svg viewBox="0 0 24 24" fill="currentColor" style="width: 18px; height: 18px; color: #666;">
+                        <a href="https://evagr.itch.io/" target="_blank" rel="noopener noreferrer" class="team-card__link" style="width: 32px; height: 32px; border-radius: 8px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;" title="itch.io" onmouseover="this.style.background='#e8eaf6'" onmouseout="this.style.background='#f5f5f5'">
+                            <svg viewBox="0 0 24 24" fill="currentColor" style="width: 16px; height: 16px; color: #666;">
                                 <path d="M3.13 1.338C2.08 1.96.02 4.328 0 4.95v1.03c0 1.303 1.22 2.45 2.325 2.45 1.33 0 2.436-1.102 2.436-2.41 0 1.308 1.07 2.41 2.4 2.41 1.328 0 2.362-1.102 2.362-2.41 0 1.308 1.107 2.41 2.436 2.41h.024c1.33 0 2.436-1.102 2.436-2.41 0 1.308 1.034 2.41 2.363 2.41 1.328 0 2.4-1.102 2.4-2.41 0 1.308 1.104 2.41 2.435 2.41C22.78 8.43 24 7.283 24 5.98V4.95c-.02-.622-2.08-2.99-3.13-3.612C19.154.448 4.846.448 3.13 1.338zm8.87 5.82c-.418.002-.827.06-1.12.173-.665.252-.99.88-.99 1.54v.42H7.38c-.057 0-.118.007-.173.018V9.16h-.002v.063c-.24.096-.45.295-.504.568v.018c-.013.064-.02.13-.02.198v6.946c0 .697.598 1.278 1.328 1.278h8.982c.73 0 1.328-.58 1.328-1.278V10.007c0-.068-.007-.134-.02-.198v-.018c-.054-.273-.264-.472-.504-.568V9.16H15.24v.15c-.055-.01-.116-.018-.173-.018H12.9v-.42c0-.66-.325-1.288-.99-1.54-.295-.114-.703-.174-1.12-.173l.21-.002zm0 .002-.21.002.21-.002zm-.21.002h.21-.21zm.21 0c.36-.002.713.048.938.135.478.18.65.646.65 1.203v.42H9.64v-.42c0-.557.172-1.023.65-1.203.225-.087.578-.137.937-.135h.783zm-5.3 2.52h2.12v.68c0 .43.27.768.47 1.03l.16.213c-.375.198-.55.43-.55.787v3.31c0 .387.277.658.64.658h5.32c.363 0 .64-.27.64-.658v-3.31c0-.358-.175-.59-.55-.787l.16-.213c.2-.262.47-.6.47-1.03v-.68h2.12v6.75H6.71V9.682zm2.79 2.1h4.98c.072 0 .13.057.13.127v3.067c0 .07-.058.126-.13.126H9.5c-.072 0-.13-.056-.13-.127V11.91c0-.07.058-.127.13-.127z"/>
                             </svg>
                         </a>
-                        <a href="https://evagr11.github.io/Curriculum/" target="_blank" rel="noopener noreferrer" class="team-card__link" style="width: 36px; height: 36px; border-radius: 8px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;" title="Portfolio web" onmouseover="this.style.background='#e8eaf6'" onmouseout="this.style.background='#f5f5f5'">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 18px; height: 18px; color: #666;">
+                        <a href="https://evagr11.github.io/Curriculum/" target="_blank" rel="noopener noreferrer" class="team-card__link" style="width: 32px; height: 32px; border-radius: 8px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;" title="Portfolio web" onmouseover="this.style.background='#e8eaf6'" onmouseout="this.style.background='#f5f5f5'">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 16px; height: 16px; color: #666;">
                                 <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
                                 <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
                             </svg>
@@ -354,56 +325,48 @@
                     </div>
                 </div>
 
-                <!-- Nicolás Corbi De Gracia -->
-                <div class="team-card fade-in" style="background: white; border-radius: 20px; padding: 40px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); text-align: left;">
-                    <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 24px;">
-                        <div class="team-card__avatar" style="width: 72px; height: 72px; background: linear-gradient(135deg, #6c5ce7 0%, #3f51b5 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; font-weight: 700; color: white; flex-shrink: 0;">
+                <div class="team-card fade-in" style="background: white; border-radius: 20px; padding: 24px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); text-align: left;">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+                        <div class="team-card__avatar" style="width: 60px; height: 60px; background: linear-gradient(135deg, #6c5ce7 0%, #3f51b5 100%); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; font-weight: 700; color: white; flex-shrink: 0;">
                             <span>NC</span>
                         </div>
                         <div>
-                            <h3 class="team-card__name" style="font-size: 1.25rem; font-weight: 700; color: #1a1a2e; margin-bottom: 4px;">Nicolás Corbi De Gracia</h3>
-                            <p class="team-card__role" style="font-size: 0.9rem; color: #6c5ce7; font-weight: 600;">Desarrollador de Aplicaciones Multiplataforma</p>
+                            <h3 class="team-card__name" style="font-size: 1.15rem; font-weight: 700; color: #1a1a2e; margin-bottom: 4px;">Nicolás Corbi De Gracia</h3>
+                            <p class="team-card__role" style="font-size: 0.85rem; color: #6c5ce7; font-weight: 600;">Dev Multiplataforma</p>
                         </div>
                     </div>
 
-                    <div class="team-card__body" style="font-size: 0.9rem; color: #555; line-height: 1.7;">
-                        <p style="margin-bottom: 16px;">Estudiante de DAM apasionado por la lógica de programación y la arquitectura de software. Enfocado en construir soluciones robustas y escalables para aplicaciones móviles.</p>
+                    <div class="team-card__body" style="font-size: 0.85rem; color: #555; line-height: 1.6;">
+                        <p style="margin-bottom: 16px;">Estudiante de DAM apasionado por la lógica de programación y la arquitectura de software. Enfocado en construir soluciones robustas para aplicaciones móviles.</p>
 
-                        <h4 style="font-size: 0.85rem; font-weight: 700; color: #1a1a2e; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; margin-top: 20px;">Contribuciones en iMirly</h4>
+                        <h4 style="font-size: 0.8rem; font-weight: 700; color: #1a1a2e; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; margin-top: 16px;">Contribuciones en iMirly</h4>
                         <ul style="list-style: none; padding: 0; margin: 0;">
-                            <li style="padding: 4px 0; padding-left: 20px; position: relative;"><span style="position: absolute; left: 0; color: #6c5ce7;">▸</span> Diseño e implementación de la lógica de negocio</li>
-                            <li style="padding: 4px 0; padding-left: 20px; position: relative;"><span style="position: absolute; left: 0; color: #6c5ce7;">▸</span> Arquitectura de datos y modelos de la aplicación</li>
-                            <li style="padding: 4px 0; padding-left: 20px; position: relative;"><span style="position: absolute; left: 0; color: #6c5ce7;">▸</span> Gestión de estado y flujo de datos en la app</li>
-                            <li style="padding: 4px 0; padding-left: 20px; position: relative;"><span style="position: absolute; left: 0; color: #6c5ce7;">▸</span> Optimización del rendimiento y estructura del código</li>
+                            <li style="padding: 4px 0; padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: #6c5ce7;">▸</span> Diseño e implementación de negocio</li>
+                            <li style="padding: 4px 0; padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: #6c5ce7;">▸</span> Arquitectura de datos y modelos</li>
+                            <li style="padding: 4px 0; padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: #6c5ce7;">▸</span> Optimización del rendimiento</li>
                         </ul>
 
-                        <h4 style="font-size: 0.85rem; font-weight: 700; color: #1a1a2e; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; margin-top: 20px;">Tecnologías</h4>
+                        <h4 style="font-size: 0.8rem; font-weight: 700; color: #1a1a2e; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; margin-top: 16px;">Tecnologías</h4>
                         <div style="display: flex; flex-wrap: wrap; gap: 6px;">
-                            <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">Kotlin</span>
-                            <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">Java</span>
-                            <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">Android Studio</span>
-                            <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">Spring Boot</span>
-                            <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">Git</span>
+                            <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 10px; border-radius: 16px; font-size: 0.75rem; font-weight: 500;">Kotlin</span>
+                            <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 10px; border-radius: 16px; font-size: 0.75rem; font-weight: 500;">Java</span>
+                            <span style="background: #f0f0ff; color: #3f51b5; padding: 4px 10px; border-radius: 16px; font-size: 0.75rem; font-weight: 500;">Android Studio</span>
                         </div>
                     </div>
 
-                    <div class="team-card__links" style="display: flex; gap: 10px; margin-top: 24px; padding-top: 20px; border-top: 1px solid #f0f0f0;">
-                        <a href="https://www.linkedin.com/in/nicolas-corbi-541293386/" target="_blank" class="team-card__link" style="width: 36px; height: 36px; border-radius: 8px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;" title="LinkedIn">
-                            <svg viewBox="0 0 24 24" fill="currentColor" style="width: 18px; height: 18px; color: #666;">
+                    <div class="team-card__links" style="display: flex; gap: 10px; margin-top: 20px; padding-top: 16px; border-top: 1px solid #f0f0f0;">
+                        <a href="https://www.linkedin.com/in/nicolas-corbi-541293386/" target="_blank" class="team-card__link" style="width: 32px; height: 32px; border-radius: 8px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;" title="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor" style="width: 16px; height: 16px; color: #666;">
                                 <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                             </svg>
                         </a>
                     </div>
                 </div>
 
-                
-
             </div>
-            </div> <!-- /team-details -->
-        </div>
+            </div> </div>
     </section>
 
-    <!-- Organización del equipo -->
     <section class="section section--org" id="organizacion">
         <div class="container">
             <div class="work-section__header fade-in">
@@ -481,7 +444,6 @@
         </div>
     </section>
 
-    <!-- Cierre de Sección -->
     <section class="section section--closing" id="cierre">
         <div class="container">
             <div class="closing-block fade-in">
@@ -515,7 +477,6 @@
         }
     </style>
 
-    <!-- Botón flotante: Ver mockup (solo móvil) -->
     <button id="mockup-fab" onclick="openMockup()" title="Ver mockup de la app"
         style="position:fixed; bottom:32px; right:24px; z-index:1200;
                align-items:center; gap:10px;
@@ -531,16 +492,13 @@
         </svg>
     </button>
 
-    <!-- Lightbox -->
     <div id="mockup-lightbox"
         style="display:none; position:fixed; inset:0; z-index:2000;">
 
-        <!-- Imagen a pantalla completa -->
         <img src="./assets/img/MockupPresentacion.png"
              alt="Mockup de la aplicacion iMirly"
              style="width:100%; height:100%; object-fit:cover; display:block;">
 
-        <!-- Botón cerrar encima de la imagen -->
         <button onclick="closeMockup()" title="Cerrar"
             style="position:absolute; top:20px; right:20px; z-index:2001;
                    background:rgba(0,0,0,0.45); border:none; color:white;
@@ -601,7 +559,6 @@
             lightbox.style.display = 'none';
             document.body.style.overflow = '';
         }
-
 
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') closeMockup();
