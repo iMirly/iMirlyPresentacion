@@ -93,10 +93,10 @@
                     <span class="section__tag">Tecnología</span>
                     <h1 class="hero__title">Arquitectura Avanzada</h1>
                     <p class="hero__subtitle">
-                        Construido como una plataforma real: escalable, segura y transaccional.
+                        Lo importante <strong>no es qué</strong> herramientas hemos usado, sino <strong>por qué</strong> hemos tomado estas decisiones.
                     </p>
                     <p class="hero__text">
-                        Hemos diseñado iMirly no como un simple prototipo, sino utilizando los estándares de la industria actual: Android moderno, servidor robusto y bases de datos seguras.
+                        Hemos diseñado el <strong>interior de iMirly</strong> centrándonos en los <strong>beneficios</strong> reales que aporta a nuestros usuarios, construyendo una plataforma segura y escalable.
                     </p>
                 </div>
 
@@ -156,7 +156,7 @@
         <div class="container">
             <div class="section__header fade-in">
                 <h2 class="section__title">Visión general del sistema</h2>
-                <p class="section__description">iMirly separa por completo lo que el usuario ve (App) del motor que gestiona la información y el dinero (Servidor).</p>
+                <p class="section__description">El sistema tiene <strong>tres piezas</strong> que trabajan <strong>separadas pero coordinadas</strong>. La <strong>clave</strong> es que el móvil nunca toca la base de datos: todo pasa por el servidor.</p>
             </div>
             
             <div class="concept-grid">
@@ -167,8 +167,8 @@
                             <line x1="12" y1="18" x2="12.01" y2="18"/>
                         </svg>
                     </div>
-                    <h3 class="concept-card__title">App Android (Kotlin)</h3>
-                    <p class="concept-card__text">Desarrollada nativamente con <strong>Jetpack Compose</strong>. Una interfaz rápida, reactiva y moderna.</p>
+                    <h3 class="concept-card__title">App Android</h3>
+                    <p class="concept-card__text">Es lo que <strong>ve el usuario</strong>. Interfaz nativa desarrollada con <strong>Jetpack Compose</strong>, el estándar moderno de Google.</p>
                 </div>
                 <div class="concept-card fade-in">
                     <div class="ux-pillar__icon">
@@ -178,7 +178,7 @@
                         </svg>
                     </div>
                     <h3 class="concept-card__title">API REST (Spring Boot)</h3>
-                    <p class="concept-card__text">Un potente servidor en <strong>Java</strong> que recibe peticiones, aplica reglas de negocio y procesa pagos.</p>
+                    <p class="concept-card__text">Es nuestro <strong>servidor</strong>. Aquí se toman las <strong>decisiones importantes</strong>: validar pagos, reglas de negocio y actuar como <strong>filtro y árbitro</strong>.</p>
                 </div>
                 <div class="concept-card fade-in">
                     <div class="ux-pillar__icon">
@@ -188,8 +188,8 @@
                             <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
                         </svg>
                     </div>
-                    <h3 class="concept-card__title">Base de datos Relacional</h3>
-                    <p class="concept-card__text">Uso de <strong>PostgreSQL</strong> (y H2 en desarrollo) gestionado a través de Hibernate (JPA).</p>
+                    <h3 class="concept-card__title">PostgreSQL</h3>
+                    <p class="concept-card__text">La <strong>base de datos</strong> donde vive toda la información: usuarios, contratos y mensajes.</p>
                 </div>
             </div>
 
@@ -204,7 +204,7 @@
             <div class="section__header fade-in">
                 <span class="section__tag">Estructura</span>
                 <h2 class="section__title">Arquitectura Hexagonal</h2>
-                <p class="section__description">Hemos abandonado el sistema de "capas tradicionales" por una arquitectura hexagonal (Puertos y Adaptadores) para hacer el sistema a prueba de balas.</p>
+                <p class="section__description">El backend se divide en <strong>tres capas</strong> distintas. Esto permite <strong>cambiar</strong> cualquier pieza (como la pasarela de pago) <strong>sin tocar las reglas de negocio</strong>. Todo es <strong>sustituible</strong>.</p>
             </div>
             
             <div class="ux-pillars">
@@ -217,9 +217,9 @@
                     </div>
                     <h3 class="ux-pillar__title">Capa de Dominio</h3>
                     <ul class="ux-pillar__list">
-                        <li>El corazón de la app (Usuarios, Contratos).</li>
-                        <li>No depende de internet ni bases de datos.</li>
-                        <li>Contiene la lógica pura (ej. "Un saldo no puede ser negativo").</li>
+                        <li>Las <strong>reglas del negocio aisladas</strong>.</li>
+                        <li>No sabe nada de internet.</li>
+                        <li>Ejemplo: <em>Un saldo nunca puede ser negativo</em>.</li>
                     </ul>
                 </div>
                 <div class="ux-pillar fade-in">
@@ -231,9 +231,9 @@
                     </div>
                     <h3 class="ux-pillar__title">Capa de Aplicación</h3>
                     <ul class="ux-pillar__list">
-                        <li>Los "Casos de Uso" (ej. "Pagar un contrato").</li>
-                        <li>Orquesta la información entre el dominio y el exterior.</li>
-                        <li>Protege las transacciones.</li>
+                        <li><strong>Orquesta</strong> las acciones principales.</li>
+                        <li>Coordina el interior con el exterior.</li>
+                        <li>Ejemplos: <em>Pagar, Aceptar propuesta</em>.</li>
                     </ul>
                 </div>
                 <div class="ux-pillar fade-in">
@@ -249,9 +249,9 @@
                     </div>
                     <h3 class="ux-pillar__title">Capa de Infraestructura</h3>
                     <ul class="ux-pillar__list">
-                        <li>Los "Enchufes" del sistema.</li>
-                        <li>Adaptadores REST (para que Android se conecte).</li>
-                        <li>Adaptadores JPA (para guardar en base de datos).</li>
+                        <li>Son los <strong>conectores</strong> del sistema.</li>
+                        <li>El que habla con Android (REST).</li>
+                        <li>El que habla con la base de datos (JPA).</li>
                     </ul>
                 </div>
             </div>
@@ -262,8 +262,8 @@
         <div class="container">
             <div class="section__header fade-in">
                 <span class="section__tag">Servidor</span>
-                <h2 class="section__title">El Motor: Spring Boot & Seguridad</h2>
-                <p class="section__description">El backend no se limita a guardar y devolver datos. Actúa como el árbitro que asegura que las reglas de negocio, la seguridad y el dinero se gestionen correctamente.</p>
+                <h2 class="section__title">Seguridad y Control</h2>
+                <p class="section__description">Nuestro servidor hace <strong>tres cosas críticas</strong> para proteger la información y el dinero de los usuarios.</p>
             </div>
             
             <div class="concept-grid">
@@ -273,8 +273,8 @@
                             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                         </svg>
                     </div>
-                    <h3 class="concept-card__title">Spring Security & JWT</h3>
-                    <p class="concept-card__text">Todo el sistema está protegido. Las peticiones desde Android viajan con un <strong>JSON Web Token (JWT)</strong> que el backend intercepta y valida antes de permitir ejecutar acciones como el pago o borrar chats.</p>
+                    <h3 class="concept-card__title">Autenticación JWT</h3>
+                    <p class="concept-card__text">Cada petición lleva un <strong>token firmado</strong>. Nadie puede hacer nada en la aplicación sin estar previamente <strong>autenticado</strong>.</p>
                 </div>
                 <div class="concept-card fade-in">
                     <div class="ux-pillar__icon">
@@ -283,8 +283,8 @@
                             <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
                         </svg>
                     </div>
-                    <h3 class="concept-card__title">JPA & Hibernate</h3>
-                    <p class="concept-card__text">Se utiliza <strong>Spring Data JPA</strong> como capa ORM. Esto nos permite interactuar con la base de datos PostgreSQL mediante objetos de Java (Entidades) sin necesidad de escribir sentencias SQL manuales complejas.</p>
+                    <h3 class="concept-card__title">JPA e Hibernate</h3>
+                    <p class="concept-card__text">Accedemos a los datos con un <strong>ORM</strong>. Esto evita consultas manuales y nos <strong>protege de hackeos</strong> como la inyección SQL.</p>
                 </div>
                 <div class="concept-card fade-in">
                     <div class="ux-pillar__icon">
@@ -294,8 +294,8 @@
                             <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
                         </svg>
                     </div>
-                    <h3 class="concept-card__title">Lógica de Transacciones</h3>
-                    <p class="concept-card__text">Las operaciones sensibles (como restar el <code>saldo</code> de un usuario y actualizar el <code>estado</code> de un contrato) están envueltas en anotaciones <code>@Transactional</code>. O la operación se completa entera, o se revierte automáticamente.</p>
+                    <h3 class="concept-card__title">Transacciones Seguras</h3>
+                    <p class="concept-card__text">Si un pago falla a la mitad, el sistema <strong>deshace todo automáticamente</strong>. No existen estados intermedios ni <strong>dinero perdido en el limbo</strong>.</p>
                 </div>
             </div>
         </div>
@@ -306,7 +306,7 @@
             <div class="section__header fade-in">
                 <span class="section__tag">Persistencia</span>
                 <h2 class="section__title">Base de Datos PostgreSQL</h2>
-                <p class="section__description">Diseño relacional estructurado mediante UUIDs para garantizar integridad y seguridad en la plataforma.</p>
+                <p class="section__description">El esquema refleja <strong>exactamente</strong> cómo funciona nuestro negocio. La base de datos no es pasiva, participa <strong>activamente</strong>.</p>
             </div>
 
             <div class="concept-grid fade-in">
@@ -352,7 +352,7 @@
             <div class="research-context fade-in" style="margin-top: 32px; background: #FAFAFA; padding: 24px; border-radius: 8px; border-left: 4px solid #3f51b5;">
                 <h4 style="color: #3f51b5; margin-bottom: 8px;">Relaciones y Reglas de Negocio en BBDD</h4>
                 <p style="font-size: 0.95rem; color: #555; line-height: 1.6;">
-                    El esquema está altamente normalizado. La tabla <code>solicitud_contrato</code> actúa como el eje central (Limbo/Escrow), relacionando a los usuarios con los anuncios. Además, la tabla <code>mensaje</code> incluye un <strong>tipo enumerado</strong> (<em>TEXTO, PROPUESTA_PRECIO, PRESUPUESTO_ACEPTADO...</em>) que permite al backend ejecutar lógica financiera al detectar mensajes del sistema.
+                    El esquema está altamente normalizado. La tabla <code>solicitud_contrato</code> actúa como el <strong>eje central</strong>. Además, la tabla <code>mensaje</code> incluye un <strong>tipo especial</strong> que permite al servidor <strong>disparar lógica financiera sola</strong> al detectar mensajes como <em>PRESUPUESTO_ACEPTADO</em>.
                 </p>
             </div>
         </div>
@@ -375,8 +375,8 @@
                         </div>
                     </div>
                     <div class="ui-element__info">
-                        <h4>Transaccionalidad (@Transactional)</h4>
-                        <p>Cuando un cliente paga, se resta su saldo y se cambia el estado del contrato. Si algo falla a la mitad, <strong>se deshace todo</strong> ("O todo o nada") para no perder dinero.</p>
+                        <h4>Transaccionalidad</h4>
+                        <p>Como mencioné antes, o la operación económica <strong>se completa</strong> entera, o se <strong>revierte</strong> por completo.</p>
                     </div>
                 </div>
                 <div class="ui-element fade-in">
@@ -390,8 +390,8 @@
                         </div>
                     </div>
                     <div class="ui-element__info">
-                        <h4>Patrón DTO y Mappers</h4>
-                        <p>Nunca enviamos la base de datos directa al móvil. Usamos "Mappers" que filtran la información (para no enviar contraseñas por error, por ejemplo).</p>
+                        <h4>DTOs y Mappers</h4>
+                        <p><strong>Nunca enviamos</strong> al móvil más datos de los necesarios. Filtramos la información antes de salir del servidor.</p>
                     </div>
                 </div>
                 <div class="ui-element fade-in">
@@ -405,8 +405,8 @@
                         </div>
                     </div>
                     <div class="ui-element__info">
-                        <h4>Gestión de Excepciones</h4>
-                        <p>Respuestas HTTP estándar. Si intentas borrar un chat con dinero retenido, el servidor responde con un código claro que Android traduce a un aviso visual.</p>
+                        <h4>Excepciones Claras</h4>
+                        <p>Si algo falla, la app muestra al usuario un <strong>aviso comprensible</strong>, no un simple pantallazo de error técnico.</p>
                     </div>
                 </div>
             </div>
@@ -427,8 +427,8 @@
                                 <line x1="12" y1="17" x2="12.01" y2="17"/>
                             </svg>
                     </div>
-                    <h3 class="research-pillar__title">Pasarelas de Pago reales</h3>
-                    <p class="research-pillar__text">El sistema de "Limbo" ya está programado. Integrar Stripe o PayPal sería simplemente conectar la pasarela al flujo existente.</p>
+                    <h3 class="research-pillar__title">Pasarelas Reales</h3>
+                    <p class="research-pillar__text">El 'limbo' ya funciona lógicamente. Conectar <strong>Stripe</strong> es solo cambiar un conector, <strong>sin reescribir nada</strong> del flujo.</p>
                 </div>
                 <div class="research-pillar fade-in">
                     <div class="ux-pillar__icon" >
@@ -437,7 +437,7 @@
                         </svg>
                     </div>
                     <h3 class="research-pillar__title">Valoraciones Automáticas</h3>
-                    <p class="research-pillar__text">Al tener el ciclo de vida cerrado (desde PENDIENTE hasta COMPLETADO), disparar un sistema de reseñas es inmediato.</p>
+                    <p class="research-pillar__text">Al controlar todo el ciclo del contrato, lanzar un sistema de reseñas al terminar un trabajo es <strong>trivial</strong>.</p>
                 </div>
             </div>
 
@@ -516,8 +516,12 @@
         <div class="container">
             <div class="closing-block fade-in">
                 <h2 class="closing-block__title">Base técnica sólida</h2>
-                <p class="closing-block__text">iMirly no es un proyecto de papel. Es una aplicación con lógica financiera, control de estados cruzados y una estructura lista para producción.</p>
-                <a href="equipo.html" class="btn btn--secondary">Siguiente sección: Equipo</a>
+                <p class="closing-block__text">iMirly <strong>no es un prototipo</strong> simulado. Tiene seguridad real, transacciones controladas y una arquitectura lista para evolucionar. Es una plataforma <strong>lista para producción</strong>.</p>
+                
+                <div style="margin-top: 32px; display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+                    <a href="#" class="btn btn--secondary" style="background: #1B5E20; color: white; border-color: #1B5E20;">▶ Demo Técnica</a>
+                    <a href="equipo.html" class="btn btn--secondary">Siguiente sección: Equipo</a>
+                </div>
             </div>
         </div>
     </section>
